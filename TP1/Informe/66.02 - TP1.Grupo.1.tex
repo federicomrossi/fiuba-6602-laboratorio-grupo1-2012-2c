@@ -25,6 +25,7 @@
 \usepackage{amssymb}
 \usepackage{float}
 \usepackage{graphicx}
+\usepackage{array}
 
 %% Fin PAQUETES
 
@@ -86,8 +87,10 @@
 \renewcommand{\lstlistingname}{Código}
 %% Titulo de las figuras
 \renewcommand{\figurename}{Figura}
+\addto\captionsspanish{\renewcommand{\figurename}{Figura}}
 %% Titulo de las tablas
 \renewcommand{\tablename}{Tabla}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 %% Referencia a los códigos
 \newcommand{\refcode}[1]{\textit{Código \ref{#1}}}
 %% Referencia a las imagenes
@@ -97,40 +100,150 @@
 
 \begin{document}
 
-% Inserción del título, autores y fecha.
-
-
-
 
 % OBJETIVOS
 \section{Objetivos}
 
-	Multímetro en continua
+	El objetivo principal de la siguiente práctica consiste en estudiar el comportamiento y la influencia del multímetro (instrumento de medición) en circuitos donde la tensión y la corriente son constantes en el tiempo (circuitos en corriente continua).
+
+
+
 
 % INTRODUCCIÓN
 \section{Introducción}
 
-	Con el fin de fortalecer las nociones fundamentales de la probabilidad es que este trabajo busca aplicar las bases de los conceptos ya estudiados en el curso de manera tal de adoptar una mejor comprensión de la inferencia estadística en hechos cotidianos. En este caso, nuestro trabajo será explorar las propiedades estádisticas de cierto tipo de secuencias, las cuales serán detalladas más adelante.
-	\par 
-	En cada análisis realizado se mostrará su resolución analítica, como así también algoritmos que simulen dichas situaciones, a fin de poder mostrar una aproximación a la constatación empírica de los resultados. Estos últimos se han hecho en el lenguaje de programación \textit{GNU Octave}\footnote{``\textit{GNU Octave} es un lenguaje interpretado de alto nivel, pensado principalmente para cálculos numéricos. Para más información dirijase a \textit{http://www.gnu.org/software/octave} ''}.
-	\par 
-	Todos los archivos y códigos fuente aquí mencionados, así como también el presente informe, pueden ser descargados de la sección \textit{Downloads} del repositorio del grupo (\textit{http://code.google.com/p/simulacion-proba2012}).
+	El desarrollo de la presente práctica de laboratorio consiste en... [ Completar introducción ]
+	\par
+	Relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno.
 
+\bigskip\bigskip
 
 
 % MATERIALES UTILIZADOS
 \section{Materiales utilizados}
 
-Tal como lo sugiere el título de este apartado, se mostrarán a continuación una serie de actividades previas necesarias para dominar las técnicas básicas de simulación de números aleatorios.
+	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
+\bigskip\bigskip
 
 
+
+\begin{table}[!hbt]
+	\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\arraybackslash}m{6cm}|}
+		\hline
+		\rowcolor[gray]{0.9}\textbf{Material/Instrumento} & \textbf{Especificaciones} \\
+		\hline
+		\centering Resistencias &  \vbox{\hbox{\strut 100$\Omega\pm5\%$ tolerancia (1 unidad)}
+						    \hbox{\strut 100k$\Omega\pm5\%$ tolerancia (2 unidades)}
+						    \hbox{\strut 10M$\Omega\pm5\%$ tolerancia (1 unidad)}} \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+		Resistencia variable & XXk$\Omega$ \\
+		\hline
+	\end{tabular}
+	\caption{Listado de materiales e instrumental utilizado.}
+	\end{center}
+\end{table}
 
 
 % DESARROLLO
 \section{Desarrollo}
 
+	En los siguientes apartados se pasarán a desarrollar las mediciones empíricas, cada una de las cuales esta complementada por una explicación de los pasos llevados a cabo, valores obtenidos, análisis de resultados y conclusiones parciales.
+\bigskip
+
+
+
 % DESARROLLO - PARTE 1
 \subsection{Parte 1}
+
+	Comencemos observando dos circuitos simples (\textit{Figura 1}). En estos se encuentran presentes los bornes A y B, sobre los cuales mediremos la tensión. En el caso de la \textit{Figura 1.a} se espera que idealmente, es decir, para una resistencia infinita del voltímetro, se lea una tensión de 9V sobre este último. Para el circuito de la \textit{Figura 1.b} también se espera que midamos 9V entre los bornes ya que estamos midiendo directamente la salida de la fuente.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.66\textwidth]{images/item-1.jpg}
+	\caption{Estimación ideal de la caída de tensión entre los bornes A y B \\ de los circuitos (a) y (b).}
+\end{figure}
+\bigskip
+
+
+	Adentrándonos en la parte experimental, pasaremos a medir la tensión sobre los bornes A y B de los circuitos de la \textit{Figura 2} utilizando un voltímetro analógico.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.94\textwidth]{images/item-2.jpg}
+	\caption{Estimación ideal de la caída de tensión entre los bornes A y B \\ de los circuitos (a) y (b).}
+\end{figure}
+\bigskip
+
+
+\noindent Habiendo utilizado el voltímetro \textit{TRIPLETT 630-APLK}, se obtuvieron los siguientes resultados:
+\bigskip
+
+	\indent \textbf{Circuito (a):} $V_{medido} = 6V$ \smallskip\\
+	\indent \textbf{Circuito (b):} $V_{medido} = 8,6V$ \\
+	\medskip
+
+	Al reemplazamos el voltímetro analógico por uno digital (en nuestro caso se utilizó un multímetro digital \textit{UNI-T Modelo UT30F}) se obtuvieron los siguientes valores de tensión:
+\bigskip
+
+	\indent \textbf{Circuito (a):} $V_{medido} = 8,91V$ \smallskip\\
+	\indent \textbf{Circuito (b):} $V_{medido} = 9,02V$ \\
+	\bigskip
+
+\newpage
+\textit{¿Qué diferencia se puede observar en las mediciones?}
+\medskip
+
+	Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+\bigskip
+
+\textit{¿A qué se atribujen esas diferencias?}
+\medskip
+
+	 Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+\bigskip
+
+\textit{¿Como se relacionan esas diferencias con las especificaciones de los instrumentos y con los circuitos usados?}
+\medskip
+
+	Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+
+
+\bigskip
+[ Colocar conclusión aquí ]
 
 
 
