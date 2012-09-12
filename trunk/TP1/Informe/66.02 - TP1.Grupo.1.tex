@@ -26,6 +26,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 \usepackage{array}
+\usepackage{multirow}
 
 %% Fin PAQUETES
 
@@ -241,17 +242,52 @@
 \medskip
 
 	Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
-
-
 \bigskip
-[ Colocar conclusión aquí ]
 
+
+[ Colocar conclusión aquí ]
+\bigskip
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.86\textwidth]{images/p1-item-8.jpg}
+	\caption{Circuito divisor de tensión.}
+\end{figure}
+\bigskip
+
+
+	Considerando ahora el circuito divisor de tensión de la \textit{Figura 3}, se medirá la tensión sobre la resistencia $R_2$ ubicada en el mismo. Si lo analizamos teóricamente, esperamos obtener una caída de tensión de 6V. La medición empírica se ha realizado con un voltímetro analógico y uno digital. Los valores obtenidos fueron:
+\bigskip\medskip
+
+\begin{tabular}{l l}
+	\textbf{Voltímetro analógico:} & $V_{medido} = 0,3V$ \smallskip\\
+	\textbf{Voltímetro digital:} & $V_{medido} = 3,9V$ \\
+\end{tabular}
+\bigskip\bigskip
+
+[ Colocar análisis de las diferencias aquí (item 11) ]
+\bigskip\bigskip
 
 
 % DESARROLLO - PARTE 2
 \subsection{Parte 2}
 
-
+\begin{tabular}{|l|l|l|l|l|} \hline
+	\multicolumn{5}{|c|}{Schedulers} \\ \hline
+	\multirow{5}{*}{100} 
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\ \hline
+	\multirow{5}{*}{100k} 
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\
+	& V & I & R & RR \\ \hline
+\end{tabular}
 
 % DESARROLLO - PARTE 3
 \subsection{Parte 3}
