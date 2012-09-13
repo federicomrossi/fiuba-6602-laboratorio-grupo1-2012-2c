@@ -105,7 +105,7 @@
 % OBJETIVOS
 \section{Objetivos}
 
-	El objetivo principal de la siguiente práctica consiste en estudiar el comportamiento y la influencia del multímetro (instrumento de medición) en circuitos donde la tensión y la corriente son constantes en el tiempo (circuitos en corriente continua).
+	El objetivo principal de la siguiente práctica consiste en estudiar el comportamiento y la influencia del multímetro (instrumento de medición) en circuitos donde la tensión y la corriente son constantes en el tiempo (circuitos en corriente continua). Particularmente se desea ver las diferencias que se dan al utilizar instrumentos analógicos o digitales
 
 
 
@@ -232,7 +232,7 @@
 	Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
 \bigskip
 
-\textit{¿A qué se atribujen esas diferencias?}
+\textit{¿A qué se atribuyen esas diferencias?}
 \medskip
 
 	 Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
@@ -267,27 +267,101 @@
 \bigskip\bigskip
 
 [ Colocar análisis de las diferencias aquí (item 11) ]
+
+texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto 
+
 \bigskip\bigskip
 
 
 % DESARROLLO - PARTE 2
 \subsection{Parte 2}
 
-\begin{tabular}{|l|l|l|l|l|} \hline
-	\multicolumn{5}{|c|}{Schedulers} \\ \hline
-	\multirow{5}{*}{100} 
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\ \hline
-	\multirow{5}{*}{100k} 
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\
-	& V & I & R & RR \\ \hline
-\end{tabular}
+%% item (a)
+
+	Se ha armado para el desarrollo de este apartado el circuito de medición mostrado en la \textit{Figura 4}. Hemos utilizado en esta ocación dos resistores cuyos valores están indicados como \textit{$R_1=100\Omega$} y \textit{$R_2=100k\Omega$}. Estos fueron colocados uno a la vez en el lugar representado en la figura como una resistencia \textit{R}. Las mediciones fueron realizadas con multímetros analógicos y también con digitales.
+\bigskip
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.72\textwidth]{images/p2-item-a.jpg}
+	\caption{Circuito de medición.}
+\end{figure}
+\bigskip\bigskip
+
+
+	En la \textit{Tabla 2} se pueden observar los valores medidos y calculados para este circuito.
+\bigskip
+
+\begin{table}[!hbt]
+	\begin{center}
+
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
+			\multirow{5}{*}{\textbf{100$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 0.2 & 1.98 &  &  & 0.2 & 1.2 &  &  \\\cline{2-9}
+			& 0.397 & 3.94 &  &  & 0.4 & 3.2 &  &  \\\cline{2-9}
+			& 0.601 & 5.96 &  &  & 0.6 & 5.6 &  &  \\ \hline
+			\multirow{5}{*}{\textbf{100k$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 2 & 0.020 &  &  & 2 & 0.030 &  &  \\\cline{2-9}
+			& 5 & 0.050 &  &  & 4 & 0.062 &  &  \\\cline{2-9}
+			& 8 & 0.080 &  &  & 6 & 0.094 &  &  \\ \hline
+		\end{tabular}
+
+	\caption{Tabla de valores medidos y calculados para\\ el circuito de la Figura 4.}
+	\end{center}
+\end{table}
+\bigskip
+
+
+%% item (b)
+
+	Hecho esto, se pasó a rearmar el circuito de manera de obtener la configuración mostrada en la \textit{Figura 5}. Nuevamente hemos utilizado dos resistores cuyos valores están indicados como \textit{$R_1=100\Omega$} y \textit{$R_2=100k\Omega$}. Estos fueron colocados uno a la vez en el lugar representado en la figura como una resistencia \textit{R}. Las mediciones fueron realizadas con multímetros analógicos y también con digitales.
+\bigskip
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.78\textwidth]{images/p2-item-b.jpg}
+	\caption{Circuito de medición.}
+\end{figure}
+\bigskip\bigskip
+
+
+	En la \textit{Tabla 3} se pueden observar los valores medidos y calculados para este último circuito.
+\bigskip
+
+\begin{table}[!hbt]
+	\begin{center}
+
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
+			\multirow{5}{*}{\textbf{100$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 0.199 & 1.66 &  &  & 0.2 & 1.0 &  &  \\\cline{2-9}
+			& 0.401 & 3.35 &  &  & 0.4 & 2.6 &  &  \\\cline{2-9}
+			& 0.6 & 5.02 &  &  & 0.6 & 4.4 &  &  \\ \hline
+			\multirow{5}{*}{\textbf{100k$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 2 & 0.020 &  &  & 2 & 0.020 &  &  \\\cline{2-9}
+			& 5 & 0.050 &  &  & 4 & 0.040 &  &  \\\cline{2-9}
+			& 8 & 0.080 &  &  & 6 & 0.062 &  &  \\ \hline
+		\end{tabular}
+
+	\caption{Tabla de valores medidos y calculados para\\ el circuito de la Figura 5.}
+	\end{center}
+\end{table}
+\bigskip
+
+
+%% item (c)
+
+
 
 % DESARROLLO - PARTE 3
 \subsection{Parte 3}
