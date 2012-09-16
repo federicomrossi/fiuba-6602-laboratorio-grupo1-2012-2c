@@ -274,8 +274,16 @@
 \bigskip\bigskip
 
 
-\noindent En la \textit{Tabla 2} se pueden observar los valores medidos y calculados para este circuito.
-\bigskip
+\noindent En la \textit{Tabla 2} se pueden observar los valores medidos y calculados para este circuito. Para el calculo de las resistencias \textit{R} se ha utilizado la \textit{Ley de Ohm}:
+\medskip
+
+\begin{equation}
+ 	R = {V \over I},
+\end{equation}
+\medskip
+
+\noindent mientras que el \textit{error relativo porcentual} se calculó como la suma de los errores relativos de \textit{V} e \textit{I}.
+\bigskip\bigskip
 
 
 % Tabla 2
@@ -287,21 +295,22 @@
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.2 & 1.98 & 0.1005 &  & 0.2 & 1.2 & 0.085 &  \\\cline{2-9}
-			& 0.397 & 3.94 & 0.1005 &  & 0.4 & 3.2 & 0.085 &  \\\cline{2-9}
-			& 0.601 & 5.96 & 0.1005 &  & 0.6 & 5.6 & 0.085 &  \\ \hline
+			& 0.2 & 1.98 & 0.10101 &  & 0.2 & 1.2 & 0.16667 &  \\\cline{2-9}
+			& 0.397 & 3.94 & 0.10076 &  & 0.4 & 3.2 & 0.125 &  \\\cline{2-9}
+			& 0.601 & 5.96 & 0.10084 &  & 0.6 & 5.6 & 0.10714 &  \\ \hline
 			\multirow{5}{*}{\textbf{100k$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2 & 0.020 & 99.2 &  & 2 & 0.030 & 100 &  \\\cline{2-9}
-			& 5 & 0.050 & 99.2 &  & 4 & 0.062 & 100 &  \\\cline{2-9}
-			& 8 & 0.080 & 99.2 &  & 6 & 0.094 & 100 &  \\ \hline
+			& 2 & 0.020 & 100 &  & 2 & 0.030 & 66.667 &  \\\cline{2-9}
+			& 5 & 0.050 & 100 &  & 4 & 0.062 & 64.516 &  \\\cline{2-9}
+			& 8 & 0.080 & 100 &  & 6 & 0.094 & 63.830 &  \\ \hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 4.}
 	\end{center}
 \end{table}
 \bigskip
+
 
 
 %% item (b)
@@ -331,21 +340,45 @@
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.199 & 1.66 & 0.1005 &  & 0.2 & 1.0 & 0.085 &  \\\cline{2-9}
-			& 0.401 & 3.35 & 0.1005 &  & 0.4 & 2.6 & 0.085 &  \\\cline{2-9}
-			& 0.6 & 5.02 & 0.1005 &  & 0.6 & 4.4 & 0.085 &  \\ \hline
+			& 0.199 & 1.66 & 0.1199 &  & 0.2 & 1.0 & 0.2000 &  \\\cline{2-9}
+			& 0.401 & 3.35 & 0.1197 &  & 0.4 & 2.6 & 0.1538 &  \\\cline{2-9}
+			& 0.6 & 5.02 & 0.1195 &  & 0.6 & 4.4 & 0.1364 &  \\ \hline
 			\multirow{5}{*}{\textbf{100k$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2 & 0.020 & 99.2 &  & 2 & 0.020 & 100 &  \\\cline{2-9}
-			& 5 & 0.050 & 99.2 &  & 4 & 0.040 & 100 &  \\\cline{2-9}
-			& 8 & 0.080 & 99.2 &  & 6 & 0.062 & 100 &  \\ \hline
+			& 2 & 0.020 & 100 &  & 2 & 0.020 & 100 &  \\\cline{2-9}
+			& 5 & 0.050 & 100 &  & 4 & 0.040 & 100 &  \\\cline{2-9}
+			& 8 & 0.080 & 100 &  & 6 & 0.062 & 96.774 &  \\ \hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 5.}
 	\end{center}
 \end{table}
 \bigskip
+
+
+
+%% item (c)
+
+	Por último se midieron los resistores anteriores con los multimetros analógico y digitale respectivamente, en su función óhmetro. Las lecturas se encuentran volcadas sobre la \textit{Tabla 4}.
+
+
+% Tabla 4
+\begin{table}[!hbt]
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Resistor} & \textbf{Multímetro digital} & \textbf{Multímetro analógico} \\
+		\hline
+		$R_1 (100\Omega)$ & $100.5\Omega$ & $85\Omega$ \\
+		\hline
+		$R_2 (100k\Omega)$ & $99.2k\Omega$ & $100k\Omega$ \\
+		\hline
+	\end{tabular}
+	\caption{Valores de las resistencias medidas con los multímetros.}
+	\end{center}
+\end{table}
+
 
 
 %% Cuestionario
