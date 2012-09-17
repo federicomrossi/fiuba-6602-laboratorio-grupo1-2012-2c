@@ -140,7 +140,7 @@
 						    \hbox{\strut 100k$\Omega\pm5\%$ tolerancia (2 unidades)}
 						    \hbox{\strut 10M$\Omega\pm5\%$ tolerancia (1 unidad)}} \\
 		\hline
-		Resistencia variable & XXk$\Omega$ \\
+		Resistencia variable & 10k$\Omega$ \\
 		\hline
 		Multímetro analógico & \vbox{\hbox{\strut Marca: TRIPLETT }
 						    \hbox{\strut Modelo: 630-APLK }
@@ -158,7 +158,7 @@
 		Multímetro digital & \vbox{\hbox{\strut Marca: Brymen }
 						    \hbox{\strut Modelo: BM837RS }}\\
 		\hline
-		Fuente F4 DC (Negra) & Tensión entregada: 7V \\
+		Fuente F4 DC (Negra) & Tensión entregada: 7.07V \\
 		\hline
 		Cables & Banana-Cocodrilo\newline Cocodrilo-Cocodrilo \\
 		\hline
@@ -277,7 +277,7 @@
 \bigskip\bigskip
 
 
-\noindent En la \textit{Tabla 2} se pueden observar los valores medidos y calculados para este circuito. Para el calculo de las resistencias \textit{R} se ha utilizado la \textit{Ley de Ohm}:
+\noindent En la \textit{Tabla 2} se pueden observar los valores medidos y calculados para este circuito. Para el cálculo de las resistencias \textit{R} se ha utilizado la \textit{Ley de Ohm}:
 \medskip
 
 \begin{equation}
@@ -285,7 +285,42 @@
 \end{equation}
 \medskip
 
-\noindent mientras que el \textit{error relativo porcentual} se calculó como la suma de los errores relativos porcentuales de \textit{V} e \textit{I}. Para la medición de \textit{V} se utilizó el multímetro \textit{Brymen BM837RS}, por lo que el error relativo porcentual correspondiente a esta medición será:
+\noindent mientras que el \textit{error relativo porcentual} de cada resistor se ha calculado como la suma de los errores relativos porcentuales de \textit{V} e \textit{I}:
+\medskip
+
+\begin{equation}
+ 	\varepsilon_r\%(R) \approx \varepsilon_r\%(V) + \varepsilon_r\%(I)
+\end{equation}
+\bigskip
+
+
+% Tabla 2
+\begin{table}[!hbt]
+	\begin{center}
+
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
+			\multirow{5}{*}{\textbf{100$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 0.200 & 1.98 & 0.101 & 0.019 & 0.2 & 1.2 & 0.17 &  \\\cline{2-9}
+			& 0.397 & 3.94 & 0.101 & 0.037 & 0.4 & 3.2 & 0.13 &  \\\cline{2-9}
+			& 0.601 & 5.96 & 0.101 & 0.055 & 0.6 & 5.6 & 0.11 &  \\ \hline
+			\multirow{5}{*}{\textbf{100k$\Omega$}} 
+			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
+			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
+			& 2.00 & 0.0200 & 100 & 0.161 & 2.0 & 0.030 & 67 &  \\\cline{2-9}
+			& 5.00 & 0.0500 & 100 & 0.401 & 4.0 & 0.062 & 65 &  \\\cline{2-9}
+			& 8.00 & 0.0800 & 100 & 0.641 & 6.0 & 0.094 & 64 &  \\ \hline
+		\end{tabular}
+
+	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 4.}
+	\end{center}
+\end{table}
+\bigskip
+
+
+	En el caso de las mesuras con multímetros digitales, se han utilizado dos instrumentos de marcas diferentes. Para la medición de \textit{V} se utilizó el multímetro \textit{Brymen BM837RS}, por lo que el error relativo porcentual correspondiente a esta medición será:
 \medskip
 
 \begin{equation}
@@ -299,42 +334,22 @@
 \begin{equation}
  	\varepsilon_r\%(I) = 1\%\times I_{medido} + 2d\times10\mu A,
 \end{equation}
-\medskip
-
-
-% Tabla 2
-\begin{table}[!hbt]
-	\begin{center}
-
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
-			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
-			\multirow{5}{*}{\textbf{100$\Omega$}} 
-			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
-			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.200 & 1.98 & 0.101 &  & 0.2 & 1.2 & 0.17 &  \\\cline{2-9}
-			& 0.397 & 3.94 & 0.101 &  & 0.4 & 3.2 & 0.13 &  \\\cline{2-9}
-			& 0.601 & 5.96 & 0.101 &  & 0.6 & 5.6 & 0.11 &  \\ \hline
-			\multirow{5}{*}{\textbf{100k$\Omega$}} 
-			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
-			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2.00 & 0.0200 & 100 &  & 2.0 & 0.030 & 67 &  \\\cline{2-9}
-			& 5.00 & 0.0500 & 100 &  & 4.0 & 0.062 & 65 &  \\\cline{2-9}
-			& 8.00 & 0.0800 & 100 &  & 6.0 & 0.094 & 64 &  \\ \hline
-		\end{tabular}
-
-	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 4.}
-	\end{center}
-\end{table}
-\bigskip
-
-
-\noindent Por lo tanto, el \textit{error relativo porcentual} para cada resistor se obtendrá haciendo:
-
-\begin{equation}
- 	\varepsilon_r\%(R) \approx \varepsilon_r\%(V) + \varepsilon_r\%(I)
-\end{equation}
 \smallskip
 
+
+	Ahora bien, para la mesura con instrumentos analógicos se han utilizado dos multímetros \textit{TRIPLETT 630-APLK}. El error relativo porcentual correspondiente a la medición de \textit{V} con este instrumento resulta:
+
+\begin{equation}
+ 	\varepsilon_r\%(V) = 1,5\%\times V_{medido} + 2d\times10\mu A, [ TERMINAR ]
+\end{equation}
+\smallskip	
+
+\noindent mientras que dicho error correspondiente a la medición de \textit{I} resulta:
+
+\begin{equation}
+ 	\varepsilon_r\%(I) = 1,5\%\times I_{medido} + 2d\times10\mu A.  [ TERMINAR ]
+\end{equation}
+\medskip
 
 
 %% item (b)
@@ -351,7 +366,7 @@
 \bigskip\bigskip
 
 
-\noindent En la \textit{Tabla 3} se pueden observar los valores medidos y calculados para este último circuito. Para el cálculo de \textit{R} y del error relativo porcentual de esta se volvieron a utilizar las ecuaciones \textit{(1)}, \textit{(2)}, \textit{(3)} y \textit{(4)}.
+\noindent En la \textit{Tabla 3} se pueden observar los valores medidos y calculados para este último circuito. Para el cálculo de \textit{R} y del error relativo porcentual de esta se volvieron a utilizar las ecuaciones \textit{(1)} a la \textit{(6)}.
 \bigskip\medskip
 
 
@@ -359,20 +374,20 @@
 \begin{table}[!hbt]
 	\begin{center}
 
-		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
 			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.199 & 1.66 & 0.120 &  & 0.2 & 1.0 & 0.20 &  \\\cline{2-9}
-			& 0.401 & 3.35 & 0.120 &  & 0.4 & 2.6 & 0.15 &  \\\cline{2-9}
-			& 0.600 & 5.02 & 0.120 &  & 0.6 & 4.4 & 0.14 &  \\ \hline
+			& 0.199 & 1.66 & 0.120 & 0.019 & 0.2 & 1.0 & 0.20 &  \\\cline{2-9}
+			& 0.401 & 3.35 & 0.120 & 0.036 & 0.4 & 2.6 & 0.15 &  \\\cline{2-9}
+			& 0.600 & 5.02 & 0.120 & 0.054 & 0.6 & 4.4 & 0.14 &  \\ \hline
 			\multirow{5}{*}{\textbf{100k$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2.00 & 0.0200 & 100 &  & 2.0 & 0.020 & 100 &  \\\cline{2-9}
-			& 5.00 & 0.0500 & 100 &  & 4.0 & 0.040 & 100 &  \\\cline{2-9}
-			& 80.. & 0.0800 & 100 &  & 6.0 & 0.062 & 100 &  \\ \hline
+			& 2.00 & 0.020 & 100 & 0.161 & 2.0 & 0.020 & 100 &  \\\cline{2-9}
+			& 5.00 & 0.050 & 100 & 0.401 & 4.0 & 0.040 & 100 &  \\\cline{2-9}
+			& 8.00 & 0.080 & 100 & 0.641 & 6.0 & 0.062 & 100 &  \\ \hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 5.}
@@ -426,14 +441,14 @@
 \medskip
 
 	[ Colocar respuesta aquí ]
-\bigskip\bigskip
+\bigskip
 
 
 \textit{¿Qué nombre se le ocurriría poner a cada tipo de conexión?}
 \medskip
 
 	[ Colocar respuesta aquí ]
-\bigskip\bigskip
+\bigskip
 
 
 \textit{¿De qué manera se pueden aplicar los conceptos obtenidos en la parte (a) en la (b)?}
@@ -448,6 +463,37 @@
 \subsection{Parte 3}
 
 
+	Armaremos ahora el circuito de la \textit{Figura 6}. Para este se utilizarán la fuente de laboratorio \textit{F4} (la cual entrega una tensión de 7.07V continuos), el multímetro digital \textit{UNI-T Modelo UT30F} (en función de voltímetro), el multímetro digital \textit{Brymen BM837RS} (en función de amperímetro) y una resistencia variable de 10k$\Omega$.
+\bigskip
+
+
+% Figura 6
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.61\textwidth]{images/p3-item-a.jpg}
+	\caption{Circuito de medición directa.}
+\end{figure}
+\bigskip\bigskip
+
+
+\noindent Sobre este circuito, primeramente se realizó la medición de la tension de salida con la \textit{SW} abierta, es decir, en vacío. Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de V vs I dejó de ser lineal, adoptándose dicho valor de corriente como nominal. La curva obtenida en dicho procedimiento se muestra en la \textit{Figura X}. Con estos valores sensados podemos calcular el valor de \textit{Regulación de carga ($\eta_c$)}, el cual resulta:
+\bigskip
+
+
+\begin{equation}
+ 	\eta_c = {V_0 - V_{PC} \over V_0} = {7.07V - XXXX \over 7.07V} = \textbf{RESULTADO AQUÍ}
+\end{equation}
+\bigskip
+
+
+
+\textit{¿Qué sucedió al cargar la fuente?} \\
+
+\textit{Si es que hubo algún cambio, explique su origen} \\
+
+\textit{Explique qué idea le brinda la relación obtenida en el punto (d), acerca del comportamiento de la fuente.} \\
+
+\textit{Determine el valor de la resistencia serie de la fuente con la incerteza correspondiente.} \\
 
 % APÉNDICE
 
