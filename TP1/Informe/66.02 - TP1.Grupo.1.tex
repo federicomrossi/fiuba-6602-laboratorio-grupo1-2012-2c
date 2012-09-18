@@ -303,15 +303,15 @@
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.200 & 1.98 & 0.101 & 0.019 & 0.2 & 1.2 & 0.17 &  \\\cline{2-9}
-			& 0.397 & 3.94 & 0.101 & 0.037 & 0.4 & 3.2 & 0.13 &  \\\cline{2-9}
-			& 0.601 & 5.96 & 0.101 & 0.055 & 0.6 & 5.6 & 0.11 &  \\ \hline
+			& 0.200 & 1.98 & 0.101 & 2.60 & 0.2 & 1.2 & 0.17 &  \\\cline{2-9}
+			& 0.397 & 3.94 & 0.101 & 1.84 & 0.4 & 3.2 & 0.13 &  \\\cline{2-9}
+			& 0.601 & 5.96 & 0.101 & 1.58 & 0.6 & 5.6 & 0.11 &  \\ \hline
 			\multirow{5}{*}{\textbf{100k$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2.00 & 0.0200 & 100 & 0.161 & 2.0 & 0.030 & 67 &  \\\cline{2-9}
-			& 5.00 & 0.0500 & 100 & 0.401 & 4.0 & 0.062 & 65 &  \\\cline{2-9}
-			& 8.00 & 0.0800 & 100 & 0.641 & 6.0 & 0.094 & 64 &  \\ \hline
+			& 2.00 & 0.0200 & 100 & 101.1 & 2.0 & 0.030 & 67 &  \\\cline{2-9}
+			& 5.00 & 0.0500 & 100 & 41.1 & 4.0 & 0.062 & 65 &  \\\cline{2-9}
+			& 8.00 & 0.0800 & 100 & 26.1 & 6.0 & 0.094 & 64 &  \\ \hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 4.}
@@ -324,7 +324,7 @@
 \medskip
 
 \begin{equation}
- 	\varepsilon_r(V) = 0.08\times V_{medido} + 1d\times 1mV,
+ 	\varepsilon_r(V) = {0.08\%\times V_{medido} + 1d\times 1mV \over V_{medido}},
 \end{equation}
 \medskip
 
@@ -332,7 +332,7 @@
 \medskip
 
 \begin{equation}
- 	\varepsilon_r(I) = 1\times I_{medido} + 2d\times10\mu A,
+ 	\varepsilon_r(I) = {1\%\times I_{medido} + 2d\times10\mu A \over I_{medido}},
 \end{equation}
 \smallskip
 
@@ -340,14 +340,14 @@
 	Ahora bien, para la mesura con instrumentos analógicos se han utilizado dos multímetros \textit{TRIPLETT 630-APLK}. El error relativo porcentual correspondiente a la medición de \textit{V} con este instrumento resulta:
 
 \begin{equation}
- 	\varepsilon_r(V) = 1,5\times V_{medido} + 2d\times10\mu A, [ TERMINAR ]
+ 	\varepsilon_r(V) = {1.5\%\times V_{medido} + {1 \over 2}\times 0.2V \over V_{medido}}
 \end{equation}
 \smallskip	
 
 \noindent mientras que dicho error correspondiente a la medición de \textit{I} resulta:
 
 \begin{equation}
- 	\varepsilon_r(I) = 1,5\times I_{medido} + 2d\times10\mu A.  [ TERMINAR ]
+ 	\varepsilon_r(I) = {1.5\%\times I_{medido} + {1 \over 2}\times ??? \over I_{medido}}.  [ TERMINAR ]
 \end{equation}
 \medskip
 
@@ -379,15 +379,15 @@
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 0.199 & 1.66 & 0.120 & 0.019 & 0.2 & 1.0 & 0.20 &  \\\cline{2-9}
-			& 0.401 & 3.35 & 0.120 & 0.036 & 0.4 & 2.6 & 0.15 &  \\\cline{2-9}
-			& 0.600 & 5.02 & 0.120 & 0.054 & 0.6 & 4.4 & 0.14 &  \\ \hline
+			& 0.199 & 1.66 & 0.120 & 2.78 & 0.2 & 1.0 & 0.20 &  \\\cline{2-9}
+			& 0.401 & 3.35 & 0.120 & 1.90 & 0.4 & 2.6 & 0.15 &  \\\cline{2-9}
+			& 0.600 & 5.02 & 0.120 & 1.70 & 0.6 & 4.4 & 0.14 &  \\ \hline
 			\multirow{5}{*}{\textbf{100k$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
-			& 2.00 & 0.020 & 100 & 0.161 & 2.0 & 0.020 & 100 &  \\\cline{2-9}
-			& 5.00 & 0.050 & 100 & 0.401 & 4.0 & 0.040 & 100 &  \\\cline{2-9}
-			& 8.00 & 0.080 & 100 & 0.641 & 6.0 & 0.062 & 100 &  \\ \hline
+			& 2.00 & 0.020 & 100 & 101.1 & 2.0 & 0.020 & 100 &  \\\cline{2-9}
+			& 5.00 & 0.050 & 100 & 41.1 & 4.0 & 0.040 & 100 &  \\\cline{2-9}
+			& 8.00 & 0.080 & 100 & 26.1 & 6.0 & 0.062 & 100 &  \\ \hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos y calculados para el\\ circuito de la Figura 5.}
