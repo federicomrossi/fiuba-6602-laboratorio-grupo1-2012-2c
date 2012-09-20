@@ -534,15 +534,19 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
+	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} =$ \\
 \end{center}
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\times 0.18V+ |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times 0.332mA$ \\
+$= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta I_{pc}$\\
+\end{center}
+
+\begin{center}
+	$\varepsilon_r(R) = |{1\over 0.18V}|\times 2\times 7.07mV+ |{1  \over  (31.30mA)}| \times 0.332mA$ \\
 \end{center}
 
 \begin{equation}
-	\varepsilon_r(R) = \textbf{2.01FALTAAA$\Omega$} \\
+	\varepsilon_r(R) = \textbf{0.089} = \textbf{8.9\%} \\
 \end{equation}
 \bigskip\bigskip
 
@@ -551,7 +555,7 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \medskip
 
 \begin{center}
-	$R = (5.75 \pm FALTA)\Omega $ \\ \medskip
+	$R = (5.75 \pm 0.51)\Omega $ \\ \medskip
 	$\eta_c = (2.55 \pm 0.19)\% $ 
 \end{center}
 \bigskip\bigskip
@@ -623,15 +627,15 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \bigskip
 
 \begin{center}
-	$\varepsilon_r\%(\eta_c) = (|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\times 100\% $ \\
+	$\varepsilon_r\%(\eta_c) = (|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\times 100 $ \\
 \end{center}
 
 \begin{center}
-	$\varepsilon_r\%(\eta_c) = (|{1 \over 0.006V}| \times 1.166mV + |{-0.220V \over (0.006V)^2}| \times 90.6\mu V)\times 100\%$ \\
+	$\varepsilon_r\%(\eta_c) = (|{1 \over 0.006V}| \times 1.166mV + |{-0.220V \over (0.006V)^2}| \times 90.6\mu V)\times 100$ \\
 \end{center}
 
 \begin{equation}
-	\varepsilon_r\%(\eta_c) = \textbf{0.75\% CORROBORAR LOS DELTA }
+	\varepsilon_r\%(\eta_c) = \textbf{0.75\%}
 \end{equation}
 
 \bigskip\bigskip
@@ -655,11 +659,16 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \end{center}
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\times 0.18V+ |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times 0.332mA$ \\
+$= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta I_{pc}$\\
 \end{center}
 
+\begin{center}
+	$\varepsilon_r(R) = |{1\over 0.226V}|\times 2\times 0.091mV+ |{1  \over  (31.30mA)}| \times 0.332mA$ \\
+\end{center}
+
+
 \begin{equation}
-	\varepsilon_r(R) = \textbf{FALTAAA\%} \\
+	\varepsilon_r(R) = \textbf{0.011} =\textbf{1.1\%} \\
 \end{equation}
 \bigskip\bigskip
 
@@ -668,7 +677,7 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \medskip
 
 \begin{center}
-	$R = (5.75 \pm FALTA)\Omega $ \\ \medskip
+	$R = (5.75 \pm 0.06)\Omega $ \\ \medskip
 	$\eta_c = (2.55 \pm 0.19)\% $ 
 \end{center}
 \bigskip\bigskip
@@ -689,7 +698,8 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 % CONCLUSION
 \section{Conclusión}
 
-	Hemos transitado por varias experiencias y gracias a ellas hemos podido consolidar la idea de que los multímetros deben ser considerados como factores de incidencia y variabilidad a la hora de realizar mediciones. Es decir, uno debe ser conciente de que estos no son instrumentos ideales y de que los valores que se midan dependerán de cómo se configure la conexión ya que los mismos influirán en el funcionamiento del dispositivo a mesurar. 
+	Hemos transitado por varias experiencias y gracias a ellas hemos podido consolidar la idea de que los multímetros deben ser considerados como factores de incidencia y variabilidad a la hora de realizar mediciones. Es decir, uno debe ser conciente de que estos no son instrumentos ideales y de que los valores que se midan dependerán de cómo se configure la conexión ya que los mismos influirán en el funcionamiento del dispositivo a mesurar. \\
+\indent Además, hay que señalar la importancia  de tomar en cuenta, al momento de realizar las mediciones, la magnitud de los valores que se van a medir, y decidir si el instrumento elegido es el adecuado, ya que sin esta reflexión previa se puede desembocar en un error mucho mas grande del esperado.  
 
 
 
