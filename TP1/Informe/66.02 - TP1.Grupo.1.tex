@@ -105,19 +105,19 @@
 % OBJETIVOS
 \section{Objetivos}
 
-	El objetivo principal de la siguiente práctica consiste en estudiar el comportamiento y la influencia del multímetro (instrumento de medición) en circuitos donde la tensión y la corriente son constantes en el tiempo (circuitos con corriente continua). Particularmente se desea ver las diferencias que se dan al utilizar instrumentos analógicos o digitales
-
+	El objetivo principal de la práctica consiste en estudiar y analizar el comportamiento y la influencia del multímetro (instrumento de medición) en circuitos donde la tensión y la corriente son constantes en el tiempo (circuitos con corriente continua).  
+\bigskip
 
 
 
 % INTRODUCCIÓN
 \section{Introducción}
 
-	El desarrollo de la presente práctica de laboratorio consiste en... [ Completar introducción ]
+	El desarrollo de la presente práctica de laboratorio consiste en analizar la incidencia de los instrumentos de medición en los circuitos que son motivo de análisis. Particularmente, se observarán las diferencias que se dan al utilizar instrumentos analógicos y/o digitales, como así también se comprobará la gran influencia que tiene el error sistemático aportado por el instrumental. Se examinará además la conveniencia de emplear el método de conexión corta o larga en la medición. Por último, mediante distintos procedimientos, se analizará la regulación de carga de una fuente de tensión continua.
 	\par
-	Relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno relleno.
+	En caso de desearlo, puede obtenerse el presente informe en formato digital accediendo a la sección \textit{Downloads} del repositorio del grupo (\textit{http://code.google.com/p/fiuba-6602-laboratorio-grupo1-2012-2c}).
 
-\bigskip\bigskip
+\bigskip
 
 
 
@@ -157,6 +157,9 @@
 		\hline
 		Multímetro digital & \vbox{\hbox{\strut Marca: Brymen }
 						    \hbox{\strut Modelo: BM837RS }}\\
+		\hline
+		Fuente regulada & \vbox{\hbox{\strut Marca: Hewlett-Packard }
+						    \hbox{\strut Modelo: 721A }}\\
 		\hline
 		Fuente F4 DC (Negra) & Tensión entregada: 7.07V \\
 		\hline
@@ -447,6 +450,13 @@
 % DESARROLLO - PARTE 3
 \subsection{Parte 3}
 
+	En este último apartado nos concentraremos en observar los efectos de carga sobre una fuente, utilizando para ello dos métodos distintos de medición de la regulación de carga: \textit{método directo} y \textit{método diferencial}.
+\bigskip
+
+
+
+%% DESARROLLO - PARTE 3 - Método directo
+\subsubsection{Método directo}
 
 	Armaremos ahora el circuito de la \textit{Figura 6}. Para este se utilizarán la fuente de laboratorio \textit{F4} (la cual entrega una tensión de 7.07V continuos), el multímetro digital \textit{UNI-T Modelo UT30F} (en función de voltímetro), el multímetro digital \textit{Brymen BM837RS} (en función de amperímetro) y una resistencia variable de 10k$\Omega$.
 \bigskip
@@ -461,7 +471,7 @@
 \bigskip\bigskip
 
 
-\noindent Sobre este circuito, primeramente se realizó la medición de la tensión de salida con la \textit{SW} abierta, es decir, en vacío. Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de \textit{V vs I} dejó de ser lineal, adoptándose dicho valor de corriente como nominal. Dichos valores, junto a sus errores correspondientes, se muestran en la \textit{Tabla 5}.
+\noindent Sobre este circuito, primeramente se realizó la medición de la tensión de salida con la \textit{SW} abierta, es decir, la tensión de vacío. Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de \textit{V vs I} dejó de ser lineal, adoptándose dicho valor de corriente como nominal. Dichos valores, junto a sus errores correspondientes, se muestran en la \textit{Tabla 5}.
 \bigskip\bigskip
 
 
@@ -486,26 +496,31 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \bigskip
 
 \begin{equation}
- 	\eta_c = {V_0 - V_{PC} \over V_0} \times 100\%  = {7.07V - 6.89V \over 7.07V} \times 100\% = \textbf{2.55\%}
+ 	\eta_c = {V_0 - V_{PC} \over V_0} = {7.07V - 6.89V \over 7.07V} = \textbf{2.55\%}
 \end{equation}
 \bigskip
 
 
+\newpage
 \noindent siendo su error correspondiente el siguiente:
 \bigskip
 
 \begin{center}
-	$\varepsilon_r(\eta_c) = |{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0} = |{1 \over 7.07V}| \times \Delta V_{pc} + |{6.89V \over (7.07V)^2}| \times \Delta V_{0}$ \\
+	$\varepsilon_r\%(\eta_c) = (|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\times 100\% $ \\
+\end{center}
+
+\begin{center}
+	$\varepsilon_r\%(\eta_c) = (|{1 \over 7.07V}| \times 6.89mV + |{6.89V \over (7.07V)^2}| \times 7.07mV)\times 100\%$ \\
 \end{center}
 
 \begin{equation}
-	\varepsilon_r(\eta_c) = \textbf{\%}
+	\varepsilon_r\%(\eta_c) = \textbf{0.19\% CORROBORAR LOS DELTA }
 \end{equation}
 
 \bigskip\bigskip
 
 
-El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
+\noindent El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
 \bigskip
 
 \begin{equation}
@@ -522,10 +537,60 @@ El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
 	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
 \end{center}
 
+\begin{center}
+	$\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\times 0.18V+ |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times 0.332mA$ \\
+\end{center}
+
 \begin{equation}
-	\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\Delta V + |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times \Delta I_{pc} = \textbf{\%} \\
+	\varepsilon_r(R) = \textbf{2.01FALTAAA$\Omega$} \\
 \end{equation}
+\bigskip\bigskip
+
+
+\noindent Por lo tanto, la resistencia serie de la fuente y la regulación de carga resultan:
+\medskip
+
+\begin{center}
+	$R = (5.75 \pm FALTA)\Omega $ \\ \medskip
+	$\eta_c = (2.55 \pm 0.19)\% $ 
+\end{center}
+\bigskip\bigskip
+
+
+
+	Observando los resultados obtenidos podemos notar que, al cargar la fuente y al exigirle la entrega de una corriente cada vez mayor, la tensión entregada por esta disminuyó respecto de la tensión de vacío. Esto se debe a que las fuentes no son ideales, lo que significa que no tienen la capacidad de regular la tensión solicitada con independencia de la corriente que le sea solicitada (de todas maneras, existen integrados que permiten mantener constante la tensión, tales como los que se utilizan en las fuentes de computadoras).
+	\par
+	El valor de regulación de carga ($\eta_c$) da idea de la pendiente de descenso con la que disminuye la tensión con respecto a la corriente que se le esté exigiendo a la fuente. Por lo tanto, cuanto mayor sea el valor de regulación de carga, tanto peor será la fuente, ya que nos indica que no será capaz de mantenerse lo más cerca posible de su valor de tensión de vacío.
+\bigskip\bigskip\medskip
+
+ 
+
+
+%% DESARROLLO - PARTE 3 - Método diferencial
+\subsubsection{Método diferencial}
+
+	Por último, se pasará a armar el circuito de la \textit{Figura 7}. Para este se utilizarán la fuente de laboratorio \textit{F4} (la cual entrega una tensión de 7.07V continuos), el multímetro digital \textit{UNI-T Modelo UT30F} (en función de voltímetro), el multímetro digital \textit{Brymen BM837RS} (en función de amperímetro), una resistencia variable de 10k$\Omega$ y una fuente regulada \textit{HP 721A}.
+\bigskip
+
+
+
+\newpage
+
+% Figura 6
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.72\textwidth]{images/p3-item-g.jpg}
+	\caption{Circuito de medición diferencial.}
+\end{figure}
+\bigskip\bigskip
+
+
+
+\noindent Sobre este circuito, primeramente se realizó la medición de la tensión sobre el voltímetro con la \textit{SW} abierta, es decir, la tensión de vacío. Manteniendo la llave abierta, se varió la tensión de la fuente auxiliar \textit{$V_{aux}$} hasta lograr una lectura de cero volts sobre el voltímetro, con la mayor resolución posible. En caso de no poder alcanzarse el cero, como estrategia para eliminar el error sistemático se puede adoptar el valor más cercano posible a cero como tensión de referencia y luego hacer los calculos considerando dicha modificación. 
+	\par
+	Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de \textit{V vs I} dejó de ser lineal, adoptándose dicho valor de corriente como nominal. Dichos valores, junto a sus errores correspondientes, se muestran en la \textit{Tabla 6}.
 \bigskip\bigskip\bigskip
+
 
 
 % Tabla 6
@@ -545,16 +610,86 @@ El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
 
 
 
+Con estos valores sensados podemos calcular el valor de \textit{Regulación de carga ($\eta_c$)}, el cual resulta:
+\bigskip
 
+\begin{equation}
+ 	\eta_c = {V_0 - V_{PC} \over V_0} = {0.006V - (-0.220V) \over 0.006V} = \textbf{1.03\%}
+\end{equation}
+\bigskip
+
+
+\noindent siendo su error correspondiente el siguiente:
+\bigskip
+
+\begin{center}
+	$\varepsilon_r\%(\eta_c) = (|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\times 100\% $ \\
+\end{center}
+
+\begin{center}
+	$\varepsilon_r\%(\eta_c) = (|{1 \over 0.006V}| \times 1.166mV + |{-0.220V \over (0.006V)^2}| \times 90.6\mu V)\times 100\%$ \\
+\end{center}
+
+\begin{equation}
+	\varepsilon_r\%(\eta_c) = \textbf{0.75\% CORROBORAR LOS DELTA }
+\end{equation}
 
 \bigskip\bigskip
-\textit{¿Qué sucedió al cargar la fuente?} \\
 
-\textit{Si es que hubo algún cambio, explique su origen} \\
 
-\textit{Explique qué idea le brinda la relación obtenida en el punto (d), acerca del comportamiento de la fuente.} \\
+\noindent El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
+\bigskip
 
-\textit{Determine el valor de la resistencia serie de la fuente con la incerteza correspondiente.} \\
+\begin{equation}
+	R = {V_{0} - V_{pc} \over I_{pc}} = {7.07V - 6.89V \over 31.30mA} = \textbf{5.75$\Omega$} \\
+\end{equation}
+\bigskip
+
+
+\noindent siendo su error correspondiente el siguiente:
+\bigskip
+
+
+\begin{center}
+	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
+\end{center}
+
+\begin{center}
+	$\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\times 0.18V+ |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times 0.332mA$ \\
+\end{center}
+
+\begin{equation}
+	\varepsilon_r(R) = \textbf{FALTAAA\%} \\
+\end{equation}
+\bigskip\bigskip
+
+
+\noindent Por lo tanto, la resistencia serie de la fuente y la regulación de carga resultan:
+\medskip
+
+\begin{center}
+	$R = (5.75 \pm FALTA)\Omega $ \\ \medskip
+	$\eta_c = (2.55 \pm 0.19)\% $ 
+\end{center}
+\bigskip\bigskip
+
+
+
+
+
+%% DESARROLLO - PARTE 3 - Diferencias entre métodos
+\subsubsection{Diferencias entre métodos}
+
+	Los resultados de los procedimientos, como puede notarse, no poseen gran disparidad. Sin embargo, si uno observa las incertezas, se puede advertir que es allí en donde los métodos difieren. Claramente en el \textit{método diferencial} se introduce menos error debido a que el error sistemático es menos significativo, es decir, se reduce. La diferencia de incertezas reside en que en el circuito medido por el método diferencial no se calcula la resta de los valores de tensión en vacío y tensión de plena carga que aparecen en el numerador de la expresión de regulación de carga de la \textit{Ecuación 7}. Por esta razón es que podemos concluir que el \textit{método diferencial} es más exacto que el \textit{método directo}.
+\bigskip\bigskip\bigskip
+
+
+
+
+% CONCLUSION
+\section{Conclusión}
+
+	Hemos transitado por varias experiencias y gracias a ellas hemos podido consolidar la idea de que los multímetros deben ser considerados como factores de incidencia y variabilidad a la hora de realizar mediciones. Es decir, uno debe ser conciente de que estos no son instrumentos ideales y de que los valores que se midan dependerán de cómo se configure la conexión ya que los mismos influirán en el funcionamiento del dispositivo a mesurar. 
 
 
 
