@@ -300,7 +300,7 @@
 	\begin{center}
 
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \hline
-			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
+			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{c|}{\textbf{Multímetro analógico}} \\ \hline
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
@@ -380,7 +380,7 @@
 	\begin{center}
 
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
-			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{|c|}{\textbf{Multímetro analógico}} \\ \hline
+			\multicolumn{5}{|c|}{\textbf{Multímetro digital}} & \multicolumn{4}{c|}{\textbf{Multímetro analógico}} \\ \hline
 			\multirow{5}{*}{\textbf{100$\Omega$}} 
 			& \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} & \textbf{V} & \textbf{I} & \textbf{R} & \textbf{${\Delta R \over R}$} \\\cline{2-9}
 			& V & mA & k$\Omega$ & \% & V & mA & k$\Omega$ & \% \\\cline{2-9}
@@ -461,17 +461,93 @@
 \bigskip\bigskip
 
 
-\noindent Sobre este circuito, primeramente se realizó la medición de la tension de salida con la \textit{SW} abierta, es decir, en vacío. Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de V vs I dejó de ser lineal, adoptándose dicho valor de corriente como nominal. La curva obtenida en dicho procedimiento se muestra en la \textit{Figura X}. Con estos valores sensados podemos calcular el valor de \textit{Regulación de carga ($\eta_c$)}, el cual resulta:
+\noindent Sobre este circuito, primeramente se realizó la medición de la tensión de salida con la \textit{SW} abierta, es decir, en vacío. Luego se cerró la llave y se varió la resistencia hasta que la recta decreciente de \textit{V vs I} dejó de ser lineal, adoptándose dicho valor de corriente como nominal. Dichos valores, junto a sus errores correspondientes, se muestran en la \textit{Tabla 5}.
+\bigskip\bigskip
+
+
+% Tabla 5
+\begin{table}[!hbt]
+	\begin{center}
+
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+			\multicolumn{4}{|c|}{\textbf{Llave SW abierta}} & \multicolumn{4}{c|}{\textbf{Llave SW cerrada}} \\ \hline
+			\textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} & \textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} \\\cline{1-8}
+			0 &  & 7.07 &  & 31.30 &  & 6.89 &  \\\cline{1-8}
+		\end{tabular}
+
+	\caption{Tabla de valores medidos por método directo.}
+	\end{center}
+\end{table}
 \bigskip
 
 
+
+Con estos valores sensados podemos calcular el valor de \textit{Regulación de carga ($\eta_c$)}, el cual resulta:
+\bigskip
+
 \begin{equation}
- 	\eta_c = {V_0 - V_{PC} \over V_0} = {7.07V - XXXX \over 7.07V} = \textbf{RESULTADO AQUÍ}
+ 	\eta_c = {V_0 - V_{PC} \over V_0} \times 100\%  = {7.07V - 6.89V \over 7.07V} \times 100\% = \textbf{2.55\%}
 \end{equation}
 \bigskip
 
 
+\noindent siendo su error correspondiente el siguiente:
+\bigskip
 
+\begin{center}
+	$\varepsilon_r(\eta_c) = |{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0} = |{1 \over 7.07V}| \times \Delta V_{pc} + |{6.89V \over (7.07V)^2}| \times \Delta V_{0}$ \\
+\end{center}
+
+\begin{equation}
+	\varepsilon_r(\eta_c) = \textbf{\%}
+\end{equation}
+
+\bigskip\bigskip
+
+
+El valor de la resistencia serie de la fuente se obtiene de la siguiente manera:
+\bigskip
+
+\begin{equation}
+	R = {V_{0} - V_{pc} \over I_{pc}} = {7.07V - 6.89V \over 31.30mA} = \textbf{5.75$\Omega$} \\
+\end{equation}
+\bigskip
+
+
+\noindent siendo su error correspondiente el siguiente:
+\bigskip
+
+
+\begin{center}
+	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
+\end{center}
+
+\begin{equation}
+	\varepsilon_r(R) = |{1\over 31.30mA \times 5.75\Omega}|\times 2\Delta V + |{(7.07V-6.89V)  \over  (31.30mA)^2  \times 5.75\Omega}| \times \Delta I_{pc} = \textbf{\%} \\
+\end{equation}
+\bigskip\bigskip\bigskip
+
+
+% Tabla 6
+\begin{table}[!hbt]
+	\begin{center}
+
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
+			\multicolumn{4}{|c|}{\textbf{Llave SW abierta}} & \multicolumn{4}{c|}{\textbf{Llave SW cerrada}} \\ \hline
+			\textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} & \textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} \\\cline{1-8}
+			 &  &  &  &  &  &  &  \\\cline{1-8}
+		\end{tabular}
+
+	\caption{Tabla de valores medidos por método diferencial.}
+	\end{center}
+\end{table}
+\bigskip
+
+
+
+
+
+\bigskip\bigskip
 \textit{¿Qué sucedió al cargar la fuente?} \\
 
 \textit{Si es que hubo algún cambio, explique su origen} \\
@@ -479,6 +555,9 @@
 \textit{Explique qué idea le brinda la relación obtenida en el punto (d), acerca del comportamiento de la fuente.} \\
 
 \textit{Determine el valor de la resistencia serie de la fuente con la incerteza correspondiente.} \\
+
+
+
 
 % APÉNDICE
 
