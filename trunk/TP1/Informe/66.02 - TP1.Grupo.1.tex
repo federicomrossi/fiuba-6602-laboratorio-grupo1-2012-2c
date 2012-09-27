@@ -437,7 +437,7 @@
 	\par
 	En el \textit{circuito B}, al estar el amperímetro conectado en serie con la resistencia, la corriente medida es la que circula por la resistencia. Sin embargo, como el voltímetro mide la caída de tensión sobre el amperímetro y la resistencia, teniendo en cuenta que los instrumentos no son ideales, entonces en el amperímetro se registra una caída de tensión, lo que eventualmente es causa de errores en las mediciones. En este caso decimos que la corriente se encuentra bien medida, mas no así la tensión.
 	\par
-	Estos dos circuitos, como se puede observar, difieren en la configuración con que se conectan los instrumentos. Como hemos mencionado en los párrafos anteriores, en uno es posible medir de manera correcta la tensión pero resultando una mala medición de la corriente, mientras que en el otro se da el caso inverso. Por esta razón, a la configuración del \textit{circuito A} se la denomina \textit{conexión corta}, y a la configuración del \textit{circuito B} se la conoce como \textit{conexión larga}.
+	Estos dos circuitos, como se puede observar, difieren en la configuración con que se conectan los instrumentos. Como hemos mencionado en los párrafos anteriores, en uno es posible medir de manera correcta la tensión pero resultando una mala medición de la corriente, mientras que en el otro se da el caso inverso. Por esta razón, a la configuración del \textit{circuito A} se la denomina \textit{conexión corta}, y a la configuración del \textit{circuito B} se la conoce como \textit{conexión larga}. En ambos casos, los valores de la resistencia medida no es exacto: en el caso de \textit{conexión corta}, el valor obtenido es menor a lo esperado; y en el caso de la \textit{conexión larga} el resultado da mayor a lo esperado. Estas discrepancias no se deben a errores sistemáticos, si no a las dispociones mencionadas de los instrumentos en los circuitos que alteran los valores de corriente y tensión medididos.
 	\par
 	En las mesuras se puede observar la diferencia de exactitud de medición de los multímetros digitales en comparación con los multímetros analógicos utilizados. En el caso en el que se utilizó la resistencia de $100k\Omega$ se puede ver que los errores no difieren en gran medida, a consecuencia de que la corriente medida por el amperímetro digital es muy pequeña para la escala provista, y por eso el error relativo es considerable.
 	\par
@@ -482,7 +482,7 @@
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
 			\multicolumn{4}{|c|}{\textbf{Llave SW abierta}} & \multicolumn{4}{c|}{\textbf{Llave SW cerrada}} \\ \hline
 			\textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} & \textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} \\\cline{1-8}
-			0 & 0 & 7.04 & 0.09 & 109 & 1.38 & 6.41 & 0.1 \\\cline{1-8}
+			0 & 0 & 7.04 & 0.22 & 109 & 1.38 & 6.41 & 0.24 \\\cline{1-8}
 		\end{tabular}
 
 	\caption{Tabla de valores medidos por método directo.}
@@ -506,15 +506,15 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \bigskip
 
 \begin{center}
-	$\varepsilon_r\%(\eta_c) = {(|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\over \eta_c}\times 100 $ \\
+	$\Delta(\eta_c) = (|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0})\times 100 $ \\
 \end{center}
 
 \begin{center}
-	$\varepsilon_r\%(\eta_c) = {(|{1 \over 7.04V}| \times 6.63mV + |{6.41V \over (7.04V)^2}| \times 6.13mV)\over \eta_c}\times 100$ \\
+	$\Delta(\eta_c) = (|{1 \over 7.04V}| \times 16mV + |{6.41V \over (7.04V)^2}| \times 16mV)\times 100$ \\
 \end{center}
 
 \begin{equation}
-	\varepsilon_r\%(\eta_c) = \textbf{1.90\%}
+	\Delta(\eta_c) = \textbf{0.43\%}
 \end{equation}
 
 \bigskip\bigskip
@@ -534,7 +534,7 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} =$ \\
+	$\Delta(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} =$ \\
 \end{center}
 
 \begin{center}
@@ -542,11 +542,11 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 \end{center}
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over 0.63V}|\times 2\times 6.13mV+ |{1  \over  (109mA)}| \times 1.51mA$ \\
+	$\Delta(R) = |{1\over 0.63V}|\times 2\times 16mV+ |{1  \over  (109mA)}| \times 1.51mA$ \\
 \end{center}
 
 \begin{equation}
-	\varepsilon_r(R) = \textbf{0.033} \equiv \textbf{3.33\%} \\
+	\Delta(R) = \textbf{$0.1 \Omega$}\\
 \end{equation}
 \bigskip\bigskip
 
@@ -555,8 +555,8 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 \medskip
 
 \begin{center}
-	$R = (5.8 \pm 0.2)\Omega $ \\ \medskip
-	$\eta_c = (8.95 \pm 1.90)\% $ 
+	$R = (5.8 \pm 0.1)\Omega $ \\ \medskip
+	$\eta_c = (8.95 \pm 0.43)\% $ 
 \end{center}
 \bigskip\bigskip
 
@@ -604,7 +604,7 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \hline
 			\multicolumn{4}{|c|}{\textbf{Llave SW abierta}} & \multicolumn{4}{c|}{\textbf{Llave SW cerrada}} \\ \hline
 			\textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} & \textbf{I [mA]} & \textbf{$\varepsilon_{\%}$(I)} & \textbf{V [V]} & \textbf{$\varepsilon_{\%}$(V)} \\\cline{1-8}
-			0 & 0 & 0.013 & 0.84 & 114.4 & 1.38 & -0.807 & 0.20 \\\cline{1-8}
+			0 & 0 & 0.013 & 0.96 & 114.4 & 1.38 & -0.807 & 0.20 \\\cline{1-8}
 		\end{tabular}
 
 	\caption{Tabla de valores medidos por método diferencial.}
@@ -627,16 +627,21 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 \bigskip
 
 \begin{center}
-	$\varepsilon_r\%(\eta_c) = {(|{1 \over V_{0}}| \times \Delta V_{pc} + |{V_{pc} \over V_{0}^2}| \times \Delta V_{0} \over \eta_c})\times 100 $ \\
+	$\varepsilon_r\%(\eta_c) = \varepsilon_r\%(V_{0} - V_{pc}) + \varepsilon_r\%(V_{0})$ 
+\end{center}
+\begin{center}	
+	$\varepsilon_r\%(\eta_c) = \varepsilon_r\%(V_{pc}) + 2 \times \varepsilon_r\%(V_{0})$
+\end{center}	
+\begin{center}	
+	$\Delta(\eta_c) = {\eta_c \times \varepsilon_r\%(\eta_c) \over 100}$
+\end{center}	
+\begin{center}	
+	$\Delta(\eta_c) = {(0.20 + 2 \times 0.96)\over 100} \times 1.02 \%$
+\end{center}	
+\begin{center}	
+	$\Delta(\eta_c) = \textbf{0.03\%}$\\
 \end{center}
 
-\begin{center}
-	$\varepsilon_r\%(\eta_c) = {(|{1 \over 0.013V}| \times 0.11mV + |{0.807V \over (0.013V)^2}| \times 1.65mV) \over \eta_c}\times 100$ \\
-\end{center}
-
-\begin{equation}
-	\varepsilon_r\%(\eta_c) = \textbf{?\%}
-\end{equation}
 
 \bigskip\bigskip
 
@@ -655,7 +660,7 @@ Con estos valores sensados podemos calcular el valor de \textit{Regulación de c
 
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
+	$\Delta(R) = |{1\over I_{pc} \times R}|\times 2\Delta V + |{(V_{0}-V_{pc})  \over  I_{pc}^2  \times R}| \times \Delta I_{pc} $ \\
 \end{center}
 
 \begin{center}
@@ -663,12 +668,12 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 \end{center}
 
 \begin{center}
-	$\varepsilon_r(R) = |{1\over 0.82V}|\times 2\times ?mV+ |{1  \over  (114.4mA)}| \times 1.57mA$ \\
+	$\Delta(R) = |{1\over 0.82V}|\times 2\times 125\mu V + |{1  \over  (114.4mA)}| \times 1.57mA$ \\
 \end{center}
 
 
 \begin{equation}
-	\varepsilon_r(R) = \textbf{?} \equiv \textbf{?\%} \\
+	\Delta(R) = \textbf{$0.02 \Omega$}\\
 \end{equation}
 \bigskip\bigskip
 
@@ -677,8 +682,8 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 \medskip
 
 \begin{center}
-	$R = (7.17 \pm 0.06)\Omega $ \\ \medskip
-	$\eta_c = (1.02 \pm )\% $ 
+	$R = (7.17 \pm 0.02)\Omega $ \\ \medskip
+	$\eta_c = (1.02 \pm 0.03)\% $ 
 \end{center}
 \bigskip\bigskip
 
