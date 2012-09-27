@@ -125,7 +125,7 @@
 % MATERIALES UTILIZADOS
 \section{Materiales utilizados}
 
-	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
+	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice B}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
 \bigskip\bigskip
 
 
@@ -184,8 +184,8 @@
 % DESARROLLO - PARTE 1
 \subsection{Parte 1}
 
-	Comencemos observando dos circuitos simples (\textit{Figura 1}). En estos se encuentran presentes los bornes A y B, sobre los cuales mediremos la tensión. En el caso de la \textit{Figura 1.a} se espera que idealmente, es decir, para una resistencia infinita del voltímetro, se lea una tensión de 9V sobre este último. Para el circuito de la \textit{Figura 1.b} también se espera que midamos 9V entre los bornes ya que estamos midiendo directamente la salida de la fuente.
-\bigskip
+	Comencemos observando dos circuitos simples (\textit{Figura 1}). En estos se encuentran presentes los bornes A y B, sobre los cuales mediremos la tensión. En el caso de la \textit{Figura 1.a} se espera que idealmente\footnote{Los valores ideales que se esperan registrar se han obtenido mediante simulaciones hechas en el software \textit{Proteus}. Estas simulaciones se muestran en el \textit{Apéndice A}.}, es decir, para una resistencia infinita del voltímetro, se lea una tensión de 9V sobre este último. Para el circuito de la \textit{Figura 1.b} también se espera que midamos 9V entre los bornes ya que estamos midiendo directamente la salida de la fuente.
+\medskip
 
 % Figura 1
 \begin{figure}[h]
@@ -225,7 +225,7 @@
 
 
 \newpage
-	En las mediciones hechas con ambos multímetros se puede observar que con el multímetro analógico los valores de la tensión son más bajos que con el multímetro digital. Notar que en el \textbf{Circuito (a)} se aprecia una mayor diferencia en la tensión medida que en el \textbf{Circuito (b)}.
+	En las mediciones hechas con ambos multímetros se puede observar que con el multímetro analógico los valores de la tensión son más bajos que con el multímetro digital, siendo estos últimos mas próximos a los valores ideales esperados. Notar que en el \textbf{Circuito (a)} se aprecia una mayor diferencia en la tensión medida que en el \textbf{Circuito (b)}.
 	\par
 	Estas variaciones se deben a que las resistencias internas de los instrumentos son diferentes. Idealmente, estas resistencias internas son infinitas, de tal modo que por el voltímetro no pase corriente. Pero en la realidad, esto es imposible.
 	\par
@@ -565,7 +565,7 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 	Observando los resultados obtenidos podemos notar que, al cargar la fuente y al exigirle la entrega de una corriente cada vez mayor, la tensión entregada por esta disminuyó respecto de la tensión de vacío. Esto se debe a que las fuentes no son ideales, lo que significa que no tienen la capacidad de regular la tensión solicitada con independencia de la corriente que le sea solicitada (de todas maneras, existen integrados que permiten mantener constante la tensión, tales como los que se utilizan en las fuentes de computadoras).
 	\par
 	El valor de regulación de carga ($\eta_c$) da idea de la pendiente de descenso con la que disminuye la tensión con respecto a la corriente que se le esté exigiendo a la fuente. Por lo tanto, cuanto mayor sea el valor de regulación de carga, tanto peor será la fuente, ya que nos indica que no será capaz de mantenerse lo más cerca posible de su valor de tensión de vacío.
-\bigskip\bigskip\medskip
+\bigskip\bigskip
 
  
 
@@ -580,7 +580,7 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 
 \newpage
 
-% Figura 6
+% Figura 7
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.72\textwidth]{images/p3-item-g.jpg}
@@ -690,7 +690,7 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 \subsubsection{Diferencias entre métodos}
 
 	Los resultados de los procedimientos, como puede notarse, no poseen gran disparidad. Sin embargo, si uno observa las incertezas, se puede advertir que es allí en donde los métodos difieren. Claramente en el \textit{método diferencial} se introduce menos error debido a que el error sistemático es menos significativo, es decir, se reduce. La diferencia de incertezas reside en que en el circuito medido por el método diferencial no se calcula la resta de los valores de tensión en vacío y tensión de plena carga que aparecen en el numerador de la expresión de regulación de carga de la \textit{Ecuación 7}. Por esta razón es que podemos concluir que el \textit{método diferencial} es más exacto que el \textit{método directo}.
-\bigskip\bigskip\bigskip
+\bigskip\bigskip\medskip
 
 
 
@@ -704,12 +704,91 @@ $= |{1\over V_{0} - V_{pc}}|\times 2\Delta V + |{1 \over  I_{pc}}| \times \Delta
 
 
 
-% APÉNDICE
+% APÉNDICE A
 
 \newpage
 \vspace*{4cm}
 \begin{center}
-	\textbf{\Huge{Apéndice}} \\
+	\textbf{\Huge{Apéndice A}} \\
+	\bigskip\bigskip
+	\Large{\textit{``Simulaciones''}}
+\end{center}
+
+
+\newpage
+
+	En el presente apéndice se muestran los resultados obtenidos al simular los circuitos propuestos en la \textit{sección 4.1}. Dichas simulaciones fueron realizadas con el software \textit{Proteus}\footnote{Para mas información sobre el software \textit{Proteus} puede dirijirse a \textit{http://www.labcenter.com/index.cfm}}.
+\bigskip \bigskip
+
+
+\subsection*{Simulación de los circuitos de la \textit{Figura 1}.}
+\medskip
+
+	En la \textit{Figura 8} se muestra el \textit{circuito (a)} de la \textit{Figura 1} armado en el simulador. Una vez iniciada la simulación, tal como se puede advertir, se han registrado los 9V esperados. Vale aclarar que se ha configurado el voltímetro utilizado para comportarse como un instrumento ideal. Para lograr esto se le ha seteado una resistencia interna muy grande.
+\medskip
+
+
+% Figura 8
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.43\textwidth]{images/apA-fig1-circ-a.jpg}
+	\caption{Simulación del circuito (a) de la Figura 1.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Para el caso del \textit{circuito (b)} de la \textit{Figura 1} se ha armado en el simulador el circuito tal como se muestra en la \textit{Figura 9}. Al realizar la simulación, como se puede ver, se han obtenido nuevamente 9V.
+\bigskip
+
+	
+% Figura 9
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.415\textwidth]{images/apA-fig1-circ-b.jpg}
+	\caption{Simulación del circuito (b) de la Figura 1.}
+\end{figure}
+\bigskip\bigskip
+
+
+
+\subsection*{Simulación del circuitos de la \textit{Figura 3}.}
+\medskip
+
+	En la \textit{Figura 10} se muestra el circuito de la \textit{Figura 3} armado en el simulador. Una vez iniciada la simulación, tal como se puede advertir, se han registrado los 6V esperados.
+
+\newpage
+% Figura 10
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.549\textwidth]{images/apA-fig2.jpg}
+	\caption{Simulación del circuito de la Figura 3.}
+\end{figure}
+\bigskip
+
+
+
+
+% APÉNDICE B
+
+\newpage
+\vspace*{4cm}
+\begin{center}
+	\textbf{\Huge{Apéndice B}} \\
+	\bigskip\bigskip
+	\Large{\textit{``Correcciones''}}
+\end{center}
+
+
+
+
+
+
+% APÉNDICE C
+
+\newpage
+\vspace*{4cm}
+\begin{center}
+	\textbf{\Huge{Apéndice C}} \\
 	\bigskip\bigskip
 	\Large{\textit{``Hojas de datos de instrumentos de medición''}}
 \end{center}
