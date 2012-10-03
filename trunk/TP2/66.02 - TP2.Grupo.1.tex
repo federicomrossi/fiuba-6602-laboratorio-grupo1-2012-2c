@@ -220,20 +220,46 @@
 
 
 
-
-
 % DESARROLLO - PARTE B
 \subsection{Parte B}
 
+En esta sección del trabajo práctico se comprobó la respuesta en frecuencias de tres tipos distintos de multímetros, es decir, el ancho de banda para el cual las mediciones de los multímetros caen dentro del rango de incertidumbre propuesto por el fabricante.
+
+
+Para realizar las mediciones, se dispuso del mismo circuito que en la \textbf{Parte A}, y con los distintos voltímetro midiendo la salida del generador en paralelo. Además se conectó el circuito a un contador, para una medida más precisa de la frecuencia.
+
+En una primera instancia, se midió un valor de tensión de referencia, con una frecuencia dentro de las establecidas por los fabricantes. De este modo se determinó un valor de \textbf{$V_{máx}$} y de \textbf{$V_{min}$}, y los valores medidos dentro de este rango se consideraron como medidas válidas. A partir de esto, se paso a determinar el ancho de banda de los instrumentos.
+\bigskip
+
+Se utilizaron 3 tipos de voltímetros:
+\bigskip
+
+\begin{table}[!hbt]
+	\begin{center}
+	\begin{tabular}{|c|c|}\hline
+	\textbf{Voltímetro} & \textbf{Ancho de banda(manual)}\\ \hline
+    DVM &  (40 - 400)$Hz$\\ \hline
+    True - RMS &  (100 - 100k)$Hz$\\ \hline
+    Analógico &  (10 - ???)$Hz$\\ \hline
+	\end{tabular}
+	\caption{Tabla de los anchos de banda provistos por el fabricante.}
+	\end{center}
+\end{table}
+
 \subsubsection{Multímetro DVM}
 
-Incertidumbre:
+La incertidumbre para la escala utilizada es:
 
 \begin{equation}
  	\Delta(V) = 1\%\times V_{medido} + 3d\times 10mV,
 \end{equation}
 \medskip
 
+Los valores medidos son:
+
+\begin{center}
+$V_{ref} = (3.39 \pm 0.04) V$
+\end{center}
 
 \begin{table}[!hbt]
 	\begin{center}
@@ -251,54 +277,81 @@ Incertidumbre:
 	410 & 3.39 & 0.06\\	 \hline
 	500 & 3.38 & 0.06\\ \hline
 	600 & 3.38 & 0.06\\ \hline
-	100000 & 1.91 &	0.05\\ \hline
 	\end{tabular}
-	\caption{Tabla del voltímetro DVM}
+	\caption{Tabla de los valores medidos con el voltímetro DVM}
 	\end{center}
 \end{table}
 \bigskip
 
 
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.80\textwidth]{images/tablaDVM.png}
+\caption{Gráfico de los valores medidos con el voltímetro DVM.}
+\end{figure}
+
+
+
 \subsubsection{Multímetro True-RMS}
 
-Incertidumbre:
+
+La incertidumbre para la escala utilizada es:
 
 \begin{equation}
  	\Delta(V) = 1\%\times V_{medido} + 3d\times 1mV.
 \end{equation}
 \medskip
 
+Los valores medidos son:
+
+\begin{center}
+$V_{ref} = (3.420 \pm 0.037) V$
+\end{center}
 
 \begin{table}[!hbt]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}\hline
 	\textbf{f(Hz)} & \textbf{V(Volts)} & \textbf{$\Delta$V(Volts)} \\ \hline
-	80 & 3.417 & 0.04\\ \hline
-    90 & 3.418 & 0.04\\ \hline
-    100 & 3.419 & 0.04\\ \hline
-	110 & 3.423 & 0.04\\ \hline
-	440 & 3.419 & 0.04\\ \hline
-	450 & 3.420 & 0.04\\ \hline
-	460 & 3.420 & 0.04\\ \hline
-	990 & 3.393 & 0.04\\ \hline
-	1000 & 3.398 & 0.04\\ \hline
-	1010& 3.396 & 0.04\\ \hline
-	1500 & 3.385 & 0.04\\ \hline
-	100000 & 0.170 & 0.04\\ \hline
+	80 & 3.417 & 0.037\\ \hline
+    90 & 3.418 & 0.037\\ \hline
+    100 & 3.419 & 0.037\\ \hline
+	110 & 3.423 & 0.037\\ \hline
+	440 & 3.419 & 0.037\\ \hline
+	450 & 3.420 & 0.037\\ \hline
+	460 & 3.420 & 0.037\\ \hline
+	990 & 3.393 & 0.037\\ \hline
+	1000 & 3.398 & 0.037\\ \hline
+	1010& 3.396 & 0.037\\ \hline
+	1500 & 3.385 & 0.037\\ \hline
+	1700 & 3.379 & 0.037\\ \hline
 	\end{tabular}
-	\caption{Tabla del voltímetro True-RMS}
+	\caption{Tabla de los valores medidos con el voltímetro True-RMS}
 	\end{center}
 \end{table}
 \bigskip
 
-\subsubsection*{Multímetro Analógico}
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.80\textwidth]{images/tablaTRUE.png}
+\caption{Gráfico de los valores medidos con el voltímetro True-RMS.}
+\end{figure}
+\bigskip
 
-Incertidumbre:
+\subsubsection{Multímetro Analógico}
+
+
+La incertidumbre para la escala utilizada es:
 
 \begin{equation}
  	\varepsilon_r(V) = 3\%\times V_{medido} + {1 \over 2}\times 0.2V
 \end{equation}
 \medskip
+
+Valores medidos:
+
+\begin{center}
+$V_{ref} = (3.4 \pm 0.2) V$
+\end{center}
 
 \begin{table}[!hbt]
 	\begin{center}
@@ -307,11 +360,35 @@ Incertidumbre:
 	100 & 3.4 & 0.2\\ \hline
     213000 & 3.2 & 0.2\\ \hline
     758000 & 3.0 & 0.2\\ \hline
-	8.33M & 1.0 & 0.2\\ \hline
 	\end{tabular}
-	\caption{Tabla del voltímetro Analógico}
+	\caption{Tabla de los valores obtenidos con el voltímetro analógico}
 	\end{center}
 \end{table}
+\bigskip
+
+
+\begin{figure}[h!tbp]
+\centering
+\includegraphics[width=0.80\textwidth]{images/tablaANA.png}
+\caption{Gráfico de los valores medidos con el voltímetro analógico.}
+\end{figure}
+\bigskip
+
+Por lo tanto, los valores aproximados de los anchos de banda son:
+
+\begin{table}[!hbt]
+	\begin{center}
+	\begin{tabular}{|c|c|}\hline
+	\textbf{Voltímetro} & \textbf{Ancho de banda(experimentales)}\\ \hline
+    DVM &  $\sim$ (30 - 900)$Hz$\\ \hline
+    True - RMS &  $\sim$ (30 - 1500)$Hz$\\ \hline
+    Analógico & $\sim$ (10 - 213000)$Hz$\\ \hline
+	\end{tabular}
+	\caption{Tabla de los anchos de banda experimentales}
+	\end{center}
+\end{table}
+
+
 
 % APÉNDICE A
 
