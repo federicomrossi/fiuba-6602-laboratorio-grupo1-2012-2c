@@ -174,6 +174,41 @@
 % DESARROLLO - PARTE A
 \subsection{Parte A}
 
+En esta parte del trabajo práctico, se hicieron distintas mediciones con el fin de comparar las diferentes formas que tienen los multímetros (en modo voltímetro) de calcular los valores de tensión.\\
+\indent Para esto, se utilizó un osciloscopio, un generador de funciones, una resistencia de 47 $\Omega$ y tres multímetros diferentes: uno analógico, uno de valor medio, y uno de valor medio verdadero.\\
+\indent El circuito armado consitió en el generador de funciones, la resistencia y el osciloscopio conectados en paralelo. También en paralelo se fueron conectando los multímetros para realizar las mediciones. \\
+\indent Se ajustó el generador para que el osciloscopio muestre una señal con un duty cicle del \textbf{30\%},
+con \textbf{5V} de amplitud, y con una frecuencia de \textbf{100 Hz} , para asegurarnos de que esté dentro del ancho de banda de los instrumentos.\\
+\indent Las incertidumbres de los instrumentos no fueron tomadas en cuenta, ya que son irrelevantes para el objetivo de esta parte de la prácitca.
+\medskip
+
+\subsubsection{Multímetro DVM}
+
+En \textbf{DC}, el multímetro de valor medio mide justamente el valor medio de la tensión presente.\\
+
+En \textbf{AC}, tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor medio y lo multiplica por el factor de forma, 1,11(en onda completa), para obtener el valor eficaz.\\
+\bigskip
+
+\subsubsection{Multímetro True-RMS}
+
+En \textbf{DC}, el multímetro de valor medio verdadero mide el valor medio de la tensión presente.\\
+
+En \textbf{AC}, tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor eficaz de la tensión alterna. Luego calcula el valor eficaz verdadero, mediante la siguiente ecuación:
+
+\begin{center}
+\begin{equation}
+V = \sqrt{ {{1}\over{T}} \times \int_{0}^{T} {V(t)}^2 \delta t}
+\end{equation}
+\end{center}
+\bigskip
+
+
+\subsubsection{Multímetro Analógico}
+
+En \textbf{DC}, el multímetro analógico mide el valor medio de la tensión presente.\\
+
+En \textbf{AC} (utilzado con la salida \textit{output}), realiza el mismo proceso que el multímetro DVM.
+
 \newpage
 % Tabla 2
 \begin{table}[!hbt]
@@ -186,9 +221,9 @@
 			& \multicolumn{2}{c|}{\textbf{VOM}} & \multicolumn{2}{c|}{\textbf{DVM}} & \multicolumn{2}{c|}{\textbf{TRUE}} \\\cline{2-7}
 			& \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} \\\cline{2-7}
 			& \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} \\\hline
-			\textbf{Cuadrada} &  &  &  &  &  &  \\\hline
-			\textbf{Senoidal} &  &  &  &  &  &  \\\hline
-			\textbf{Triangular} &  &  &  &  &  &  \\\hline
+			\textbf{Cuadrada} & -2,00 & 4,7  & -2,00 & 4,66 & -2,000 & 4,66 \\\hline
+			\textbf{Senoidal} & 0 & 3,2 & 0 & 3,53 & 0 &  3,536 \\\hline
+			\textbf{Triangular} & 0 & 2,50 & 0 & 2,50 & 0 & 3,536 \\\hline
 		\end{tabular}
 
 	\caption{Tabla de valores calculados.}
@@ -208,9 +243,9 @@
 			& \multicolumn{2}{c|}{\textbf{VOM}} & \multicolumn{2}{c|}{\textbf{DVM}} & \multicolumn{2}{c|}{\textbf{TRUE}} \\\cline{2-7}
 			& \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} \\\cline{2-7}
 			& \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} \\\hline
-			\textbf{Cuadrada} & 1,95 & 5,0 & 2,049 & 4,47 & 2,01 & 4,35 \\\hline
-			\textbf{Senoidal} & 0,05 & 3,0 & 0,042 & 3,45 & 0,30 & 3,45 \\\hline
-			\textbf{Triangular} & 0,00 & 2,4 & 0,017 & 2,64 & 0,59 & 2,74 \\\hline
+			\textbf{Cuadrada} & -1,95 & 5,0 & -2,05 & 4,47 & -2,009 & 4,35 \\\hline
+			\textbf{Senoidal} & 0,05 & 3,00 & 0,042 & 3,45 & 0,301 & 3,446 \\\hline
+			\textbf{Triangular} & 0,00 & 2,40 & 0,017 & 2,64 & 0,587 & 2,778 \\\hline
 		\end{tabular}
 
 	\caption{Tabla de valores medidos.}
