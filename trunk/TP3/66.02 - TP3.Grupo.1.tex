@@ -326,7 +326,7 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 	Ahora mediremos el offset máximo pero el correspondiente al que puede entregar internamente el osciloscopio. Para lograrlo, partiendo del estado inicial y desconectando el generador de funciones utilizado en párrafos anteriores, conectaremos la fuente regulada al osciloscopio mediante un cable \textit{Banana-BNC} teniendo en cuenta el detalle de colocar la tensión de salida del primero en 0V. Además colocaremos un voltímetro en paralelo a la fuente, de manera de poder saber que tensión está entregando realmente, ya que la indicación de la propia fuente no es confiable. En el osciloscopio posicionaremos la perilla del selector de entrada del canal \textit{CH1} en \textit{GND} y variaremos el potenciometro de posición vertical hasta que este llegue a su máximo, es decir, cuando ya no sea posible seguir girándola hacia la derecha. Luego volveremos a modificar la posición de la perilla del selector de entrada del canal \textit{CH1} colocándola en \textit{DC}. Como puede notarse, la señal ya no se verá en la pantalla. Nuestro trabajo será entonces buscar ver de nuevo dicha señal alineada a la división de 0V del display. Para esto comenzaremos a aumentar la tensión de la fuente regulada hasta lograr dicha alineación. Una vez conseguido esto leeremos el valor de tensión medido por el voltímetro, siendo este el offset máximo entregado por el osciloscopio. Para el modelo utilizado en este informe se ha observado que dicho offset máximo es 
 
 \begin{equation*}
-	Offset_{m\acute{a}x}(osc) = \pm (XXXXV \pm XXXV)
+	Offset_{m\acute{a}x}(osc) = 8 Div \times Escala
 \end{equation*}
 \medskip
 
