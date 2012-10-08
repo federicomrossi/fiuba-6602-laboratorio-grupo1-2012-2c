@@ -129,7 +129,7 @@
 \section{Materiales utilizados}
 
 	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice B}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
-\bigskip\bigskip\bigskip
+\bigskip\bigskip
 
 
 % Tabla 1
@@ -151,7 +151,12 @@
 		Contador & \vbox{\hbox{\strut Marca: GOOD-WILL }
 						   \hbox{\strut Modelo: guc-2020 }}\\
 		\hline
-		Cables & Banana-Cocodrilo\newline Cocodrilo-Cocodrilo\newline BNC-BNC \\
+		Fuente regulada & \vbox{\hbox{\strut Marca: Hewlett-Packard }
+						   \hbox{\strut Modelo: 721A }}\\
+		\hline
+		Multímetro digital & UNI-T Mod. UT30F \\
+		\hline
+		Cables & Banana-Cocodrilo\newline Cocodrilo-Cocodrilo\newline BNC-BNC\newline Banana-BNC \\
 		\hline
 	\end{tabular}
 	\caption{Listado de materiales e instrumental utilizado.}
@@ -204,12 +209,7 @@
 % DIAGRAMA EN BLOQUES DEL OSCILOSCOPIO - Acople del sistema vertical con el sistema horizontal
 \subsection{Acople del sistema vertical con el sistema horizontal}
 
-	Las posibles formas de acoplamiento entre los sistemas vertical y horizontal son las que se muestran a continuación:
-	Ya que se pueden querer observar distintas señales, el instrumento permite elegir el modo de acoplamiento para conseguir el disparo estable en las distintas situaciones:
-	AC: Bloquea la componente continua de la señal y atenúa las bajas frecuencias.
-	HF REJ: Rechaza la componente de continua, pero permite el paso de las bajas frecuencias. Cualquier frecuencia por encima de los 50Hz es atenuada.
-	DC: Permite el paso de la componente continua de la señal.
-	
+	[ Colocar texto aquí ]
 	\bigskip\bigskip
 
 
@@ -267,27 +267,12 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 \end{enumerate}
 
 
+
 % INCERTEZAS EN EL OSCILOSCOPIO
 \section{Incertezas en el osciloscopio}
 
-	La incertezas que se deben considerar son las siguientes:
-		Incerteza de lectura: un medio de la mínima división. 
-		Exactitud del sistema vertical: 3\%(5mV a 5V/DIV) ; 5\%(1mV a 2mV/DIV)
-		Desplazamiento del balance de CC del sistema vertical: ±0,5DIV(5mV a 5V/DIV) ; ±2,0DIV(1mV a 2mV/DIV)
-		Linealidad del sistema vertical: ±0,1DIV cuando una señal de amplitud de más de dos divisiones es movida verticalmente.
-		Exactitud de la base de tiempo del sistema horizontal: 3\%
-		Exactitud de magnificador de barrido del sistema horizontal: ±5\%(1μS a 50mS/DIV) ; ±8\%(1nS a 50nS/DIV)
-		Linealidad del sistema horizontal: normal ±3\%(×1) ; magnificado ±5\%(×10)  (±8\% para 10nS a 50nS/DIV)
-	La incertezas que se deben considerar son las siguientes:
-		Incerteza de lectura: un medio de la mínima división. 
-		Exactitud del sistema vertical: 3\%(5mV a 5V/DIV) ; 5\%(1mV a 2mV/DIV)
-		Desplazamiento del balance de CC del sistema vertical: ±0,5DIV(5mV a 5V/DIV) ; ±2,0DIV(1mV a 2mV/DIV)
-		Linealidad del sistema vertical: ±0,1DIV cuando una señal de amplitud de más de dos divisiones es movida verticalmente.
-		Exactitud de la base de tiempo del sistema horizontal: 3\%
-		Exactitud de magnificador de barrido del sistema horizontal: ±5\%(1μS a 50mS/DIV) ; ±8\%(1nS a 50nS/DIV)
-		Linealidad del sistema horizontal: normal ±3\%(×1) ; magnificado ±5\%(×10)  (±8\% para 10nS a 50nS/DIV)
-	
-
+	[ Colocar texto aquí ]
+\bigskip\bigskip
 
 
 
@@ -324,9 +309,46 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 \begin{equation*}
 	p_{min} = 0,1\mu S \pm 0,01\mu S
 \end{equation*}
+\medskip
+
+\noindent Para hacerlo se debió modificar la base de tiempo a XXXX XX/div y se tuvo que variar la perilla de posición horizontal de manera de conseguir una lectura mas cómoda de la cantidad de divisiones abarcadas por un ciclo de la señal.
+	\par
+	Para la medición del offset máximo que nos puede entregar el generador de funciones se procedió volviendo al estado inicial, manteniendo la conexión del generador de funciones al osciloscopio. Luego se aumentó la perilla del offset del generador al máximo (positivo). En el osciloscopio se posicionó la perilla del selector de entrada del canal \textit{CH1} en \textit{GND} y variando el potenciometro de posición vertical se llevó la señal hacia la segunda división mas baja de la pantalla. Acto seguido, se posicionó la perilla del selector de entrada del \textit{CH1} en \textit{DC} notando el desplazamiento de la señal a divisiones por encima de lo que llega a mostrar el display. Para lograr ver a esta de la forma mas conveniente se modificó la escala de tensión a 2V/div. Hecho esto se observó que el offset máximo (positivo) del generador de funciones es
+
+\begin{equation*}
+	Offset_{m\acute{a}x}(gen) = \pm (10,8V \pm 0,2V)
+\end{equation*}
+\medskip
 
 
-\bigskip\bigskip
+\noindent En esta última medición hemos incluido el valor máximo negativo del offset ya que la medición debe realizarse de la misma manera pero invirtiendo la posición de la señal cuando se ajusta la perilla del selector de entrada del canal \textit{CH1} en \textit{GND}; es decir, en vez de colocarla en la segunda división más baja debemos colocarla en la segunda división mas alta de la pantalla ya que al disminuir al máximo el offset y al posicionar la perilla del selector de entrada del \textit{CH1} en \textit{DC} dicha señal se desplazará hacia abajo.
+	\par
+	Ahora mediremos el offset máximo pero el correspondiente al que puede entregar internamente el osciloscopio. Para lograrlo, partiendo del estado inicial y desconectando el generador de funciones utilizado en párrafos anteriores, conectaremos la fuente regulada al osciloscopio mediante un cable \textit{Banana-BNC} teniendo en cuenta el detalle de colocar la tensión de salida del primero en 0V. Además colocaremos un voltímetro en paralelo a la fuente, de manera de poder saber que tensión está entregando realmente, ya que la indicación de la propia fuente no es confiable. En el osciloscopio posicionaremos la perilla del selector de entrada del canal \textit{CH1} en \textit{GND} y variaremos el potenciometro de posición vertical hasta que este llegue a su máximo, es decir, cuando ya no sea posible seguir girándola hacia la derecha. Luego volveremos a modificar la posición de la perilla del selector de entrada del canal \textit{CH1} colocándola en \textit{DC}. Como puede notarse, la señal ya no se verá en la pantalla. Nuestro trabajo será entonces buscar ver de nuevo dicha señal alineada a la división de 0V del display. Para esto comenzaremos a aumentar la tensión de la fuente regulada hasta lograr dicha alineación. Una vez conseguido esto leeremos el valor de tensión medido por el voltímetro, siendo este el offset máximo entregado por el osciloscopio. Para el modelo utilizado en este informe se ha observado que dicho offset máximo es 
+
+\begin{equation*}
+	Offset_{m\acute{a}x}(osc) = 8 Div \times Escala
+\end{equation*}
+\medskip
+
+
+	Si desearamos ahora medir la sensibilidad especificada por el fabricante del osciloscopio, podremos hacerlo conectando el generador de funciones al instrumento y agregándole un voltímetro digital en paralelo. De esta manera, y dejando el \textit{Level} en un valor muy cercano a cero, se debería ir variando la amplitud del generador, en busca del momento en donde la imagen queda sincronizada. En ese instante debe leerse la medición del voltímetro. Para esta experiencia convendría utilizar el modo de disparo único del osciloscopio, además de regular el canal vertical en una escala de 50 mV/div o similar.
+\bigskip
+
+
+
+% MEDICIONES CON EL OSCILOSCOPIO - Modo X-Y y figuras de Lissajous
+\subsection{Modo X-Y y figuras de Lissajous}
+
+\bigskip
+
+
+
+% MEDICIONES CON EL OSCILOSCOPIO - Modo normal y automático
+\subsection{Modo normal y automático}
+
+	
+
+\bigskip\bigskip	
 
 
 
@@ -334,12 +356,7 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 % CONCLUSIONES
 \section{Conclusiones}
 
-	El osciloscopio permite estudiar las características de una onda de corriente alterna, es decir medir la amplitud, la frecuencia y  la fase respecto de una señal que puede ser distinta o ser la misma con desfasada(lo cual se logra midiendo la señal en otra parte de un circuito que posee capacitores y/o inductancias).
-	Con el control de acople nos permite modificar el tipo de señal que queremos, si una alterna pura o una que sea parte continua y parte alterna, de acuerdo a que nos convenga a la hora de medir para reducir las incertezas (y eliminar el ruido). Otra ventaja es la de utilizar los cambios de escala para ver la señal más grande y medir más exactamente.
-	Una de las características principales es la de poder mostrar en un mismo gráfico dos señales simultáneamente.De esta forma podemos ver la diferencia de amplitud y de fase, y con el modo X-Y se pueden generar las figuras de Lissajous, de las cuales se puede determinar el desfasaje entre la dos señales, y la relacion entre las frecuencias.
-	En el sistema de disparo, mediante la utilización de los controles TRIGGER LEVEL (nivel de disparo) y TRIGGER SELECTOR (tipo de disparo) es posible estabilizar lo mejor posible señales repetitivas. La clave está en que el barrido comience siempre en el mismo punto de la onda repetitiva. Para ello se utiliza el llamado "pulso de sincronismo" que es generada por la sección de disparo. El generador de rampa generará un solo ciclo de diente de sierra cuando reciba el pulso de sincronismo, y luego espera hasta que se produzca el siguiente. Esta forma de sincronizar se llama "Modo Normal". En modo normal si no hay pulso de sincronismo no veremos nada en la pantalla, en cambio en “modo Auto”, la señal sincronizada es visible, pero si variamos el nivel de disparo hasta que se pierda el sincronismo se producirán disparos aleatorios.
-	Para la visualización de las señales, depende de cómo seleccionamos el acoplamiento, de entrada y del trigger, que vamos a ver. En el caso del acoplamiento de entrada, si este está en DC se verá la misma señal que ingresa, en cambio en el modo AC se filtrara mediante un capacitor la componente continua de la misma, o el offset. En el acoplamiento del trigger, al igual que en el de entrada en AC se filtrará la componente de offset de la señal, si es que no se filtro anteriormente en la entrada,  y en el modo DC se mostrara la señal tal como se la recibe de la entrada, si la misma esta en AC, se la ve sin el offset, y si esta en DC la señal se verá pura.
-	
+	[ Colocar texto aquí ]
 	\bigskip\bigskip
 
 
