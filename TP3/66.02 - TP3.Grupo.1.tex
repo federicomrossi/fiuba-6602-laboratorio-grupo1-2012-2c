@@ -209,12 +209,16 @@
 % DIAGRAMA EN BLOQUES DEL OSCILOSCOPIO - Acople del sistema vertical con el sistema horizontal
 \subsection{Acople del sistema vertical con el sistema horizontal}
 
-		Las posibles formas de acoplamiento entre los sistemas vertical y horizontal son las que se muestran a continuación:
-		Ya que se pueden querer observar distintas señales, el instrumento permite elegir el modo de acoplamiento para conseguir el disparo estable en las distintas situaciones:
-		AC: Bloquea la componente continua de la señal y atenúa las bajas frecuencias.
-		HF REJ: Rechaza la componente de continua, pero permite el paso de las bajas frecuencias. Cualquier frecuencia por encima de los 50Hz es atenuada.
-		DC: Permite el paso de la componente continua de la señal.
-	\bigskip\bigskip
+	Se mencinarán ahora las posibles formas de acoplamiento entre los sistemas vertical y horizontal. Ya que se puede querer observar distintas señales, el instrumento permite elegir el modo de acoplamiento para conseguir el disparo estable en las distintas situaciones:
+\medskip
+
+\begin{itemize}
+	\item \textit{AC}: bloquea la componente continua de la señal y atenúa las bajas frecuencias.
+	\item \textit{HF REJ}: rechaza la componente de continua, pero permite el paso de las bajas frecuencias. Cualquier frecuencia por encima de los 50Hz es atenuada.
+	\item \textit{DC}: permite el paso de la componente continua de la señal.
+
+\end{itemize}
+\bigskip\bigskip
 
 
 
@@ -269,29 +273,30 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 		  \textit{Horizontal Display(A; A int. B; B; B Trig B):} \textit{A} muestra la base de tiempo principal. \textit{A int B} muestra la base de tiempo principal intensificada. \textit{B} muestra la base de tiempo secundaria. \textit{Trig B} muestra la base de tiempo secundaria intensificada.  \medskip \\
 
 \end{enumerate}
+\smallskip
 
 
 
 % INCERTEZAS EN EL OSCILOSCOPIO
 \section{Incertezas en el osciloscopio}
 
-	\item \textbf{La incertezas que se deben considerar son las siguientes:} \bigskip \\
-		\textit {Incerteza de lectura:} un medio de la mínima división. \medskip \\
-		\textit {Exactitud del sistema vertical:} 3\%(5mV a 5V/DIV) ; 5\%(1mV a 2mV/DIV) \medskip \\
-		\textit {Desplazamiento del balance de CC del sistema vertical:} ±0,5DIV(5mV a 5V/DIV) ; ±2,0DIV(1mV a 2mV/DIV) \medskip \\
-		\textit {Linealidad del sistema vertical:} ±0,1DIV cuando una señal de amplitud de más de dos divisiones es movida verticalmente. \medskip \\
-		\textit {Exactitud de la base de tiempo del sistema horizontal:} 3\% \medskip \\
-		\textit	{Exactitud de magnificador de barrido del sistema horizontal:} ±5\%(1$\mu$S a 50mS/DIV) ; ±8\%(1nS a 50nS/DIV) \medskip \\
-		\textit	{Linealidad del sistema horizontal:} normal ±3\%(×1) ; magnificado ±5\%(×10)  (±8\% para 10nS a 50nS/DIV) \medskip \\
-	\item \textbf{La incertezas que se deben considerar son las siguientes:} \bigskip \\
-		\textit	{Incerteza de lectura:} un medio de la mínima división. \medskip \\
-		\textit	{Exactitud del sistema vertical:} 3\%(5mV a 5V/DIV) ; 5\%(1mV a 2mV/DIV)\medskip \\
-		\textit	{Desplazamiento del balance de CC del sistema vertical:} ±0,5DIV(5mV a 5V/DIV) ; ±2,0DIV(1mV a 2mV/DIV) \medskip \\
-		\textit	{Linealidad del sistema vertical:} ±0,1DIV cuando una señal de amplitud de más de dos divisiones es movida verticalmente. \medskip \\
-		\textit	{Exactitud de la base de tiempo del sistema horizontal:} 3\% \medskip \\
-		\textit	{Exactitud de magnificador de barrido del sistema horizontal:} ±5\%(1$\mu$S a 50mS/DIV) ; ±8\%(1nS a 50nS/DIV) \medskip \\
-		\textit	{Linealidad del sistema horizontal:} normal ±3\%(×1) ; magnificado ±5\%(×10)  (±8\% para 10nS a 50nS/DIV) \medskip \\
-\bigskip\bigskip
+	Las incertezas que se deben considerar son las siguientes: 
+
+\begin{itemize}
+	\itemsep=3pt \topsep=0pt \partopsep=0pt \parskip=0pt \parsep=0pt
+
+	\item \textit {Incerteza de lectura:} un medio de la mínima división;
+	\item  \textit {Exactitud del sistema vertical:} 3\%(5mV a 5V/DIV) ; 5\%(1mV a 2mV/DIV);
+	\item  \textit {Desplazamiento del balance de CC del sistema vertical:} ±0,5DIV(5mV a 5V/DIV) ; ±2,0DIV(1mV a 2mV/DIV);
+	\item  \textit {Linealidad del sistema vertical:} ±0,1DIV cuando una señal de amplitud de más de dos divisiones es movida verticalmente;
+	\item \textit {Exactitud de la base de tiempo del sistema horizontal:} 3\% ;
+	\item \textit	{Exactitud de magnificador de barrido del sistema horizontal:} ±5\%(1$\mu$S a 50mS/DIV) ; ±8\%(1nS a 50nS/DIV);
+	\item \textit	{Linealidad del sistema horizontal:} normal ±3\%(×1) ; magnificado ±5\%(×10)  (±8\% para 10nS a 50nS/DIV).
+	\item \textit{Error sistemático:} el tipo de error sistemático más frecuente en las mediciones con un osciloscopio es el \textit{efecto de carga}. Para medir utilizamos \textit{puntas} o más comúnmente conocidas como \textit{probes}, instrumentos que cuentan con una resistencia y una capacitancia propia. Esto puede acarrear un error sistemático, que se evita utilizando un conjunto de resistencias mucho mayor que la del circuito a medir junto con una capacitancia mucho menor.
+
+\end{itemize}
+\newpage
+
 
 
 
@@ -313,7 +318,7 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 	\item \textit{TIME/DIV} = 0,2mS
 	\item \textit{Vertical Position} = 0V al centro
 \end{itemize}
-\medskip
+\bigskip
 
 
 	Habiendo establecido este estado inicial en el osciloscopio, se pasó a medir la amplitud pico máxima del generador de funciones. Para lograrlo se posicionó la perilla del selector de entrada del canal CH1 en AC. Además, se debió modificar la escala de tensión de dicho canal a 5V/div y se tuvo que variar la perilla de posición vertical de manera de conseguir una lectura más comoda de la cantidad de divisiones abarcadas por la señal. Hecho esto se obtuvo el siguiente valor de tensión:
@@ -341,7 +346,7 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 
 
 \noindent En esta última medición hemos incluido el valor máximo negativo del offset ya que la medición debe realizarse de la misma manera pero invirtiendo la posición de la señal cuando se ajusta la perilla del selector de entrada del canal \textit{CH1} en \textit{GND}; es decir, en vez de colocarla en la segunda división más baja debemos colocarla en la segunda división mas alta de la pantalla ya que al disminuir al máximo el offset y al posicionar la perilla del selector de entrada del \textit{CH1} en \textit{DC} dicha señal se desplazará hacia abajo.
-	\par
+	\newpage
 	Ahora mediremos el offset máximo pero el correspondiente al que puede entregar internamente el osciloscopio. Para lograrlo, partiendo del estado inicial y desconectando el generador de funciones utilizado en párrafos anteriores, conectaremos la fuente regulada al osciloscopio mediante un cable \textit{Banana-BNC} teniendo en cuenta el detalle de colocar la tensión de salida del primero en 0V. Además colocaremos un voltímetro en paralelo a la fuente, de manera de poder saber que tensión está entregando realmente, ya que la indicación de la propia fuente no es confiable. En el osciloscopio posicionaremos la perilla del selector de entrada del canal \textit{CH1} en \textit{GND} y variaremos el potenciometro de posición vertical hasta que este llegue a su máximo, es decir, cuando ya no sea posible seguir girándola hacia la derecha. Luego volveremos a modificar la posición de la perilla del selector de entrada del canal \textit{CH1} colocándola en \textit{DC}. Como puede notarse, la señal ya no se verá en la pantalla. Nuestro trabajo será entonces buscar ver de nuevo dicha señal alineada a la división de 0V del display. Para esto comenzaremos a aumentar la tensión de la fuente regulada hasta lograr dicha alineación. Una vez conseguido esto leeremos el valor de tensión medido por el voltímetro, siendo este el offset máximo entregado por el osciloscopio. Para el modelo utilizado en este informe se ha observado que dicho offset máximo es 
 
 \begin{equation*}
@@ -375,11 +380,15 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 % CONCLUSIONES
 \section{Conclusiones}
 
-		El osciloscopio permite estudiar las características de una onda de corriente alterna, es decir medir la amplitud, la frecuencia y  la fase respecto de una señal que puede ser distinta o ser la misma con desfasada(lo cual se logra midiendo la señal en otra parte de un circuito que posee capacitores y/o inductancias).
-		Con el control de acople nos permite modificar el tipo de señal que queremos, si una alterna pura o una que sea parte continua y parte alterna, de acuerdo a que nos convenga a la hora de medir para reducir las incertezas (y eliminar el ruido). Otra ventaja es la de utilizar los cambios de escala para ver la señal más grande y medir más exactamente.
-		Una de las características principales es la de poder mostrar en un mismo gráfico dos señales simultáneamente.De esta forma podemos ver la diferencia de amplitud y de fase, y con el modo X-Y se pueden generar las figuras de Lissajous, de las cuales se puede determinar el desfasaje entre la dos señales, y la relacion entre las frecuencias.
-		En el sistema de disparo, mediante la utilización de los controles TRIGGER LEVEL (nivel de disparo) y TRIGGER SELECTOR (tipo de disparo) es posible estabilizar lo mejor posible señales repetitivas. La clave está en que el barrido comience siempre en el mismo punto de la onda repetitiva. Para ello se utiliza el llamado "pulso de sincronismo" que es generada por la sección de disparo. El generador de rampa generará un solo ciclo de diente de sierra cuando reciba el pulso de sincronismo, y luego espera hasta que se produzca el siguiente. Esta forma de sincronizar se llama "Modo Normal". En modo normal si no hay pulso de sincronismo no veremos nada en la pantalla, en cambio en “modo Auto”, la señal sincronizada es visible, pero si variamos el nivel de disparo hasta que se pierda el sincronismo se producirán disparos aleatorios.
-		Para la visualización de las señales, depende de cómo seleccionamos el acoplamiento, de entrada y del trigger, que vamos a ver. En el caso del acoplamiento de entrada, si este está en DC se verá la misma señal que ingresa, en cambio en el modo AC se filtrara mediante un capacitor la componente continua de la misma, o el offset. En el acoplamiento del trigger, al igual que en el de entrada en AC se filtrará la componente de offset de la señal, si es que no se filtro anteriormente en la entrada,  y en el modo DC se mostrara la señal tal como se la recibe de la entrada, si la misma esta en AC, se la ve sin el offset, y si esta en DC la señal se verá pura.
+	El osciloscopio permite estudiar las características de una onda de corriente alterna, es decir medir la amplitud, la frecuencia y la fase respecto de una señal que puede ser distinta o ser la misma con cierto desfasaje.
+	\par
+	Con el control de acople es posible modificar el tipo de señal que queremos, si una alterna pura o una que sea parte continua y parte alterna, de acuerdo a lo que nos convenga a la hora de medir para reducir las incertezas (y eliminar el ruido). Otra ventaja es la de utilizar los cambios de escala para ver la señal más grande y medir más exactamente. 
+	\par
+	Una de las características principales es la de poder mostrar en un mismo gráfico dos señales simultáneamente.De esta forma podemos ver la diferencia de amplitud y de fase, y con el modo \textit{X-Y} se pueden generar las figuras de Lissajous, de las cuales se puede determinar el desfasaje entre la dos señales, y la relacion entre las frecuencias.
+	\par
+	En el sistema de disparo, mediante la utilización de los controles \textit{TRIGGER LEVEL} (nivel de disparo) y \textit{TRIGGER SELECTOR} (tipo de disparo) es posible estabilizar lo mejor posible señales repetitivas. La clave está en que el barrido comience siempre en el mismo punto de la onda repetitiva. Para ello se utiliza el llamado \textit{pulso de sincronismo} que es generada por la sección de disparo. El generador de rampa generará un solo ciclo de diente de sierra cuando reciba el pulso de sincronismo, y luego esperará hasta que se produzca el siguiente. Esta forma de sincronizar se llama \textit{Modo Normal}. En modo normal si no hay pulso de sincronismo no veremos nada en la pantalla, en cambio en modo \textit{Auto}, la señal sincronizada es visible, pero si variamos el nivel de disparo hasta que se pierda el sincronismo se producirán disparos aleatorios.
+	\par
+	Para la visualización de las señales, depende de cómo seleccionamos el acoplamiento de entrada y del trigger que vamos a ver. En el caso del acoplamiento de entrada, si este está en DC se verá la misma señal que ingresa, en cambio en el modo AC se filtrará mediante un capacitor la componente continua de la misma, o el offset. En el acoplamiento del trigger, al igual que en el de entrada en AC, se filtrará la componente de offset de la señal, si es que no se filtro anteriormente en la entrada,  y en el modo DC se mostrará la señal tal como se la recibe de la entrada. Si la misma esta en AC, se la ve sin el offset, y si esta en DC la señal se verá pura.
 	\bigskip\bigskip
 
 
