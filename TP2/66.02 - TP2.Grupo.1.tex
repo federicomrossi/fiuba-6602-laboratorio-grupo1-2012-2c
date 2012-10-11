@@ -113,8 +113,10 @@
 % INTRODUCCIÓN
 \section{Introducción}
 
-	[ Colocar texto aquí ]
-\bigskip
+	El trabajo consiste está dividido en dos secciones:\\
+	\indent \textbf{Parte A:} Se compararon los valores medidos, al generar señales de diferentes tipo, con los valores esperados para cada tipo de multímetro. \\ 
+	\indent \textbf{Parte B:} Cada instrumento tiene un rango de frecuencias en el que es utilizable (dato provisto por el fabricante), y se comparó con los resultados obtenidos en el laboratorio, que se midieron tomando como partida el rango de incertidumbre de cada instrumento.
+
 
 
 
@@ -167,7 +169,7 @@
 \section{Desarrollo}
 
 	En los siguientes apartados se pasarán a desarrollar las mediciones empíricas, cada una de las cuales esta complementada con una explicación de los pasos llevados a cabo, valores obtenidos, análisis de resultados y conclusiones parciales.
-\bigskip
+\bigskip \bigskip
 
 
 
@@ -177,23 +179,25 @@
 En esta parte del trabajo práctico, se hicieron distintas mediciones con el fin de comparar las diferentes formas que tienen los multímetros (en modo voltímetro) de calcular los valores de tensión.\\
 \indent Para esto, se utilizó un osciloscopio, un generador de funciones, una resistencia de 47 $\Omega$ y tres multímetros diferentes: uno analógico, uno de valor medio, y uno de valor medio verdadero.\\
 \indent El circuito armado consitió en el generador de funciones, la resistencia y el osciloscopio conectados en paralelo. También en paralelo se fueron conectando los multímetros para realizar las mediciones. \\
-\indent Se ajustó el generador para que el osciloscopio muestre una señal con un duty cicle del \textbf{30\%},
+\indent Se ajustó el generador para que el osciloscopio muestre una señal con un ciclo de trabajo (duty cicle) del \textbf{30\%},
 con \textbf{5V} de amplitud, y con una frecuencia de \textbf{100 Hz} , para asegurarnos de que esté dentro del ancho de banda de los instrumentos.\\
 \indent Las incertidumbres de los instrumentos no fueron tomadas en cuenta, ya que son irrelevantes para el objetivo de esta parte de la prácitca.
 \medskip
 
+Cada multímetro tiene diferentes formas de medir las tensiones eficaces:\\
+
+En \textbf{DC}, los tres multímetros calculan el valor medio de la onda presente, que es el valor de la parte continua de la señal.
+
+En \textbf{AC}:\\
+
 \subsubsection{Multímetro DVM}
 
-En \textbf{DC}, el multímetro de valor medio mide justamente el valor medio de la tensión presente.\\
-
-En \textbf{AC}, tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor medio y lo multiplica por el factor de forma, 1,11(en onda completa), para obtener el valor eficaz.\\
+Presenta un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor medio y lo multiplica por el factor de forma, 1,11(en onda completa), para obtener el valor eficaz.\\
 \bigskip
 
 \subsubsection{Multímetro True-RMS}
 
-En \textbf{DC}, el multímetro de valor medio verdadero mide el valor medio de la tensión presente.\\
-
-En \textbf{AC}, tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor eficaz de la tensión alterna. Luego calcula el valor eficaz verdadero, mediante la siguiente ecuación:
+También tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor eficaz de la tensión alterna. Luego calcula el valor eficaz verdadero, mediante la siguiente ecuación:
 
 \begin{center}
 \begin{equation}
@@ -205,9 +209,9 @@ V = \sqrt{ {{1}\over{T}} \times \int_{0}^{T} {V(t)}^2 \delta t}
 
 \subsubsection{Multímetro Analógico}
 
-En \textbf{DC}, el multímetro analógico mide el valor medio de la tensión presente.\\
+Utilzado con la salida \textit{output}, incluye un capacitor en la entrada, y realiza el mismo proceso que el multímetro DVM.\bigskip
 
-En \textbf{AC} (utilzado con la salida \textit{output}), realiza el mismo proceso que el multímetro DVM.
+
 
 \newpage
 % Tabla 2
@@ -221,16 +225,17 @@ En \textbf{AC} (utilzado con la salida \textit{output}), realiza el mismo proces
 			& \multicolumn{2}{c|}{\textbf{VOM}} & \multicolumn{2}{c|}{\textbf{DVM}} & \multicolumn{2}{c|}{\textbf{TRUE}} \\\cline{2-7}
 			& \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} & \multicolumn{2}{c|}{\textbf{V}} \\\cline{2-7}
 			& \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} & \textbf{DC} & \textbf{AC} \\\hline
-			\textbf{Cuadrada} & -2,00 & 4,7  & -2,00 & 4,66 & -2,000 & 4,66 \\\hline
-			\textbf{Senoidal} & 0 & 3,2 & 0 & 3,53 & 0 &  3,536 \\\hline
-			\textbf{Triangular} & 0 & 2,50 & 0 & 2,50 & 0 & 3,536 \\\hline
+			\textbf{Cuadrada} & -2,00 & 4,7  & -2,00 & 4,66 & -2,000 & 4,583 \\\hline
+			\textbf{Senoidal} & 0 & 3,6 & 0 & 3,53 & 0 &  3,536 \\\hline
+			\textbf{Triangular} & 0 & 2,8 & 0 & 2,78 & 0 & 2,500 \\\hline
 		\end{tabular}
 
 	\caption{Tabla de valores calculados.}
 	\end{center}
 \end{table}
-\bigskip
+\medskip
 
+Estos valores pueden consultar en el \textit{apéndice}\\\bigskip
 
 % Tabla 3
 \begin{table}[!hbt]
@@ -263,7 +268,7 @@ En esta sección del trabajo práctico se comprobó la respuesta en frecuencias 
 
 Para realizar las mediciones, se dispuso del mismo circuito que en la \textbf{Parte A}, y con los distintos voltímetro midiendo la salida del generador en paralelo. Además se conectó el circuito a un contador, para una medida más precisa de la frecuencia.
 
-En una primera instancia, se midió un valor de tensión de referencia, con una frecuencia dentro de las establecidas por los fabricantes. De este modo se determinó un valor de \textbf{$V_{máx}$} y de \textbf{$V_{min}$}, y los valores medidos dentro de este rango se consideraron como medidas válidas. A partir de esto, se paso a determinar el ancho de banda de los instrumentos.
+En una primera instancia, se midió un valor de tensión de referencia, con una frecuencia dentro de las establecidas por los fabricantes. De este modo se determinó un valor de \textbf{$V_{max}$} y de \textbf{$V_{min}$}, y los valores medidos dentro de este rango se consideraron como medidas válidas. A partir de esto, se paso a determinar el ancho de banda de los instrumentos.
 \bigskip
 
 Se utilizaron 3 tipos de voltímetros:
@@ -319,16 +324,14 @@ $V_{ref} = (3.39 \pm 0.04) V$
 \bigskip
 
 
-\begin{figure}[h!tbp]
+\begin{figure}[!htb]
 \centering
 \includegraphics[width=0.80\textwidth]{images/tablaDVM.png}
 \caption{Gráfico de los valores medidos con el voltímetro DVM.}
 \end{figure}
 
 
-
 \subsubsection{Multímetro True-RMS}
-
 
 La incertidumbre para la escala utilizada es:
 
@@ -342,8 +345,8 @@ Los valores medidos son:
 \begin{center}
 $V_{ref} = (3.420 \pm 0.037) V$
 \end{center}
-
-\begin{table}[!hbt]
+\bigskip
+\begin{table}[h]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}\hline
 	\textbf{f(Hz)} & \textbf{V(Volts)} & \textbf{$\Delta$V(Volts)} \\ \hline
@@ -365,11 +368,12 @@ $V_{ref} = (3.420 \pm 0.037) V$
 \end{table}
 \bigskip
 
-\begin{figure}[h!tbp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.80\textwidth]{images/tablaTRUE.png}
 \caption{Gráfico de los valores medidos con el voltímetro True-RMS.}
 \end{figure}
+\bigskip
 \bigskip
 
 \subsubsection{Multímetro Analógico}
@@ -392,7 +396,7 @@ $V_{ref} = (3.4 \pm 0.2) V$
 	\begin{center}
 	\begin{tabular}{|c|c|c|}\hline
 	\textbf{f(Hz)} & \textbf{V(Volts)} & \textbf{$\Delta$V(Volts)} \\ \hline
-	100 & 3.4 & 0.2\\ \hline
+	10 & 3.4 & 0.2\\ \hline
     213000 & 3.2 & 0.2\\ \hline
     758000 & 3.0 & 0.2\\ \hline
 	\end{tabular}
@@ -401,6 +405,7 @@ $V_{ref} = (3.4 \pm 0.2) V$
 \end{table}
 \bigskip
 
+En este cuadro figuran pocos valores, esto es debido a que se tomaron nota de los valores de frecuencia en los que la aguja cambiaba de división. De \textit{10 Hz} para abajo, no se puede especificar el valor medido, ya que la aguja oscila.
 
 \begin{figure}[h!tbp]
 \centering
@@ -421,8 +426,12 @@ Por lo tanto, los valores aproximados de los anchos de banda son:
 	\end{tabular}
 	\caption{Tabla de los anchos de banda experimentales}
 	\end{center}
-\end{table}
+\end{table}\bigskip
 
+\section{Conclusión}
+
+\indent De la primera parte se observa que los valores medidos y los valores calculados no diferen mucho, lo que para los multímetros analógico y DVM es notable, ya que multiplcan al valor medio rectificado por el factor de forma de una onda senoidal, y el error resultante no parace ser tan significativo.\\\medskip
+\indent De la segunda parte resalta el hecho de que los anchos de banda observados en los que son válidas las mediciones realizadas por los instrumentos es en realidad mayor al especificado por el fabricante de estos instrumentos, siendo el analógico el mayor. La diferencia observada en los anchos de banda, debe ser una precaución del fabricante para poder asegurar la fiabilidad del instrumento en los casos más cercanos a los extremos y que la incertidumbre esté dentro de los valores razonables.
 
 
 % APÉNDICE A
@@ -432,16 +441,104 @@ Por lo tanto, los valores aproximados de los anchos de banda son:
 \begin{center}
 	\textbf{\Huge{Apéndice A}} \\
 	\bigskip\bigskip
-	\Large{\textit{``Simulaciones''}}
+	\Large{\textit{``Cálculos teóricos''}}
 \end{center}
 
 
-\newpage \textit{}
 \newpage
+\subsection{Cálculos teóricos en DC}
 
-	En el presente apéndice se muestran los resultados obtenidos al simular los circuitos propuestos en la \textit{sección X.X}. Dichas simulaciones fueron realizadas con el software \textit{Proteus}\footnote{Para mas información sobre el software \textit{Proteus} puede dirijirse a \textit{http://www.labcenter.com/index.cfm}}.
-\bigskip \bigskip
+El valor continuo es el valor medio de la señal:
 
+\begin{center}
+\begin{equation}
+V_{m} =  {{1}\over{T}} \times \int_{0}^{T} {V(t)} \delta t
+\end{equation}
+\end{center}
+\bigskip
+
+En el caso de la senoidal y de la triangular, al tener un ciclo de trabajo de 50\%, son ondas simétricas, entonces el valor medio es 0.
+
+En el caso de la señal cuadrada:
+
+\begin{center}
+\begin{equation}
+V =  {5V \times 3ms - 5V \times 7ms \over 10ms }= -2V
+\end{equation}
+\end{center}
+\bigskip
+
+\subsection{Cálculos teóricos en AC}
+
+\subsubsection{Analógico y DVM}
+
+Ambos presentan capacitor, y rectifican a onda completa, calculan el $V_{m_{rect}}$ y muliplcan por el factor de forma que es 1,11.
+
+Onda cuadrada:
+
+\begin{center}
+\begin{equation}
+V_{ef} = 1,11 \times 2 \times {b \times h \over T} = 1,11 \times 2 \times {7V \times 3ms \over 10ms} = 4,66V
+\end{equation}
+\end{center}
+\medskip
+
+
+Onda senoidal:
+
+\begin{center}
+\begin{equation}
+V_{ef} = 1,11 \times {2 \over 2\pi} \times \int_{0}^{\pi} 5V \times \sin (t)\delta t = 3,53 V
+\end{equation}
+\end{center}
+\medskip
+
+Onda triangular:
+
+\begin{center}
+\begin{equation}
+V_{ef} = 1,11 \times 2 \times {b \times h \over 2 \times T} = 1,11 \times 2 \times {5V \times 
+5ms \over 2 \times 10ms} = 2,78V
+\end{equation}
+\end{center}
+\bigskip
+
+\subsubsection{True-RMS}
+
+Presenta un capacitor en la entrada, y realiza el cálculo del valor eficaz:
+\begin{center}
+\begin{equation}
+V_{ef} = \sqrt{ {{1}\over{T}} \times \int_{0}^{T} {V(t)}^2 \delta t}
+\end{equation}
+\end{center}
+\medskip
+
+Onda cuadrada:
+
+\begin{center}
+\begin{equation}
+V_{ef} = \sqrt{b \times h^2 \over T} = \sqrt{3ms \times (7V)^2 + 7ms \times (3V)^2 \over 10ms} = 4,583V
+\end{equation}
+\end{center}
+\medskip
+
+Onda senoidal:
+
+\begin{center}
+\begin{equation}
+V_{ef} = \sqrt{{1 \over 2\pi} \times \int_{0}^{2\pi} (5V)^2 \times \sin ^2 (t)\delta t} = 3,536 V
+\end{equation}
+\end{center}
+\medskip
+
+Onda triangular:
+
+\begin{center}
+\begin{equation}
+V_{ef} = \sqrt{{1\over T}\times 2 \times {b\times h^2 \over 2}} = \sqrt{5ms \times (5V)^2 \over 2 \times 10ms} = 2,500V
+\end{equation}
+\end{center}
+\medskip
 
 
 
@@ -454,5 +551,21 @@ Por lo tanto, los valores aproximados de los anchos de banda son:
 	\bigskip\bigskip
 	\Large{\textit{``Hojas de datos de instrumentos de medición''}}
 \end{center}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
