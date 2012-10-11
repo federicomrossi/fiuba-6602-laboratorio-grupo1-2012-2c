@@ -128,7 +128,7 @@
 % MATERIALES UTILIZADOS
 \section{Materiales utilizados}
 
-	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice B}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
+	Se detallan a continuación (\textit{Tabla 1}) la lista de materiales y dispositivos utilizados durante el desarrollo de la práctica, acompañados por sus respectivas características y especificaciones principales. Para más información sobre el instrumental puede dirijirse a la sección \textit{Apéndice A}, ubicada al final del presente informe, donde se adjuntan las hojas de datos de todos estos.
 \bigskip\bigskip
 
 
@@ -273,7 +273,6 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 		  \textit{Horizontal Display(A; A int. B; B; B Trig B):} \textit{A} muestra la base de tiempo principal. \textit{A int B} muestra la base de tiempo principal intensificada. \textit{B} muestra la base de tiempo secundaria. \textit{Trig B} muestra la base de tiempo secundaria intensificada.  \medskip \\
 
 \end{enumerate}
-\smallskip
 
 
 
@@ -356,7 +355,7 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 
 
 	Si desearamos ahora medir la sensibilidad especificada por el fabricante del osciloscopio, podremos hacerlo conectando el generador de funciones al instrumento y agregándole un voltímetro digital en paralelo. De esta manera, y dejando el \textit{Level} en un valor muy cercano a cero, se debería ir variando la amplitud del generador, en busca del momento en donde la imagen queda sincronizada. En ese instante debe leerse la medición del voltímetro. Para esta experiencia convendría utilizar el modo de disparo único del osciloscopio, además de regular el canal vertical en una escala de 50 mV/div o similar.
-\bigskip
+\bigskip\bigskip\smallskip
 
 
 
@@ -364,13 +363,71 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 \subsection{Modo \textit{X-Y} y figuras de Lissajous}
 	
 	Se desea ahora mostrar sobre la pantalla del osciloscopio la relación de frecuencias que hay entre dos señales mediante el funcionamiento del modo \textit{X-Y}. Para esto se hará uso de un circuito RC compuesto por una resistencia de 47$\Omega$ y un capacitor de 22$\mu$F. El generador de funciones será la fuente de dicho circuito, y se configurará de manera tal de entregar una forma sinusoidal. Conectaremos el \textit{CH1} del osciloscopio a la salida del generador, y el \textit{CH2} entre las puntas del capactor. Téngase en cuenta que las masas de ambas puntas deben estar conectadas entre sí, por lo que, una de las puntas del capacitor debe estar unida al extremo del generador que se considera como tierra. Hecho esto, seleccionaremos el modo vertical en \textit{X-Y}. Si variamos la frecuencia del generador podremos ver que la forma de la imagen mostrada en la pantalla va adquiriendo distintas deformaciones. 
+\bigskip\bigskip\bigskip	
+
+
+% Figura 2
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.832\textwidth]{images/02-lissajouse-1a1.jpg}
+	\medskip
+	\caption{Figuras de Lissajous para la relación de frecuencias 1:1.}
+\end{figure}
+\bigskip\bigskip\bigskip
+
+
+En la \textit{Figura 2} se muestran las figuras de Lissajous correspondientes a una relación de frecuencias 1:1. En nuestro caso, para el circuito utilizado vamos a poder solamente ver la figura correspondiente a 45° ya que para distintas variaciones de frecuencias visualizaremos siempre una especie de ovalo con distintos grados de achatamiento. Es decir, veremos que las variaciones se dan entre 0° y 45°, dándose una diferencia de fase de 0° para una frecuencia nula de entrada (hecho que es obvio en un circuito RC).
 	\par
-	En nuestro caso tenemos una relacion de frecuencias 1:1 por lo que podremos ver figuras como las que se muestran en la \textit{Figura X}.
+	Por último, si quisiesemos hacer el proceso inverso, es decir, determinar la relación de frecuencias a partir de una imagen presentada en pantalla en modo \textit{X-Y} lo que debemos hacer es centrar la figura en la pantalla, tomando como eje coordenado las franjas centrales de la misma. En la \textit{Figura 3} se muestra un ejemplo en el cual la pantalla muestra una figura que corresponde a un grado de defasaje de 45°.
+\bigskip\bigskip
+
+% Figura 3
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4039\textwidth]{images/03-lissajouse-calculo-relacion.jpg}
+	\medskip
+	\caption{Figura de Lissajous centrada sobre la pantalla con\\ intersecciones marcadas.}
+\end{figure}
+\bigskip\bigskip
 
 
-%%%% AQUI VA LA IMAGEN DE FIGURAS DE LISAJOUSE PARA RELACION 1:1
+\noindent Hecho esto, se contarán la cantidad de veces que la figura corta al eje vertical y las veces que corta al eje horizontal. De esta manera, la relación de frecuencias resultará
+\bigskip
 
-	
+
+\begin{equation}
+	Relaci\acute{o}n = {\textrm{\textit{Cantidad de veces que corta al eje vertical}} \over \textrm{\textit{Cantidad de veces que corta al eje horizontal}}},
+\end{equation}
+\bigskip
+
+
+\noindent y por lo tanto, la relación final quedará expresada como
+\bigskip
+
+
+\begin{equation}
+	{f_1 \over f_2} = 1:Relaci\acute{o}n
+\end{equation}
+\bigskip
+
+
+\noindent En el ejemplo de la \textit{Figura 3}, aplicando las ecuaciones (1) y (2), la relación resultará
+\medskip
+
+
+\begin{equation*}
+	Relaci\acute{o}n = {2 \over 2} = 1,
+\end{equation*}
+\medskip
+
+
+\noindent y por lo tanto, la relación de frecuencias es
+\medskip
+
+
+\begin{equation*}
+	{f_1 \over f_2} = 1:1
+\end{equation*}
 \bigskip
 
 
@@ -378,9 +435,78 @@ señal a partir del cual, el sistema de barrido empieza a actuar. Este ajuste no
 % MEDICIONES CON EL OSCILOSCOPIO - Modo normal y automático
 \subsection{Modo normal y automático}
 
+	Con el fin de mostrar el funcionamiento del sistema de disparo del osciloscopio, se generó una señal de 2Vpp y 1kHz, que tuviera además una tensión continua de 3V (offset) provista por el generador de funciones. Luego se sincronizó dicha señal en el osciloscopio, y habiendo seteado los controles en el \textit{Estado inicial} especificado al inicio de la \textit{Sección 7} se observó sobre la pantalla el gráfico que se muestra en la \textit{Figura 4}.
+
+
+\newpage
+% Figura 3
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.542\textwidth]{images/04-modo-normal-y-auto.jpg}
+	\medskip
+	\caption{Estado de la pantalla del osciloscopio.}
+\end{figure}
+\bigskip\bigskip\bigskip
+
+
+	Partiendo de este estado, analicemos los siguientes planteamientos (en cada uno de ellos se parte del mismo estado inicial, a menos que se explicite lo contrario):
+\bigskip\smallskip
+
+\begin{enumerate}
+
+	%% Pregunta A
+	\item \noindent \textit{¿Qué sucede en el trayecto si voy aumentando lentamente el LEVEL hasta 4V?}
+	\smallskip
+
+	En caso de ir aumentando el nivel del disparo hasta 4 V, se ven varias ondas senoidales de la misma amplitud pero desfasadas moviéndose horizontalmente en la pantalla. Esto sucede porque el nivel de disparo es más alto que el pico de la señal y la comparación siempre falla. Al estar en modo de disparo automático, se barre la pantalla en intervalos de tiempo constantes pero que no están relacionados con el período de la onda.
+	\bigskip
+
+
+	%% Pregunta B
+	\item \noindent \textit{¿Qué sucede en el trayecto si voy aumentando lentamente el LEVEL hasta 4V en modo Normal?}
+	\smallskip
+
+	En el modo normal lo que sucede es idéntico a lo que ocurre en el modo automático, con la diferencia de que, cuando no se encuentra la señal, en vez de verse muchas señales superpuestas no se observa nada sobre la pantalla.
+	\bigskip
+
+
+	%% Pregunta C
+	\item \noindent \textit{¿Qué sucede en el Estado inicial pero cambiando el acoplamiento de entrada a DC?}
+	\smallskip
+
+	En este caso se registra el mismo fenómeno que el observado en el caso anterior, ya que la señal sin la componente continua nunca pasa por el nivel de comparación.
+	\bigskip
+
+
+	%% Pregunta D
+	\item \noindent \textit{¿Qué sucede en el Estado inicial pero cambiando el acoplamiento de entrada a DC y en modo Normal?}
+	\smallskip
+
+	Aquí, como la comparación falla, el disparo nunca se ejecuta por lo que no veremos nada sobre la pantalla del osciloscopio.
+	\bigskip
+
+
+	%% Pregunta E
+	\item \noindent \textit{¿Que se observa al probar todas las combinaciones posibles entre cambiar el acoplamiento de entrada en DC y cambiar el acomplamiento del Trigger en AC?}
+	\smallskip
+
+	Para el \textit{acoplamiento de entrada en AC} y \textit{acoplamiento del Trigger AC o DC} se ve la señal centrada en la pantalla (se filtra el offset en la entrada).
+	\par
+	Para el \textit{acoplamiento de entrada en DC} y \textit{acoplamiento del Trigger en AC} se observa la señal centrada en la pantalla (filtra el offset en la salida).
+	\par
+Finalmente, para el \textit{acoplamiento de entrada en DC} y \textit{acoplamiento del Trigger en DC} se muestra la señal como la recibe a la entrada.
+	\bigskip
 	
 
-\bigskip\bigskip	
+	%% Pregunta F
+	\item \noindent \textit{¿Se pierde el sincronismo si en el caso anterior además se varia (lentamente) el control de posición vertical?}
+	\smallskip
+
+	No, no se pierde sincronismo porque este modo agrega una componente continua a la señal después de derivarla hacia el sistema horizontal, es decir, los disparos se van a producir usando la señal original y la señal continua añadida es agregada en las etapas posteriores.
+	\bigskip
+
+\end{enumerate}
+\bigskip
 
 
 
