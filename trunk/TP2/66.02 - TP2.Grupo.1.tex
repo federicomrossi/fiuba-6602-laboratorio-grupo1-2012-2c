@@ -106,17 +106,18 @@
 \section{Objetivos}
 
 	El objetivo del trabajo práctico es familiarizarse con el uso de los diferentes multímetros utilizados como voltímetros, y predecir las alteraciones que trae su uso, conociendo sus especificaciones.
-\bigskip
+\bigskip\bigskip
+
 
 
 
 % INTRODUCCIÓN
 \section{Introducción}
 
-	El trabajo consiste está dividido en dos secciones:\\
-	\indent \textbf{Parte A:} Se compararon los valores medidos, al generar señales de diferentes tipo, con los valores esperados para cada tipo de multímetro. \\ 
+	El trabajo consiste está dividido en dos secciones: \bigskip \\ 
+	\indent \textbf{Parte A:} Se compararon los valores medidos, al generar señales de diferentes tipo, con los valores esperados para cada tipo de multímetro. \medskip \\ 
 	\indent \textbf{Parte B:} Cada instrumento tiene un rango de frecuencias en el que es utilizable (dato provisto por el fabricante), y se comparó con los resultados obtenidos en el laboratorio, que se midieron tomando como partida el rango de incertidumbre de cada instrumento.
-
+\bigskip\bigskip
 
 
 
@@ -169,7 +170,7 @@
 \section{Desarrollo}
 
 	En los siguientes apartados se pasarán a desarrollar las mediciones empíricas, cada una de las cuales esta complementada con una explicación de los pasos llevados a cabo, valores obtenidos, análisis de resultados y conclusiones parciales.
-\bigskip \bigskip
+\bigskip\bigskip
 
 
 
@@ -190,30 +191,32 @@ En \textbf{DC}, los tres multímetros calculan el valor medio de la onda present
 
 En \textbf{AC}:\\
 
+
+
 \subsubsection{Multímetro DVM}
 
 Presenta un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor medio y lo multiplica por el factor de forma, 1,11(en onda completa), para obtener el valor eficaz.\\
-\bigskip
+\smallskip
+
+
 
 \subsubsection{Multímetro True-RMS}
 
 También tiene un capacitor en la entrada, por lo que elimina el valor continuo de la tensión. Además rectifica la señal por onda completa, y calcula el valor eficaz de la tensión alterna. Luego calcula el valor eficaz verdadero, mediante la siguiente ecuación:
+\medskip
 
-\begin{center}
 \begin{equation}
 V = \sqrt{ {{1}\over{T}} \times \int_{0}^{T} {V(t)}^2 \delta t}
 \end{equation}
-\end{center}
-\bigskip
+\smallskip
 
 
 \subsubsection{Multímetro Analógico}
 
-Utilzado con la salida \textit{output}, incluye un capacitor en la entrada, y realiza el mismo proceso que el multímetro DVM.\bigskip
+Utilizado con la salida \textit{output}, incluye un capacitor en la entrada, y realiza el mismo proceso que el multímetro DVM.
+\medskip
 
 
-
-\newpage
 % Tabla 2
 \begin{table}[!hbt]
 	\begin{center}
@@ -235,7 +238,7 @@ Utilzado con la salida \textit{output}, incluye un capacitor en la entrada, y re
 \end{table}
 \medskip
 
-Estos valores pueden consultar en el \textit{apéndice}\\\bigskip
+Estos valores pueden consultarse en el \textit{Apéndice A}\\\bigskip
 
 % Tabla 3
 \begin{table}[!hbt]
@@ -263,16 +266,15 @@ Estos valores pueden consultar en el \textit{apéndice}\\\bigskip
 % DESARROLLO - PARTE B
 \subsection{Parte B}
 
-En esta sección del trabajo práctico se comprobó la respuesta en frecuencias de tres tipos distintos de multímetros, es decir, el ancho de banda para el cual las mediciones de los multímetros caen dentro del rango de incertidumbre propuesto por el fabricante.
-
-
-Para realizar las mediciones, se dispuso del mismo circuito que en la \textbf{Parte A}, y con los distintos voltímetro midiendo la salida del generador en paralelo. Además se conectó el circuito a un contador, para una medida más precisa de la frecuencia.
-
-En una primera instancia, se midió un valor de tensión de referencia, con una frecuencia dentro de las establecidas por los fabricantes. De este modo se determinó un valor de \textbf{$V_{max}$} y de \textbf{$V_{min}$}, y los valores medidos dentro de este rango se consideraron como medidas válidas. A partir de esto, se paso a determinar el ancho de banda de los instrumentos.
+	En esta sección del trabajo práctico se comprobó la respuesta en frecuencias de tres tipos distintos de multímetros, es decir, el ancho de banda para el cual las mediciones de los multímetros caen dentro del rango de incertidumbre propuesto por el fabricante.
+	\par
+	Para realizar las mediciones, se dispuso del mismo circuito que en la \textbf{Parte A}, y con los distintos voltímetro midiendo la salida del generador en paralelo. Además se conectó el circuito a un contador, para una medida más precisa de la frecuencia.
+	\par
+	En una primera instancia, se midió un valor de tensión de referencia, con una frecuencia dentro de las establecidas por los fabricantes. De este modo se determinó un valor de \textbf{$V_{max}$} y de \textbf{$V_{min}$}, y los valores medidos dentro de este rango se consideraron como medidas válidas. A partir de esto, se paso a determinar el ancho de banda de los instrumentos.
+	\par
+	Se utilizaron 3 tipos de voltímetros:
 \bigskip
 
-Se utilizaron 3 tipos de voltímetros:
-\bigskip
 
 \begin{table}[!hbt]
 	\begin{center}
@@ -285,6 +287,8 @@ Se utilizaron 3 tipos de voltímetros:
 	\caption{Tabla de los anchos de banda provistos por el fabricante.}
 	\end{center}
 \end{table}
+
+
 
 \subsubsection{Multímetro DVM}
 
@@ -340,11 +344,7 @@ La incertidumbre para la escala utilizada es:
 \end{equation}
 \medskip
 
-Los valores medidos son:
 
-\begin{center}
-$V_{ref} = (3.420 \pm 0.037) V$
-\end{center}
 \bigskip
 \begin{table}[h]
 	\begin{center}
@@ -373,8 +373,18 @@ $V_{ref} = (3.420 \pm 0.037) V$
 \includegraphics[width=0.80\textwidth]{images/tablaTRUE.png}
 \caption{Gráfico de los valores medidos con el voltímetro True-RMS.}
 \end{figure}
-\bigskip
-\bigskip
+\bigskip\bigskip\bigskip
+
+
+
+Los valores medidos son:
+
+\begin{center}
+	$V_{ref} = (3.420 \pm 0.037) V$
+\end{center}
+\bigskip\bigskip
+
+
 
 \subsubsection{Multímetro Analógico}
 
@@ -392,7 +402,9 @@ Valores medidos:
 $V_{ref} = (3.4 \pm 0.2) V$
 \end{center}
 
-\begin{table}[!hbt]
+
+\newpage
+\begin{table}[h]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}\hline
 	\textbf{f(Hz)} & \textbf{V(Volts)} & \textbf{$\Delta$V(Volts)} \\ \hline
@@ -405,14 +417,20 @@ $V_{ref} = (3.4 \pm 0.2) V$
 \end{table}
 \bigskip
 
-En este cuadro figuran pocos valores, esto es debido a que se tomaron nota de los valores de frecuencia en los que la aguja cambiaba de división. De \textit{10 Hz} para abajo, no se puede especificar el valor medido, ya que la aguja oscila.
 
-\begin{figure}[h!tbp]
-\centering
-\includegraphics[width=0.80\textwidth]{images/tablaANA.png}
-\caption{Gráfico de los valores medidos con el voltímetro analógico.}
+
+	En este cuadro figuran pocos valores, esto es debido a que se tomaron nota de los valores de frecuencia en los que la aguja cambiaba de división. De \textit{10 Hz} para abajo, no se puede especificar el valor medido, ya que la aguja oscila.
+
+
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.80\textwidth]{images/tablaANA.png}
+	\caption{Gráfico de los valores medidos con el voltímetro analógico.}
 \end{figure}
-\bigskip
+\bigskip\bigskip
+
+
 
 Por lo tanto, los valores aproximados de los anchos de banda son:
 
@@ -426,12 +444,17 @@ Por lo tanto, los valores aproximados de los anchos de banda son:
 	\end{tabular}
 	\caption{Tabla de los anchos de banda experimentales}
 	\end{center}
-\end{table}\bigskip
+\end{table}
+\bigskip
+
+
+
 
 \section{Conclusión}
 
-\indent De la primera parte se observa que los valores medidos y los valores calculados no diferen mucho, lo que para los multímetros analógico y DVM es notable, ya que multiplcan al valor medio rectificado por el factor de forma de una onda senoidal, y el error resultante no parace ser tan significativo.\\\medskip
-\indent De la segunda parte resalta el hecho de que los anchos de banda observados en los que son válidas las mediciones realizadas por los instrumentos es en realidad mayor al especificado por el fabricante de estos instrumentos, siendo el analógico el mayor. La diferencia observada en los anchos de banda, debe ser una precaución del fabricante para poder asegurar la fiabilidad del instrumento en los casos más cercanos a los extremos y que la incertidumbre esté dentro de los valores razonables.
+	De la primera parte se observa que los valores medidos y los valores calculados no diferen mucho, lo que para los multímetros analógico y DVM es notable, ya que multiplcan al valor medio rectificado por el factor de forma de una onda senoidal, y el error resultante no parace ser tan significativo.
+	\par
+	De la segunda parte resalta el hecho de que los anchos de banda observados en los que son válidas las mediciones realizadas por los instrumentos es en realidad mayor al especificado por el fabricante de estos instrumentos, siendo el analógico el mayor. La diferencia observada en los anchos de banda, debe ser una precaución del fabricante para poder asegurar la fiabilidad del instrumento en los casos más cercanos a los extremos y que la incertidumbre esté dentro de los valores razonables.
 
 
 % APÉNDICE A
@@ -446,6 +469,9 @@ Por lo tanto, los valores aproximados de los anchos de banda son:
 
 
 \newpage
+\section{Cálculos teóricos}
+\bigskip
+
 \subsection{Cálculos teóricos en DC}
 
 El valor continuo es el valor medio de la señal:
@@ -467,6 +493,7 @@ V =  {5V \times 3ms - 5V \times 7ms \over 10ms }= -2V
 \end{equation}
 \end{center}
 \bigskip
+
 
 \subsection{Cálculos teóricos en AC}
 
