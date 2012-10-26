@@ -139,7 +139,7 @@
 % INTRODUCCIÓN - Tiempo de crecimiento de una señal
 \subsection{Tiempo de crecimiento de una señal}
 
-	Sabemos que cuando se aplica una tensión a un circuito RC, la carga del capacitor demandará cierto tiempo. El retraso en el crecimiento de la tensión sobre un capacitor puede ponerse de manifiesto a través del parámetro llamado tiempo de crecimiento. Para una onda cuadrada, se define a esta variable como el tiempo que le lleva a la señal aumentar desde el 10\% al 90\% de su tensión máxima, y se calcula mediante la fórmula
+	Sabemos que cuando se aplica una tensión a un circuito RC, la carga del capacitor demandará cierto tiempo. El retraso en el crecimiento de la tensión sobre un capacitor puede ponerse de manifiesto a través del parámetro llamado tiempo de crecimiento. Para una onda cuadrada, se define a esta variable como el tiempo que le lleva a la señal aumentar desde el 10\% al 90\% de su tensión máxima, y se calcula mediante la fórmula:
 
 \begin{equation*}
 	T_c = 2,2 \times RC
@@ -212,10 +212,40 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 
 % DESARROLLO - Medicion del tiempo de crecimiento
 \subsection{Medición del tiempo de crecimiento}
-	
-	[ Colocar texto aquí ]
+	Se dispuso del siguiente banco de medición:\\
 	\bigskip
+	
+	[Insertar la figura!]\\
+	\bigskip
+	
+	Inicialmente, se calculó la frecuencia de corte y el tiempo de crecimiento del circuito \textit{RC} de manera teórica, y sin tener en cuenta el efecto de carga que producen las puntas y los instrumentos de medición. Como los valores de los elementos que se utilizaron son \textbf{$C = 68pF$} y \textbf{$R = 1k\Omega $}, entonces:
 
+\begin{equation*}
+	f_c = {1 \over 2 \pi RC} = {1 \over 2 \pi \times 1k\Omega \times 68pF} = 2,34 Mhz
+\end{equation*}
+\medskip
+Y el tiempo de crecimiento es:
+\begin{equation*}
+	T_c = 2,2 \times RC = 2,2 \times 1k\Omega \times 68pF = 149,6 ns
+\end{equation*}
+
+En la práctica el efecto de carga es imposible de evitar, y se midió el tiempo de crecimiento  y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{x1}, y la \textit{x10}.
+El procedimiento para ambos fue el mismo:\\
+\bigskip
+
+Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor) y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.\\
+
+Con respecto a la frecuencia de corte, se buscó que ambas señales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
+El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, y viendo la relación.
+ 
+\subsubsection{Medición con la punta \textit{x1}}
+Los valores medidos fueron:
+
+
+
+
+\subsubsection{Medición con la punta \textit{x10}} 
+Los valores medidos fueron:
 
 
 % DESARROLLO - Respuesta en frecuencia
@@ -246,7 +276,7 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 % CONCLUSIONES
 \section{Conclusiones}
 
-	De acuerdo a los resultados obtenidos en apartados anteriores podemos concluir que el efecto de carga que introducen las puntas en circuitos RC puede ser considerable tanto usando la punta X1 como la X10. Esto se confirma al ver que los tiempos de crecimiento de las señales eran apreciablemente distintos de los calculados analíticamente. 
+	De acuerdo a los resultados obtenidos en apartados anteriores podemos concluir que el efecto de carga que introducen las puntas en circuitos RC puede ser considerable tanto usando la punta \textit{X1} como la \textit{X10}. Esto se confirma al ver que los tiempos de crecimiento de las señales eran apreciablemente distintos de los calculados analíticamente. Aún así se puede ver que la punta atenuadora \textit{X10} es la mejor opción para realizar el trabajo práctico. Al ser el capacitor de $68 pF$, no hay punta que mejore las medidas realizadas mucho más, porque hay que tener en cuenta la capacidad de entrada del osciloscopio, que no se puede despreciar. 
 	\par
 	Se pudo observar también la relación directa entre el ancho de banda de los circuitos con el tiempo de crecimiento, y los valores utilizados de resistencias y capacidades. 
 	\par
