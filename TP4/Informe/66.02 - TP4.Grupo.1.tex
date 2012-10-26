@@ -228,6 +228,14 @@ Y el tiempo de crecimiento es:
 \begin{equation*}
 	T_c = 2,2 \times RC = 2,2 \times 1k\Omega \times 68pF = 149,6 ns
 \end{equation*}
+\medskip
+
+De las anteriores sale que:\\
+
+\begin{equation*}
+	f_c \times T_c = 2,2 RC \times {1 \over 2 \pi RC} = {2,2 \over 2 \times \pi} = 0,35
+\end{equation*}
+\medskip
 
 En la práctica el efecto de carga es imposible de evitar, y se midió el tiempo de crecimiento  y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{x1}, y la \textit{x10}.
 El procedimiento para ambos fue el mismo:\\
@@ -236,17 +244,44 @@ El procedimiento para ambos fue el mismo:\\
 Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor) y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.\\
 
 Con respecto a la frecuencia de corte, se buscó que ambas señales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
-El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, y viendo la relación.
+El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, y verificando la relación entre ambos tiempos.
  
 \subsubsection{Medición con la punta \textit{x1}}
-Los valores medidos fueron:
+Los valores medidos fueron:\\
+\medskip
 
+Para el tiempo de crecimiento, se contaron 2,8 divisiones, en una escala de $0.2 \mu s$, por lo que el valor medido, con su respectiva incerteza es: \\
 
+$T_c = 560 ns \pm 34 ns$\\
+
+La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
+
+$f_c = 580 khz$\\
+
+Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
+
+$T_c \times f_c = 560 ns \times 580 khz = 0,33$\\
+
+\bigskip
 
 
 \subsubsection{Medición con la punta \textit{x10}} 
-Los valores medidos fueron:
+Los valores medidos fueron:\\
+\medskip
 
+Para el tiempo de crecimiento, se contaron 1,2 divisiones, en una escala de $0.2 \mu s$, por lo que el valor medido, con su respectiva incerteza es: \\
+
+$T_c = 240 ns \pm 15 ns$\\
+
+La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
+
+$f_c = 1,620 Mhz$\\
+
+Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
+
+$T_c \times f_c = 240 ns \times 1,620 Mhz = 0,39$\\
+
+\bigskip
 
 % DESARROLLO - Respuesta en frecuencia
 \subsection{Medición de la respuesta en frecuencia}
