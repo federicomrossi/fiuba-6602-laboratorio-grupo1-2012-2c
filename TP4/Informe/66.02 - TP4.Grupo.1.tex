@@ -139,7 +139,7 @@
 % INTRODUCCIÓN - Tiempo de crecimiento de una señal
 \subsection{Tiempo de crecimiento de una señal}
 
-	Sabemos que cuando se aplica una tensión a un circuito RC, la carga del capacitor demandará cierto tiempo. El retraso en el crecimiento de la tensión sobre un capacitor puede ponerse de manifiesto a través del parámetro llamado tiempo de crecimiento. Para una onda cuadrada, se define a esta variable como el tiempo que le lleva a la señal aumentar desde el 10\% al 90\% de su tensión máxima, y se calcula mediante la fórmula:
+	Sabemos que cuando se aplica una tensión a un circuito RC, la carga del capacitor demandará cierto tiempo. El retraso en el crecimiento de la tensión sobre un capacitor puede ponerse de manifiesto a través del parámetro llamado tiempo de crecimiento. Para una onda cuadrada, se define a esta variable como el tiempo que le lleva a la señal aumentar desde el 10\% al 90\% de su tensión máxima, y se calcula mediante la fórmula
 
 \begin{equation*}
 	T_c = 2,2 \times RC
@@ -158,6 +158,7 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 \medskip
 
 \noindent En un circuito RC, esta frecuencia se obtiene según
+\medskip
 
 \begin{equation*}
 	f_c = {1 \over 2 \pi RC}
@@ -210,80 +211,102 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 
 
 
-% DESARROLLO - Medicion del tiempo de crecimiento
+%% DESARROLLO - Medicion del tiempo de crecimiento
 \subsection{Medición del tiempo de crecimiento}
-	Se dispuso del siguiente banco de medición:\\
+	Se dispuso del siguiente banco de medición mostrado en la \textit{Figura L}.
 	\bigskip
 	
 	[Insertar la figura!]\\
 	\bigskip
 	
 	Inicialmente, se calculó la frecuencia de corte y el tiempo de crecimiento del circuito \textit{RC} de manera teórica, y sin tener en cuenta el efecto de carga que producen las puntas y los instrumentos de medición. Como los valores de los elementos que se utilizaron son \textbf{$C = 68pF$} y \textbf{$R = 1k\Omega $}, entonces:
+\medskip
 
 \begin{equation*}
-	f_c = {1 \over 2 \pi RC} = {1 \over 2 \pi \times 1k\Omega \times 68pF} = 2,34 Mhz
+	f_c = {1 \over 2 \pi RC} = {1 \over 2 \pi \times 1k\Omega \times 68pF} = 2,34 MHz
 \end{equation*}
 \medskip
+
 Y el tiempo de crecimiento es:
+\medskip
+
 \begin{equation*}
 	T_c = 2,2 \times RC = 2,2 \times 1k\Omega \times 68pF = 149,6 ns
 \end{equation*}
 \medskip
 
-De las anteriores sale que:\\
+De estos dos valores obtenidos resulta que:
+\medskip
 
 \begin{equation*}
 	f_c \times T_c = 2,2 RC \times {1 \over 2 \pi RC} = {2,2 \over 2 \times \pi} = 0,35
 \end{equation*}
 \medskip
 
-En la práctica el efecto de carga es imposible de evitar, y se midió el tiempo de crecimiento  y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{x1}, y la \textit{x10}.
-El procedimiento para ambos fue el mismo:\\
+
+	En la práctica el efecto de carga es imposible de evitar, por lo que se midió el tiempo de crecimiento y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{X1}, y la \textit{X10}. El procedimiento para ambos fue el mismo y se pasan a enunciar.
+	\par
+	Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor), y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.
+	\par
+	Con respecto a la frecuencia de corte, se buscó que ambas señales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
+El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, verificando la relación entre ambos tiempos.
+\bigskip\medskip
+
+
+
+%%% DESARROLLO - Medicion del tiempo de crecimiento - Medición con la punta X1
+\subsubsection{Medición con la punta \textit{X1}}
+	
+	En la \textit{Tabla M} se listan los valores medidos.
+\bigskip\bigskip
+
+
+	[ COLOCAR TABLA AQUI ]
+	\bigskip\bigskip
+
+
+	Para el tiempo de crecimiento, se contaron 2,8 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
+
+$T_c = 560 nS \pm 34 nS$\\
+
+\LaTeX frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección. Su valor es: \\
+
+$f_c = 580 kHz$\\
+
+	Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
+
+$T_c \times f_c = 560 nS \times 580 kHz = 0,33$\\
 \bigskip
 
-Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor) y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.\\
-
-Con respecto a la frecuencia de corte, se buscó que ambas señales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
-El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, y verificando la relación entre ambos tiempos.
- 
-\subsubsection{Medición con la punta \textit{x1}}
-Los valores medidos fueron:\\
-\medskip
-
-Para el tiempo de crecimiento, se contaron 2,8 divisiones, en una escala de $0.2 \mu s$, por lo que el valor medido, con su respectiva incerteza es: \\
-
-$T_c = 560 ns \pm 34 ns$\\
-
-La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
-
-$f_c = 580 khz$\\
-
-Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
-
-$T_c \times f_c = 560 ns \times 580 khz = 0,33$\\
-
-\bigskip
 
 
+%%% DESARROLLO - Medicion del tiempo de crecimiento - Medición con la punta X10
 \subsubsection{Medición con la punta \textit{x10}} 
-Los valores medidos fueron:\\
-\medskip
 
-Para el tiempo de crecimiento, se contaron 1,2 divisiones, en una escala de $0.2 \mu s$, por lo que el valor medido, con su respectiva incerteza es: \\
+En la \textit{Tabla Mm} se listan los valores medidos.
+\bigskip\bigskip
 
-$T_c = 240 ns \pm 15 ns$\\
 
-La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
+	[ COLOCAR TABLA AQUI ]
+	\bigskip\bigskip
 
-$f_c = 1,620 Mhz$\\
 
-Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
+	Para el tiempo de crecimiento, se contaron 1,2 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
 
-$T_c \times f_c = 240 ns \times 1,620 Mhz = 0,39$\\
+$T_c = 240 nS \pm 15 nS$\\
 
+	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
+
+$f_c = 1,620 MHz$\\
+
+	Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
+
+$T_c \times f_c = 240 nS \times 1,620 MHz = 0,39$\\
 \bigskip
 
-% DESARROLLO - Respuesta en frecuencia
+
+
+%% DESARROLLO - Respuesta en frecuencia
 \subsection{Medición de la respuesta en frecuencia}
 	
 	[ Colocar texto aquí ]
@@ -291,7 +314,7 @@ $T_c \times f_c = 240 ns \times 1,620 Mhz = 0,39$\\
 
 
 
-% DESARROLLO - Determinación de la frecuencia de corte
+%% DESARROLLO - Determinación de la frecuencia de corte
 \subsection{Determinación de la frecuencia de corte}
 	
 	[ Colocar texto aquí ]
@@ -302,8 +325,117 @@ $T_c \times f_c = 240 ns \times 1,620 Mhz = 0,39$\\
 % DESARROLLO - Rectificadores
 \subsection{Rectificadores}
 	
-	[ Colocar texto aquí ]
-	\bigskip
+	Veremos ahora el funcionamiento de los llamados \textit{circuitos rectificadores}, los cuales permiten convertir la corriente alterna en corriente continua mediante el uso de diodos rectificadores, los cuales dependiendo de la configuración en que son conectados, otorgan distintos resultados en la salida. 
+	\par
+	En la \textit{Figura X} se muestra el circuito del primero de los dos circuitos rectificadores que analizaremos. Este es conocido como \textit{rectificador de media onda}, ya que utiliza solo el semiciclo positivo de la señal de entrada para rectificar.
+\bigskip\bigskip
+
+
+% Figura X
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.47\textwidth]{images/4-4-1-circuito-rectificador-media-onda.jpg}
+	\medskip
+	\caption{Circuito rectificador de media onda.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Utilizando una señal de $10V_{pp}$ y 100Hz a la entrada, junto con una resistencia de 1$k\Omega$ y un diodo de silicio, se obtuvo a la salida una señal rectificada como la que se muestra en la \textit{Figura XX}. Esta última tiene una amplitud de 9,27V. Puede observarse que la señal de salida comienza a aumentar su amplitud a partir de los 0V unos instantes mas tarde que la señal de entrada. Este hecho se debe a que la tensión umbral del diodo de silicio es de 0,7V, es decir, hasta que no haya una caída mayor o igual a este valor sobre el diodo, este mismo no permitirá el paso de corriente. Por otro lado, la señal de salida posee una amplitud máxima menor a los 10V (aproximadamente 0,7V por debajo de esta), ya que parte de la tensión de la señal de entrada cae sobre el diodo.
+\bigskip
+
+
+\newpage
+% Figura XX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{images/4-4-2-grafico-circuito-rectificador-media-onda.jpg}
+	\caption{Gráfico de la señal de salida de un rectificador\\ de media onda.}
+\end{figure}
+\bigskip\bigskip
+
+	
+	Agreguemos ahora a este circuito un capacitor de $20\mu F$ en paralelo a la resistencia que se encuentra previa a la salida, tal como se muestra en la \textit{Figura XXX}.
+\bigskip
+
+
+% Figura XXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.54\textwidth]{images/4-4-3-circuito-rectificador-media-onda-con-filtro.jpg}
+	\medskip
+	\caption{Circuito rectificador de media onda con capacitor.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Al hacer esto, obtenemos sobre la salida la señal que se muestra en la \textit{Figura XXXX}, en la cual se puede observar que la tensión se mantiene entre dos valores acotados, lo que denomina \textit{ripple}. Es el capacitor el responsable de generar este comportamiento al cargarse en los tramos crecientes del semiciclo positivo de la señal de entrada y al descargarse en los instantes restantes (siendo fundamental que no llegue a descargarse por completo). Para este caso, el valor pico a pico de la tensión de ripple es de 3.08V, el cual resulta de la diferencia del máximo y mínimo valor de ripple. Cabe mencionar que cuanto menor sea este ripple, más grado de continuidad tendrá nuestra señal a la salida, por lo que podemos considerar que será mejor el rectificador.
+\bigskip
+
+
+\newpage
+% Figura XXXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{images/4-4-4-grafico-circuito-rectificador-media-onda-con-filtro.jpg}
+	\caption{Gráfico de la señal de salida de un rectificador\\ de media onda con capacitor.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Ahora, en la \textit{Figura XXXXX} se muestra el circuito rectificador conocido como \textit{rectificador de onda completa}. A diferencia del rectificador de media onda, en este caso, se utilizan los dos semiciclos  de la señal de entrada para rectificar.
+\bigskip\bigskip
+	
+
+% Figura XXXXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/4-4-5-circuito-rectificador-onda-completa.jpg}
+	\medskip
+	\caption{Circuito rectificador de onda completa.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Aplicando nuevamente una señal de $10V_{pp}$ y 100Hz a la entrada, junto con una resistencia de 1$k\Omega$ y un puente de diodos de silicio, se obtuvo a la salida una señal rectificada como la que se muestra en la \textit{Figura XXXXXX}. Esta última tiene una amplitud de 8,56V. Nótese que esta se encuentra 1,4V por debajo de los 10V de la señal de entrada, debiéndose esto a que se produce una caída de tensión sobre los dos diodos que se encuentran en directa en cada semiciclo de la señal. 
+\bigskip
+
+
+\newpage
+% Figura XXXXXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{images/4-4-6-grafico-circuito-rectificador-onda-completa.jpg}
+	\caption{Gráfico de la señal de salida de un rectificador\\ de onda completa.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Acoplémosle a este circuito un capacitor de $10\mu F$ en paralelo a la resistencia que se encuentra previa a la salida, tal como se muestra en la \textit{Figura XXXXXXX}.
+\bigskip
+
+
+% Figura XXXXXXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.633\textwidth]{images/4-4-7-circuito-rectificador-onda-completa-con-filtro.jpg}
+	\medskip
+	\caption{Circuito rectificador de onda completa con capacitor.}
+\end{figure}
+\bigskip\bigskip
+
+
+Al hacer esto, sobre la salida obtenemos la señal que se muestra en \textit{Figura XXXXXXXX}, en la cual se puede observar que nuevamente se produce un ripple, pero que en este caso, el capacitor se carga y descarga dos veces por ciclo completo de la señal. Por último, se puede ver fácilmente que el valor pico a pico de la tensión de ripple es de 2,33V.
+
+
+\newpage
+% Figura XXXXXXXX
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.88\textwidth]{images/4-4-8-grafico-circuito-rectificador-onda-completa-con-filtro.jpg}
+	\caption{Gráfico de la señal de salida de un rectificador\\ de onda completa.}
+\end{figure}
+\bigskip\bigskip
 
 
 
