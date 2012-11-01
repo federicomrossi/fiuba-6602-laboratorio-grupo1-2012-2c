@@ -132,7 +132,7 @@
 \medskip
 
 	También existe otra especificación para una punta pasiva: su factor de atenuación. Este determina la proporción que hay entre las amplitudes de las señales de entrada y salida. Cuanto más elevado es, menor es la sensibilidad vertical del sistema de medida punta-osciloscopio. Sin embargo, la ventaja de las puntas atenuadoras radica en reducir la carga eléctrica del sistema de medida sobre el circuito a medir.
-\bigskip
+\bigskip\medskip
 
 
 
@@ -151,11 +151,13 @@
 \subsection{Frecuencia de corte}
 
 Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en frecuencia cae al 70,7\% de su valor máximo (se reduce en un valor de 3dB), es decir
+\medskip
 
 \begin{equation*}
 	V_0 = {V_i \over \sqrt{2}}
 \end{equation*}
-\medskip
+\bigskip
+
 \noindent En un circuito RC, esta frecuencia se obtiene según
 \medskip
 
@@ -368,7 +370,7 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 \subsection{Determinación de la frecuencia de corte}
 	
 	Para la determinación de la frecuencia de corte se ha utilizado el banco de medición de la \textit{Figura 3}.
-\bigskip\bigskip
+\bigskip
 
 
 % Figura 3
@@ -378,20 +380,36 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	\medskip
 	\caption{Conexionado del banco de medición.}
 \end{figure}
+\bigskip
+
+	
+	Se determinó la frecuencia de corte del conjunto punta osciloscopio seteando una onda senoidal de amplitud 4V la cual fue conectada al canal A del osciloscopio. A este último instrumento lo seteamos para tener en este mismo canal una escala de 1V/DIV (punta X1) y 0,1V/DIV (punta X10). Una vez hecho esto se varió la frecuencia hasta encontrar el punto donde cae 70\% la amplitud. 
+	\par			
+	En la \textit{Tabla 2} se muestran las frecuencias de corte observadas.
 \bigskip\bigskip
 
 	
-	Se determinó la frecuencia de corte del conjunto punta osciloscopio seteando una onda senoidal de amplitud 4V la cual fue conectada al canal A del osciloscopio. A este último instrumento lo seteamos para ver el canal A con 1V/DIV (punta X1) y .1V/DIV (punta X10). Una vez hecho esto se varió la frecuencia hasta encontrar el punto donde cae 70\% la amplitud. 
-				
-	Observamos que las frecuencias de corte son: 855 kHz para la punta X1 y 5,98MHz para la punta X10. Al encontrarse el resistor en paralelo este se suma a la resistencia total equivalente del circuito, disminuyendo el valor de la frecuencia de corte.
-	
-	\begin{equation*}
-		f_c = {1 \over 2 \pi RC}
-	\end{equation*}
-	\medskip
-	
-	Si se elimina la resistencia y se la reemplaza por un cable, la frecuencia de corte aumentará considerablemente ya que la resistencia del mismo es del orden de los 50$\Omega$.
-\bigskip\bigskip\bigskip
+% Tabla 2
+\begin{table}[!hbt]
+	\begin{center}
+	\begin{tabular}{|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{4.5cm}|}
+		\hline
+		\rowcolor[gray]{0.9}\textbf{Punta} & \textbf{Frecuencia de corte ($f_c$)} \\
+		\hline
+		X1 & 855 kHz\\
+		\hline
+		X10 & 5,98 MHz\\
+		\hline
+	\end{tabular}
+	\caption{Frecuencia de corte determinada para cada punta.}
+	\end{center}
+\end{table}
+
+
+	Como la resistencia del conjunto \textit{osciloscopio–punta} es tres órdenes mayor que la del circuito, no aportan efecto de carga al medir frecuencias. Como no se tiene un capacitor en el circuito, lo que se mide es la capacitancia del conjunto \textit{osciloscopio–punta}.
+	\par
+	La función de la resistencia que se encuentra en serie con la punta es desacoplar el nodo de la salida del generador con el nodo de entrada del osciloscopio. Si eliminamos la resistencia, notaremos la influencia de la capacitancia equivalente del generador en el circuito.
+\bigskip\bigskip
 
 
 
@@ -402,7 +420,7 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	Veremos ahora el funcionamiento de los llamados \textit{circuitos rectificadores}, los cuales permiten convertir la corriente alterna en corriente continua mediante el uso de diodos rectificadores, los cuales dependiendo de la configuración en que son conectados, otorgan distintos resultados en la salida. 
 	\par
 	En la \textit{Figura 4} se muestra el circuito del primero de los dos circuitos rectificadores que analizaremos. Este es conocido como \textit{rectificador de media onda}, ya que utiliza solo el semiciclo positivo de la señal de entrada para rectificar.
-\bigskip\bigskip
+\bigskip
 
 
 % Figura 4
@@ -412,14 +430,13 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	\medskip
 	\caption{Circuito rectificador de media onda.}
 \end{figure}
-\bigskip\bigskip
-
-
-	Utilizando una señal de $10V_{pp}$ y 100Hz a la entrada, junto con una resistencia de 1$k\Omega$ y un diodo de silicio, se obtuvo a la salida una señal rectificada como la que se muestra en la \textit{Figura 5}. Esta última tiene una amplitud de 9,27V. Puede observarse que la señal de salida comienza a aumentar su amplitud a partir de los 0V unos instantes mas tarde que la señal de entrada. Este hecho se debe a que la tensión umbral del diodo de silicio es de 0,7V, es decir, hasta que no haya una caída mayor o igual a este valor sobre el diodo, este mismo no permitirá el paso de corriente. Por otro lado, la señal de salida posee una amplitud máxima menor a los 10V (aproximadamente 0,7V por debajo de esta), ya que parte de la tensión de la señal de entrada cae sobre el diodo.
-\bigskip
 
 
 \newpage
+	Utilizando una señal de $10V_{pp}$ y 100Hz a la entrada, junto con una resistencia de 1$k\Omega$ y un diodo de silicio, se obtuvo a la salida una señal rectificada como la que se muestra en la \textit{Figura 5}. Esta última tiene una amplitud de 9,27V. Puede observarse que la señal de salida comienza a aumentar su amplitud a partir de los 0V unos instantes mas tarde que la señal de entrada. Este hecho se debe a que la tensión umbral del diodo de silicio es de 0,7V, es decir, hasta que no haya una caída mayor o igual a este valor sobre el diodo, este mismo no permitirá el paso de corriente. Por otro lado, la señal de salida posee una amplitud máxima menor a los 10V (aproximadamente 0,7V por debajo de esta), ya que parte de la tensión de la señal de entrada cae sobre el diodo.
+\bigskip\bigskip\bigskip
+
+
 % Figura 5
 \begin{figure}[h]
 	\centering
@@ -441,14 +458,13 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	\medskip
 	\caption{Circuito rectificador de media onda con capacitor.}
 \end{figure}
-\bigskip\bigskip
-
-
-	Al hacer esto, obtenemos sobre la salida la señal que se muestra en la \textit{Figura 7}, en la cual se puede observar que la tensión se mantiene entre dos valores acotados, lo que denomina \textit{ripple}. Es el capacitor el responsable de generar este comportamiento al cargarse en los tramos crecientes del semiciclo positivo de la señal de entrada y al descargarse en los instantes restantes (siendo fundamental que no llegue a descargarse por completo). Para este caso, el valor pico a pico de la tensión de ripple es de 3.08V, el cual resulta de la diferencia del máximo y mínimo valor de ripple. Cabe mencionar que cuanto menor sea este ripple, más grado de continuidad tendrá nuestra señal a la salida, por lo que podemos considerar que será mejor el rectificador.
-\bigskip
 
 
 \newpage
+	Al hacer esto, obtenemos sobre la salida la señal que se muestra en la \textit{Figura 7}, en la cual se puede observar que la tensión se mantiene entre dos valores acotados, lo que denomina \textit{ripple}. Es el capacitor el responsable de generar este comportamiento al cargarse en los tramos crecientes del semiciclo positivo de la señal de entrada y al descargarse en los instantes restantes (siendo fundamental que no llegue a descargarse por completo). Para este caso, el valor pico a pico de la tensión de ripple es de 3.08V, el cual resulta de la diferencia del máximo y mínimo valor de ripple. Cabe mencionar que cuanto menor sea este ripple, más grado de continuidad tendrá nuestra señal a la salida, por lo que podemos considerar que será mejor el rectificador.
+\bigskip\bigskip
+
+
 % Figura 7
 \begin{figure}[h]
 	\centering
@@ -456,11 +472,11 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	\medskip
 	\caption{Gráfico de la señal de salida de un rectificador\\ de media onda con capacitor.}
 \end{figure}
-\bigskip\bigskip
+\bigskip\medskip
 
 
 	Ahora, en la \textit{Figura 8} se muestra el circuito rectificador conocido como \textit{rectificador de onda completa}. A diferencia del rectificador de media onda, en este caso, se utilizan los dos semiciclos  de la señal de entrada para rectificar.
-\bigskip\bigskip
+
 	
 
 % Figura 8
@@ -470,14 +486,13 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 	\medskip
 	\caption{Circuito rectificador de onda completa.}
 \end{figure}
-\bigskip\bigskip
+
 
 
 	Aplicando nuevamente una señal de $10V_{pp}$ y 100Hz a la entrada, junto con una resistencia de 1$k\Omega$ y un puente de diodos de silicio, se obtuvo a la salida una señal rectificada como la que se muestra en la \textit{Figura 9}. Esta última tiene una amplitud de 8,56V. Nótese que esta se encuentra 1,4V por debajo de los 10V de la señal de entrada, debiéndose esto a que se produce una caída de tensión sobre los dos diodos que se encuentran en directa en cada semiciclo de la señal. 
-\bigskip
+\bigskip\bigskip\bigskip
 
 
-\newpage
 % Figura 9
 \begin{figure}[h]
 	\centering
@@ -502,10 +517,10 @@ Para una mejor apreciación, con los valores medidos en las primeras dos partes 
 \bigskip\bigskip
 
 
-Al hacer esto, sobre la salida obtenemos la señal que se muestra en \textit{Figura 11}, en la cual se puede observar que nuevamente se produce un ripple, pero que en este caso, el capacitor se carga y descarga dos veces por ciclo completo de la señal. Por último, se puede ver fácilmente que el valor pico a pico de la tensión de ripple es de 2,33V.
+	Al hacer esto, sobre la salida obtenemos la señal que se muestra en \textit{Figura 11}, en la cual se puede observar que nuevamente se produce un ripple, pero que en este caso, el capacitor se carga y descarga dos veces por ciclo completo de la señal. Por último, se puede ver fácilmente que el valor pico a pico de la tensión de ripple es de 2,33V.
+\bigskip\bigskip
 
 
-\newpage
 % Figura 11
 \begin{figure}[h]
 	\centering
@@ -520,7 +535,19 @@ Al hacer esto, sobre la salida obtenemos la señal que se muestra en \textit{Fig
 \bigskip\bigskip
 
 
-\newpage
+
+
+% CONCLUSIONES
+\section{Conclusiones}
+
+	De acuerdo a los resultados obtenidos en apartados anteriores podemos concluir que el efecto de carga que introducen las puntas en circuitos RC puede ser considerable tanto usando la punta \textit{X1} como la \textit{X10}. Esto se confirma al ver que los tiempos de crecimiento de las señales eran apreciablemente distintos de los calculados analíticamente. Aún así se puede ver que la punta atenuadora \textit{X10} es la mejor opción para realizar el trabajo práctico. Al ser el capacitor de $68 pF$, no hay punta que mejore las medidas realizadas mucho más, porque hay que tener en cuenta la capacidad de entrada del osciloscopio, que no se puede despreciar. 
+	\par
+	Se pudo observar también la relación directa entre el ancho de banda de los circuitos con el tiempo de crecimiento, y los valores utilizados de resistencias y capacidades. 
+	\par
+	Finalmente analizamos la utilización de diodos como rectificadores de media onda y onda completa, pudiendo así deducir los factores de forma.
+\bigskip\bigskip
+
+
 % Figura 12
 \begin{figure}[h]
 	\centering
@@ -533,15 +560,6 @@ Al hacer esto, sobre la salida obtenemos la señal que se muestra en \textit{Fig
 
 
 
-% CONCLUSIONES
-\section{Conclusiones}
-
-	De acuerdo a los resultados obtenidos en apartados anteriores podemos concluir que el efecto de carga que introducen las puntas en circuitos RC puede ser considerable tanto usando la punta \textit{X1} como la \textit{X10}. Esto se confirma al ver que los tiempos de crecimiento de las señales eran apreciablemente distintos de los calculados analíticamente. Aún así se puede ver que la punta atenuadora \textit{X10} es la mejor opción para realizar el trabajo práctico. Al ser el capacitor de $68 pF$, no hay punta que mejore las medidas realizadas mucho más, porque hay que tener en cuenta la capacidad de entrada del osciloscopio, que no se puede despreciar. 
-	\par
-	Se pudo observar también la relación directa entre el ancho de banda de los circuitos con el tiempo de crecimiento, y los valores utilizados de resistencias y capacidades. 
-	\par
-	Finalmente analizamos la utilización de diodos como rectificadores de media onda y onda completa, pudiendo así deducir los factores de forma.
-\bigskip\bigskip
 
 
 \newpage \textit{}
