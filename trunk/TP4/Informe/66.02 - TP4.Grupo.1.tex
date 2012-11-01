@@ -156,7 +156,6 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 	V_0 = {V_i \over \sqrt{2}}
 \end{equation*}
 \medskip
-
 \noindent En un circuito RC, esta frecuencia se obtiene según
 \medskip
 
@@ -215,10 +214,7 @@ Definimos como frecuencia de corte a la frecuencia para la cual la respuesta en 
 \subsection{Medición del tiempo de crecimiento}
 	Se dispuso del siguiente banco de medición mostrado en la \textit{Figura L}.
 	\bigskip
-	
-	[Insertar la figura!]\\
-	\bigskip
-	
+
 	Inicialmente, se calculó la frecuencia de corte y el tiempo de crecimiento del circuito \textit{RC} de manera teórica, y sin tener en cuenta el efecto de carga que producen las puntas y los instrumentos de medición. Como los valores de los elementos que se utilizaron son \textbf{$C = 68pF$} y \textbf{$R = 1k\Omega $}, entonces:
 \medskip
 
@@ -244,152 +240,96 @@ De estos dos valores obtenidos resulta que:
 \medskip
 
 
-	En la práctica el efecto de carga es imposible de evitar, por lo que se midió el tiempo de crecimiento y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{X1}, y la \textit{X10}. El procedimiento para ambos fue el mismo y se pasan a enunciar.
+	En la práctica el efecto de carga es imposible de evitar, por lo que se midió el tiempo de crecimiento y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{X1}, y la \textit{X10}. El procedimiento para ambas fue el mismo y se pasan a enunciar.
 	\par
 	Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor), y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.
 	\par
-	Con respecto a la frecuencia de corte, se buscó que ambas señales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
-El método utilizado fue calcular el período de la señal, y luego medir el tiempo de desfase entre ambas señales, verificando la relación entre ambos tiempos.
-\bigskip\medskip
 
 
 
 %%% DESARROLLO - Medicion del tiempo de crecimiento - Medición con la punta X1
 \subsubsection{Medición con la punta \textit{X1}}
 	
-	En la \textit{Tabla M} se listan los valores medidos.
-\bigskip\bigskip
-
-
-	[ COLOCAR TABLA AQUI ]
-	\bigskip\bigskip
-
-
 	Para el tiempo de crecimiento, se contaron 2,8 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
 
 $T_c = 560 nS \pm 34 nS$\\
-
-	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección. Su valor es: \\
-
-$f_c = 580 kHz$\\
-
-	Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
-
-$T_c \times f_c = 560 nS \times 580 kHz = 0,33$\\
-\bigskip
-
 
 
 %%% DESARROLLO - Medicion del tiempo de crecimiento - Medición con la punta X10
 \subsubsection{Medición con la punta \textit{X10}} 
 
-En la \textit{Tabla Mm} se listan los valores medidos.
-\bigskip\bigskip
-
-
-	[ COLOCAR TABLA AQUI ]
-	\bigskip\bigskip
-
-
 	Para el tiempo de crecimiento, se contaron 1,2 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
 
 $T_c = 240 nS \pm 15 nS$\\
 
-	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
-
-$f_c = 1,620 MHz$\\
-
-	Entonces, para verificar la verosimilitud de los valores obtenidos, se verifica la relación de la frecuencia de corte con el tiempo de crecimiento:\\
-
-$T_c \times f_c = 240 nS \times 1,620 MHz = 0,39$\\
-\bigskip
 
 
-
-%% DESARROLLO - Medición de la respuesta en frecuencia
+%% DESARROLLO - Respuesta en frecuencia
 \subsection{Medición de la respuesta en frecuencia}
 	
-	Para realizar esta medición se generó una onda senoidal de amplitud igual a (INSERTAR VOLTAJE) V.
-	\par
-	Se conecto la punta del CH1 a la salida del generador y la punta del CH2 a los bornes del capacitor.
-	Al osciloscopio se lo seteo para que muestre ambas señales en modo DUAL. Los canales 1 y 2 se setearon a 2V/DIV.
-	\par
-	Siendo la amplitud máxima de la señal de entrada V (VOLTAJE UTIL/2Volt/div = CAnt divisiones ), se encontró la frecuencia de corte cuando la señal de salida alcanzaba en su punto máximo las (0.7 * Cantidad de divisiones) divisiones (punto en el que cae un 70\% la tensión de salida con respecto a la entrada). 
-	Se tomaron las mediciones con la punta atenuada en X1 y se volcaron en el cuadro dela \textit{Tabla 2}.
-\bigskip\bigskip
-	
-	\begin{table}[!hbt]
-		\begin{center}
-		\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\arraybackslash}m{3.5cm}|}
-			\hline
-			\rowcolor[gray]{0.9}\textbf{Frecuencia [KHz]} & \textbf{Tensión} \\
-			\hline
-			0,1 & 0\\
-			\hline
-			1 & 0\\
-			\hline
-			10 & 0\\
-			\hline
-			100 & 0 \\
-			\hline
-			1000 & 0 \\
-			\hline
-		\end{tabular}
-		\caption{T(f)}
-		\end{center}
-	\end{table}
-	\bigskip
+	Para medir la frecuencia de corte, se buscó que las señales de ambos canales tuviesen un desfasaje de \textit{45°} , que es en el momento en que se encuentra en dicha frecuencia de corte.
+La forma de calcular esto fue medir el período de la señal, y luego medir el tiempo de desfase entre ambas señales, verificando la relación entre ambos tiempos.
+\bigskip\medskip
 
-	
-	Para la frecuencia (INSERTAR FRECUENCIA) se encontró que la tensión caía al 70\%. Esta es la frecuencia de corte que determina el ancho de banda del instrumento-puntaX1.
-\bigskip\bigskip
+Las curvas de respuesta en frecuencia en cada caso se puede ver en el siguiente gráfico:\\
 
-	%\begin{figure}[h]
-	%	\centering
-	%	\includegraphics[width=0.47\textwidth]{images/graficoLogaritmicoX1.jpg}
-	%	\medskip
-	%	\caption{log(f) vs Amplitud, punta x1.}
-	%\end{figure}
-	[ COLOCAR IMAGEN AQUI ]
-	\bigskip\bigskip
-	
-	Luego se atenuó a  X10  la punta y los controles de V/DIV de los CH 1 y 2 se conmutaron a .2V/DIV. Se varió la frecuencia y se tomaron las mediciones que se encuentran en la \textit{Tabla 3}.
+% GRAFICO
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{images/2-respuesta-en-frecuencia.png}
+	\medskip
+	\caption{Respuesta en frecuencia del circuito.}
+\end{figure}
 \bigskip\bigskip
-	
-	\begin{table}[!hbt]
-			\begin{center}
-			\begin{tabular}{|>{\centering\arraybackslash}m{3.5cm}|>{\arraybackslash}m{3.5cm}|}
-				\hline
-				\rowcolor[gray]{0.9}\textbf{Frecuencia [KHz]} & \textbf{Tensión} \\
-				\hline
-				0,1 & 0\\
-				\hline
-				1 & 0\\
-				\hline
-				10 & 0\\
-				\hline
-				100 & 0 \\
-				\hline
-				1000 & 0 \\
-				\hline
-			\end{tabular}
-			\caption{T(f)}
-			\end{center}
-		\end{table}
-		\bigskip
-		
-		Para la frecuencia (INSERTAR FRECUENCIA) se encontró que la tensión caía al 70\%. Esta es la frecuencia de corte que determina el ancho de banda del instrumento-punta X10.
-\bigskip\bigskip
-		
-	%\begin{figure}[h]
-	%	\centering
-	%	\includegraphics[width=0.47\textwidth]{images/graficoLogaritmicoX10.jpg}
-	%	\medskip
-	%	\caption{log(f) vs Amplitud, punta x10.}
-	%\end{figure}
-	[ COLOCAR IMAGEN AQUI ]
-	\bigskip\bigskip
-\newpage
+\bigskip
+
+En el momento en que la relación de ambas tensiones cae por debajo de ${1 \over \sqrt{2}}$, signifca que se ha alcanzado la frecuencia de corte.
+
+\subsubsection{Medición con la punta \textit{X1}}
+
+	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección. Su valor es: \\
+
+$f_c = 580 kHz$\\
+
+
+\subsubsection{Medición con la punta \textit{X10}}
+
+	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
+
+$f_c = 1,62 MHz$\\
+
+\subsubsection{tiempo de crecimiento}
+
+Ya que se sabe que:
+
+\begin{equation}
+t_c \times f_c = 0,35
+\end{equation}
+de aquí se puede despejar el tiempo de crecimiento, y por lo tanto:
+
+\begin{equation}
+t_{c_{X1}} = {0,35 \over 580kHz} = 603,46 ns
+\end{equation}
+
+De la misma manera:
+
+\begin{equation}
+t_{c_{X10}} = {0,35 \over 1,62Mz} = 216,05 ns
+\end{equation}
+
+Se puede ver que los valores no son los mismos que los obtenidos midiendo con el osciloscopio, y es de esperar,pero aún así están a una distancia aceptable, hay que tener en cuenta que la medición de la frecuencia de corte también tiene su error, así los últimos cálculos no son exactos.
+
+Para una mejor apreciación, con los valores medidos en las primeras dos partes se obtiene:
+
+\begin{equation*}
+	f_{c_X1} \times T_{c_X1} = 580 kHz \times 560 ns = 0,33
+\end{equation*}
+\medskip
+
+\begin{equation*}
+	f_{c_X10} \times T_{c_X10} = 1,62 MHz \times 240 ns = 0,39
+\end{equation*}
+\medskip
 
 
 
