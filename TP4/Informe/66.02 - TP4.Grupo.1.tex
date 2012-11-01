@@ -309,7 +309,86 @@ $T_c \times f_c = 240 nS \times 1,620 MHz = 0,39$\\
 %% DESARROLLO - Respuesta en frecuencia
 \subsection{Medición de la respuesta en frecuencia}
 	
-	[ Colocar texto aquí ]
+	Para realizar esta medición se generó una onda senoidal de amplitud igual a (INSERTAR VOLTAJE) V.
+	
+	Se conecto la punta del CH1 a la salida del generador y la punta del CH2 a los bornes del capacitor.
+	Al osciloscopio se lo seteo para que muestre ambas señales en modo DUAL. Los canales 1 y 2 se setearon a 2V/DIV.
+	
+	Siendo la amplitud máxima de la señal de entrada V (VOLTAJE UTIL/2Volt/div = CAnt divisiones ), se encontró la frecuencia de corte cuando la señal de salida alcanzaba en su punto máximo las (0.7 * Cantidad de divisiones) divisiones (punto en el que cae un 70\% la tensión de salida con respecto a la entrada). 
+	Se tomaron las mediciones con la punta atenuada en ×1 y se volcaron en el siguiente cuadro:
+	
+	\begin{table}[!hbt]
+		\begin{center}
+		\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\arraybackslash}m{6cm}|}
+			\hline
+			\rowcolor[gray]{0.9}\textbf{Frecuencia(KHz)} & \textbf{Tension} \\
+			\hline
+			0,1 & 0\\
+			\hline
+			1 & 0\\
+			\hline
+			10 & 0\\
+			\hline
+			100 & 0 \\
+			\hline
+			1000 & 0 \\
+			\hline
+		\end{tabular}
+		\caption{T(f)}
+		\end{center}
+	\end{table}
+	\bigskip\bigskip
+	
+	Para la frecuencia (INSERTAR FRECUENCIA) se encontró que la tensión caía al 70\%. Esta es la frecuencia de corte que determina el ancho de banda del instrumento-puntaX1.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.47\textwidth]{images/graficoLogaritmicoX1.jpg}
+		\medskip
+		\caption{log(f) vs Amplitud, punta x1.}
+	\end{figure}
+	\bigskip\bigskip
+	
+	Luego se atenuó a  ×10  la punta y los controles de V/DIV de los CH 1 y 2 se conmutaron a .2V/DIV.
+	Se varió la frecuencia y se tomaron las siguientes mediciones:
+	
+	
+	\begin{table}[!hbt]
+			\begin{center}
+			\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\arraybackslash}m{6cm}|}
+				\hline
+				\rowcolor[gray]{0.9}\textbf{Frecuencia(KHz)} & \textbf{Tension} \\
+				\hline
+				0,1 & 0\\
+				\hline
+				1 & 0\\
+				\hline
+				10 & 0\\
+				\hline
+				100 & 0 \\
+				\hline
+				1000 & 0 \\
+				\hline
+			\end{tabular}
+			\caption{T(f)}
+			\end{center}
+		\end{table}
+		\bigskip\bigskip
+		
+		Para la frecuencia (INSERTAR FRECUENCIA) se encontró que la tensión caía al 70\%. Esta es la frecuencia de corte que determina el ancho de banda del instrumento-punta X10.
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.47\textwidth]{images/graficoLogaritmicoX10.jpg}
+			\medskip
+			\caption{log(f) vs Amplitud, punta x10.}
+		\end{figure}
+		\bigskip\bigskip
+	
+	
+	
+	
+	
 	\bigskip
 
 
@@ -317,7 +396,68 @@ $T_c \times f_c = 240 nS \times 1,620 MHz = 0,39$\\
 %% DESARROLLO - Determinación de la frecuencia de corte
 \subsection{Determinación de la frecuencia de corte}
 	
-	[ Colocar texto aquí ]
+	Se determinó la frecuencia de corte del conjunto punta osciloscopio seteando una onda senoidal de amplitud 4V la cual la conectamos en el canal A del osciloscopio. A este ultimo instrumento lo seteamos para ver el canal A con 1V/DIV (punta x1) y .1V/DIV (punta x10).
+	Una vez hecho esto se varió la frecuencia hasta encontrar el punto donde cae 70\% la amplitud.
+	Los datos fueron volcados en la siguientes tabla:
+	
+		\begin{table}[!hbt]
+				\begin{center}
+				\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\arraybackslash}m{6cm}|}
+					\hline
+					\rowcolor[gray]{0.9}\textbf{Frecuencia(KHz)} & \textbf{Tension} \\
+					\hline
+					0,1 & 0\\
+					\hline
+					1 & 0\\
+					\hline
+					10 & 0\\
+					\hline
+					100 & 0 \\
+					\hline
+					1000 & 0 \\
+					\hline
+				\end{tabular}
+				\caption{Punta X1}
+				\end{center}
+			\end{table}
+			\bigskip\bigskip
+	
+	
+		\begin{table}[!hbt]
+					\begin{center}
+					\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|>{\arraybackslash}m{6cm}|}
+						\hline
+						\rowcolor[gray]{0.9}\textbf{Frecuencia(KHz)} & \textbf{Tension} \\
+						\hline
+						0,1 & 0\\
+						\hline
+						1 & 0\\
+						\hline
+						10 & 0\\
+						\hline
+						100 & 0 \\
+						\hline
+						1000 & 0 \\
+						\hline
+					\end{tabular}
+					\caption{Punta X10}
+					\end{center}
+				\end{table}
+				\bigskip\bigskip
+				
+				
+	Observamos que las frecuencias de corte son: (INDICAR FCorte)MHz para la punta x1 y (INDICAR FCorte)MHz para la punta x10.
+	
+	Al encontrarse el resistor en paralelo este se suma a la resistencia total equivalente del circuito, disminuyendo el valor de la frecuencia de corte.
+	
+	\begin{equation*}
+		f_c = {1 \over 2 \pi RC}
+	\end{equation*}
+	\medskip
+	
+	Si elimino la resistencia y la reemplazo por un cable, la frecuencia de corte aumentará considerablemente. Ya que la resistencia de el mismo es del orden de los 50 ohms.
+	
+	
 	\bigskip
 
 
