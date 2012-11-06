@@ -154,12 +154,12 @@
 	\medskip
 	Diagrama de bloques para medir frecuencia:
 	
-	\begin{figure}[h]
-				\centering
-				\includegraphics[width=0.47\textwidth]{images/diagramaBloquesFrecuenciaContador.jpg}
-				\medskip
-	\end{figure}
-	\bigskip\bigskip
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.47\textwidth]{images/diagramaBloquesFrecuenciaContador.jpg}
+	\medskip
+\end{figure}
+\bigskip\bigskip
 	
 \subsection {Medicion de Período}
 		
@@ -293,25 +293,25 @@
 		\begin{tabular}{|c|c|c|c|c|c|c|} \hline
 			\multirow{2}{*}{\textbf{Frecuencia}}
 			& \multicolumn{2}{c|}{\textbf{Contador recíproco}} & \multicolumn{2}{c|}{\textbf{Contador universal}} & \multirow{2}{*}{\textbf{Modo}} & \multirow{2}{*}{\textbf{Gate Time}} \\\cline{2-5}
-			& Indicación display & Error & Indicación display & Error & & \\\hline
+			& Indicación display & Error(\%) & Indicación display & Error & & \\\hline
 			
 			\multirow{4}{*}{\textbf{10 Hz}}
-			& 9,991893 Hz &  & 0,010 KHz &  & Frecuencia & 1 Seg. \\\cline{2-7}
-			& 100131,1 $\mu$S &  & ¿OVER? &  & Período & 1 Seg. \\\cline{2-7}
+			& 9,991893 Hz & 1e-5  & 0,010 KHz & 10 & Frecuencia & 1 Seg. \\\cline{2-7}
+			& 100131,1 $\mu$S & 1e-5 & ¿OVER? &  & Período & 1 Seg. \\\cline{2-7}
 			& - &  & ¿GATE? &  & Frecuencia & 0.01 Seg. \\\cline{2-7}
-			& - &  & 100201,7 $\mu$S &  & Período & 0.01 Seg. \\\hline
+			& - &  & 100201,7 $\mu$S & 1e-5  & Período & 0.01 Seg. \\\hline
 
 			\multirow{4}{*}{\textbf{1 kHz}}
-			& 1,00423 kHz &  & 1,005 kHz &  & Frecuencia & 1 Seg. \\\cline{2-7}
-			& 995,7958 $\mu$S &  & 995,797 $\mu$S &  & Período & 1 Seg. \\\cline{2-7}
-			& 1,0036 kHz &  & 1,0 kHz &  & Frecuencia & 0.01 Seg. \\\cline{2-7}
-			& 996,43 $\mu$S &  & 996,5 $\mu$S &  & Período & 0.01 Seg. \\\hline
+			& 1,00423 kHz & 1e-4  & 1,005 kHz & 0,1  & Frecuencia & 1 Seg. \\\cline{2-7}
+			& 995,7958 $\mu$S & 1e-5 & 995,797 $\mu$S & 1e-4 & Período & 1 Seg. \\\cline{2-7}
+			& 1,0036 kHz & 0,01 & 1,0 kHz & 10 & Frecuencia & 0.01 Seg. \\\cline{2-7}
+			& 996,43 $\mu$S & 1e-3 & 996,5 $\mu$S & 0,01 & Período & 0.01 Seg. \\\hline
 
 			\multirow{4}{*}{\textbf{1 MHz}}
-			& 1,001719 MHz &  & 1001,743 kHz &  & Frecuencia & 1 Seg. \\\cline{2-7}
-			& 0,998182 $\mu$S &  & 0,998 $\mu$S &  & Período & 1 Seg. \\\cline{2-7}
-			& 1,0015 MHz &  & 1001,5 kHz &  & Frecuencia & 0.01 Seg. \\\cline{2-7}
-			& 0,99868 $\mu$S &  & 1,0 $\mu$S &  & Período & 0.01 Seg. \\\hline
+			& 1,001719 MHz & 1e-4 & 1001,743 kHz & 1e-4 & Frecuencia & 1 Seg. \\\cline{2-7}
+			& 0,998182 $\mu$S & 1e-4 & 0,998 $\mu$S & 0,1 & Período & 1 Seg. \\\cline{2-7}
+			& 1,0015 MHz & 1e-2 & 1001,5 kHz & 1e-2 & Frecuencia & 0.01 Seg. \\\cline{2-7}
+			& 0,99868 $\mu$S & 1e-3 & 1,0 $\mu$S & 10 & Período & 0.01 Seg. \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la primer medición.}
@@ -331,15 +331,19 @@
 			& \multicolumn{3}{c|}{\textbf{Contador universal}} & \multicolumn{3}{c|}{\textbf{Contador recíproco}} \\\cline{2-7}
 			& Modo (\textit{f} ó \textit{T}) & Gate time & Error & Modo (\textit{f} ó \textit{T}) & Gate time & Error \\\hline
 			
-			\textbf{10 Hz} &  &  &  &  &  &  \\\hline
-			\textbf{1 kHz} &  &  &  &  &  &  \\\hline
-			\textbf{1 MHz} &  &  &  &  &  &  \\\hline
+			\textbf{10 Hz} & T & 0,01 & 1e-5 & Ambos & 1 & 1e-5 \\\hline
+			\textbf{1 kHz} & T & 1 & 1e-4 & T & 1 & 1e-4 \\\hline
+			\textbf{1 MHz} & f & 1 & 1e-4 & Ambos & 1 & 1e-4 \\\hline
 		\end{tabular}
 
 	\caption{Valores calculados para la primer medición.}
 	\end{center}
 \end{table}
 \medskip
+
+Análisis de la primer medición:
+		
+		Como conclusión se puede sacar que el contador recíproco es mucho más preciso que el universal y me sirve usarlo en modo período o frecuencia cuando mido frecuencias de cualquier magnitud. Al contrario el unviersal, a fin de reducir los errores debo medir en modo frecuencia para las frecuencias altas y en modo período para las bajas.
 
 
 
