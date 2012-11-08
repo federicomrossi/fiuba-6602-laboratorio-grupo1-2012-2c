@@ -147,7 +147,7 @@
 % Figura 1
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.72\textwidth]{images/01-ondasFrecuenciaContador.jpg}
+	\includegraphics[width=0.63\textwidth]{images/01-ondasFrecuenciaContador.jpg}
 	\medskip
 	\caption{Esquema de conteo en la medición de frecuencia.}
 \end{figure}
@@ -155,6 +155,7 @@
 
 	
 	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1 ó 10 segundos según sea seleccionado por el control \textit{GATE TIME}.A la señal de entrada , para eliminar ruidos que pueden causar una lectura errónea, se la transforma en una señal cuadrada. Para esto se la pasa por un disparador de Schmitt. Este disparador cuenta con un límite máximo de tensión y otro límite mínimo, y cuando la señal sobrepasa el máximo, o pasa por debajo del mínimo, la señal de salida (del disparador de Schmitt) varía. Un detalle importante es que los límites de tensión se pueden variar, por la razón de que puede darse el caso en el que la señal de entrada no supere los límites establecidos, de manera tal que no se llegue a formar una señal. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
+\bigskip
 
 
 \newpage
@@ -174,7 +175,7 @@
 \begin{equation}
 	f_x = {N_c \over T_G}
 \end{equation}
-\medskip
+
 
 \noindent donde, \\
 $N_c$ = Número de cuentas acumuladas (ó ciclos de la señal de entrada);\\
@@ -194,7 +195,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 % Figura 3
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.65\textwidth]{images/03-ondasPeriodoContador.jpg}
+	\includegraphics[width=0.70\textwidth]{images/03-ondasPeriodoContador.jpg}
 	\medskip
 	\caption{Esquema de conteo en la medición de período.}
 \end{figure}
@@ -260,9 +261,6 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 
 	
 	
-	
-
-
 %% INTRODUCCIÓN - Medición de la Relación de Frecuencias
 \subsection{Medición de la Relación de Frecuencias} 
 \medskip
@@ -302,6 +300,9 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 		\item Base de tiempo
 		\item Errores sistemáticos
 	\end{itemize}
+	\medskip
+
+\noindent Para una amplia comprensión de cómo es que se obtienen las incertezas, diríjase al \textit{Apéndice A}.
 \bigskip\bigskip
 
 
@@ -356,6 +357,8 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 \medskip
 	
 	En esta primer medición se dispondrán los contadores y el generador de la forma en que se muestra en la \textit{Figura 7}.
+\bigskip
+
 	
 % Figura 7
 \begin{figure}[h]
@@ -431,23 +434,29 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 		De ambas tablas se desprende que el contador recíproco es mucho más preciso que el universal, por lo que su uso es útil en modo período o frecuencia cuando se mide frecuencias de cualquier magnitud. Por el contrario, en el unviersal, a fin de reducir los errores, se debe medir en modo frecuencia a frecuencias altas y en modo período a frecuencias bajas.
 
 
-
+\newpage
 %% DESARROLLO - Segunda medición
 \subsection{Segunda medición}
 \medskip
 
+	En esta ocasión armaremos el banco de medición conectando el contador, el generador y el osciloscopio de la forma en la que se muestra en la \textit{Figura 8}.
+\bigskip
 
-	Banco de Medición:
-	
-	\begin{figure}[h]
-				\centering
-				\includegraphics[width=0.47\textwidth]{images/bancoMedicionMed2.jpg}
-				\medskip
-	\end{figure}
-	\bigskip\bigskip
+
+% Figura 8
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.63\textwidth]{images/08-bancoMedicionMed2.jpg}
+	\medskip
+	\caption{Banco de medición para la segunda medición.}
+\end{figure}
+\bigskip\bigskip	
+
 	
 	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, 1 KHz de frecuencia y se fue variando el ciclo de trabajo desde el generador y probando todas las combinaciones posibles entre el slope A y B ( + y -). 
-\bigskip
+	\par
+	En la \textit{Tabla 4} se encuentran volcados los valores obtenidos en la realización de esta segunda experiencia.
+\bigskip\bigskip\medskip
 
 
 % Tabla 4
@@ -468,9 +477,11 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 	\caption{Valores obtenidos en la segunda medición.}
 	\end{center}
 \end{table}
-\medskip
+\bigskip
+
 	
-El contador toma el intervalo de tiempo entre la señal del \textit{CH A} y la del \textit{CH B}. Como en este caso es la misma señal la que entra a ambos canales, el contador no tiene el tiempo suficiente de notar la diferencia de fase si ambas pendientes son positivas o negativas, es por eso que se mide el período. En los demás casos, se puede apreciar que la suma de los valores cuando A y B son + y -, respectivamente, y cuando son - y +, da un valor cercano al período de la señal.
+	El contador toma el intervalo de tiempo entre la señal del \textit{CH A} y la del \textit{CH B}. Como en este caso es la misma señal la que entra a ambos canales, el contador no tiene el tiempo suficiente de notar la diferencia de fase si ambas pendientes son positivas o negativas, es por eso que se mide el período. En los demás casos, se puede apreciar que la suma de los valores cuando A y B son + y -, respectivamente, y cuando son - y +, da un valor cercano al período de la señal.
+\bigskip\bigskip
 
 
 %% DESARROLLO - Tercera medición
