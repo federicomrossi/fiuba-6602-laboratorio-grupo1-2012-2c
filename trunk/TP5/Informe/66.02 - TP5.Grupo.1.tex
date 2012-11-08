@@ -645,11 +645,58 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 \begin{center}
 	\textbf{\Huge{Apéndice A}} \\
 	\bigskip\bigskip
-	\Large{\textit{``Hojas de datos de instrumentos de medición''}}
+	\Large{\textit{``Incertidumbres''}}
 \end{center}
 
 
 \newpage \textit{}
+
+\section{Incertezas}
+
+\subsection{\textbf{Contador universal}} Utilizando el contador universal, las incertezas se deben a:\\
+
+\begin{itemize}
+\item{Error de cuantización ($\pm 1$ cuenta).}
+\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, se tomó como aproximado 50 ppm).}
+\item{Error del trigger(0,3\%/N)).}
+\end{itemize}
+
+\medskip
+
+\subsubsection{\textit{Modo frecuencia}}
+
+En este modo se cometen incertidumbres por: error de cuantización, y error de la base de tiempos.
+\medskip
+
+\subsubsection{\textit{Modo período}}
+
+En modo período se cometen: incertidumbres por errores de cuantización, error de la base de tiempos y error del trigger.
+\medskip
+
+\subsubsection{\textit{Modo intervalo de tiempo}}
+
+En este modo se cometen: error de cuantización, error de la base de tiempos y errores de ambos triggers.
+\medskip
+
+\subsubsection{\textit{Modo relación de frecuencias}}
+
+Se cometen: error de cuantización, y error de la base de tiempos.
+\bigskip
+
+
+\subsection{\textbf{Contador recíproco}}
+
+La incertidumbre cometida en el modo frecuencia y en modo período de tiempo es debido a:\\
+
+\begin{itemize}
+\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, tambien se tomó como aproximado 50 ppm).}
+\item{Resolución del contador(\textit{ver hoja de datos}).}
+\end{itemize}
+
+\bigskip
+
+
 \newpage
+
 
 \end{document}
