@@ -138,6 +138,7 @@
 
 %% INTRODUCCIÓN - Medición de Frecuencia	
 \subsection{Medición de Frecuencia}
+\medskip
 
 	En este modo, el contador cuenta durante el tiempo elegido en la \textit{Base de Tiempo}, la cantidad de ciclos de la señal de entrada. Ese valor es el que aparece en el display indicando la frecuencia.
 \bigskip\bigskip
@@ -146,7 +147,7 @@
 % Figura 1
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{images/01-ondasFrecuenciaContador.jpg}
+	\includegraphics[width=0.72\textwidth]{images/01-ondasFrecuenciaContador.jpg}
 	\medskip
 	\caption{Esquema de conteo en la medición de frecuencia.}
 \end{figure}
@@ -160,7 +161,7 @@
 % Figura 2
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.80\textwidth]{images/02-diagrama-en-bloques-modo-medicion-frecuencia.jpg}
+	\includegraphics[width=0.75\textwidth]{images/02-diagrama-en-bloques-modo-medicion-frecuencia.jpg}
 	\medskip
 	\caption{Esquema de bloques de un contador convencional\\ en modo medición de frecuencias.}
 \end{figure}
@@ -184,7 +185,8 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 
 %% INTRODUCCIÓN - Medición de Periodo	
 \subsection {Medicion de Período}
-		
+\medskip
+
 	En este modo, el contador cuenta la cantidad de pulsos de la base de tiempo durante un ciclo de la señal de entrada. A partir de ese valor obtiene el período. 
 \bigskip\bigskip
 
@@ -206,7 +208,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 % Figura 4
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.80\textwidth]{images/04-diagrama-en-bloques-modo-medicion-periodo.jpg}
+	\includegraphics[width=0.75\textwidth]{images/04-diagrama-en-bloques-modo-medicion-periodo.jpg}
 	\medskip
 	\caption{Diagrama en bloques correspondiente al modo de\\ Medición de Período.}
 \end{figure}
@@ -233,30 +235,56 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 
 %% INTRODUCCIÓN - Medición del Intervalo de tiempo	
 \subsection{Medición del Intervalo de tiempo}
-	
-	A diferencia de las mediciones anteriores, en este caso el objetivo de esta medición es medir el tiempo que transcurre entre dos eventos que pueden provenir de señales diferentes o de la misma señal.
+\medskip
+
+	A diferencia de los tipos de mediciones expuestas en los apartados anteriores, en este caso el objetivo es medir el tiempo que transcurre entre dos eventos que pueden provenir de señales diferentes o de la misma señal.
+	\par
+	En este modo de funcionamiento ambos tipos de contadores, convencionales y recíprocos, lo hacen de la misma forma, ya que ambos acumulan y cuentan impulsos de la base de tiempos entre los eventos de apertura y cierre de la compuerta fijados a los canales 1 y 2. La expresión de cálculo del intervalo de tiempo es la misma que la del período (ecuación 7), donde el término $t_x$ deberá reemplazarse por $IT_x$ (intervalo de tiempo).
+	\par
+	En la \textit{Figura 5} se muestra el diagrama en bloques para este modo de medición. La salida del \textit{FLIP-FLOP} cambiará al estado alto cuando reciba una señal adecuada en la entrada SET. A partir de entonces ingnorará toda otra señal aplicada a SET hasta tanto no haya recibido una señal adecuada en la entrada RESET que lo vuelva al estado bajo.
+	\par
+	La pendiente de disparo de cada canal (flanco positivo o flanco negativo) puede variarse desde el panel frontal, permitiendo las diversas mediciones: ancho de pulso, período, fase, etc.
+	\par
+	A su vez, tanto los contadores convencionales como los recíprocos realizan mediciones de intervalos múltiples, cuya cantidad puede ser seleccionada desde el panel frontal (1, 10, 100 ó 1000 intervalos). La cuenta final se obtiene simplemente fijando el punto decimal de acuerdo a la cantidad de períodos seleccionados.
+\bigskip\bigskip
+
+\newpage
+% Figura 5
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{images/05-diagrama-en-bloques-modo-intervalo-tiempos.jpg}
 	\medskip
-	El diagrama en bloques del instrumento para poder realizar esta medición es:
+	\caption{Diagrama en bloques para la medición en modo\\ Intervalo de tiempos.}
+\end{figure}
+\bigskip\bigskip
+
 	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.47\textwidth]{images/diagramaBloquesIntervaloContador.jpg}
-		\medskip
-	\end{figure}
-	\bigskip\bigskip
 	
+	
+
+
+%% INTRODUCCIÓN - Medición de la Relación de Frecuencias
 \subsection{Medición de la Relación de Frecuencias} 
+\medskip
+
+	Esta última configuración permite comparar señales de frecuencias distintas, mostrando cuántos ciclos de una señal de alta frecuencia entran en un ciclo de la otra de frecuencia menor. Esto se logra utilizando la señal de menor frecuencia como Gate, conectada a un canal (habitualmente el B) y durante el tiempo de apertura de compuerta que determina esta, cuenta pulsos de la señal de mayor frecuencia, ingresada en el otro canal (habitualmente el A).
+\bigskip\bigskip
+
+
+% Figura 6
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{images/06-diagrama-en-bloques-modo-relacion-frecuencias.jpg}
 	\medskip
-	Esta última configuración permite comparar señales de frecuencias distintas, mostrando cuántos ciclos de una señal de alta frecuencia entran en un ciclo de la otra de frecuencia menor.
-	\medskip
-	El diagrama en bloques del instrumento para poder realizar esta medición es:
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.47\textwidth]{images/diagramaBloquesRelacionContador.jpg}
-		\medskip
-	\end{figure}
-	\bigskip\bigskip
+	\caption{Diagrama en bloques para la medición en modo\\ Intervalo de tiempos.}
+\end{figure}
+\bigskip\bigskip
+
+
+	El diagrama en bloques correspondiente a este modo de funcionamiento se muestra en la \textit{Figura 6}. Para hacer una analogía podría asimilarse al modo medición de Período, donde el Período medido es de la señal B (menor frecuencia) y la Base de Tiempos es la señal A (mayor frecuencia). La lógica interna presentará luego en el display la cantidad de pulsos de A contados que es directamente la relación entre las frecuencias de los canales A y B. En el caso de realizar promediación de períodos, simplemente la lógica interna fija el punto decimal un lugar a la izquierda por cada década del multiplicador N (divide por N, que siempre son multiplos de 10, 1 - 10 - 100 ó 1000).
+\bigskip\bigskip
+
+
 	
 	Incertezas en las mediciones
 	\medskip
@@ -317,24 +345,26 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 
 
 
-
-
-
 %% DESARROLLO - Primer medición
 \subsection{Primer medición}
+\medskip
 	
-	Banco de Medición:
+	En esta primer medición se dispondrán los contadores y el generador de la forma en que se muestra en la \textit{Figura 7}.
 	
-	\begin{figure}[h]
-				\centering
-				\includegraphics[width=0.47\textwidth]{images/bancoMedicion.jpg}
-				\medskip
-	\end{figure}
-	\bigskip\bigskip	
+% Figura 7
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.70\textwidth]{images/07-bancoMedicion.jpg}
+	\medskip
+	\caption{Banco de medición para la primer medición.}
+\end{figure}
+\bigskip\bigskip
 
-	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, y se fue variando la frecuencia desde el generador de funciones y cambiando el modo y la base de tiempo de los contadores. Se obtuvo la siguiente tabla:
 
-\newpage
+	Para el desarrollo de esta se generó una onda cuadrada de amplitud 5$V_{pp}$. Luego, se fue variando la frecuencia desde el generador de funciones, y se fue cambiando el modo y la base de tiempo de los contadores. De esta forma se obtuvieron los valores mostrados en la \textit{Tabla 2}.
+\bigskip\bigskip
+
+
 % Tabla 2
 \begin{table}[!hbt]
 	\begin{center}
@@ -366,10 +396,11 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 	\caption{Valores obtenidos en la primer medición.}
 	\end{center}
 \end{table}
-\medskip
+\medskip\medskip
 
 
-
+	En la \textit{Tabla 3} se muestran los valores calculados, correspondiente al análisis de las mediciones realizadas.
+\bigskip\bigskip
 
 % Tabla 3
 \begin{table}[!hbt]
@@ -388,16 +419,17 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 	\caption{Valores calculados para la primer medición.}
 	\end{center}
 \end{table}
-\medskip
+\medskip\medskip
 
-Análisis de la primer medición:
 		
-		Como conclusión se puede sacar que el contador recíproco es mucho más preciso que el universal y me sirve usarlo en modo período o frecuencia cuando mido frecuencias de cualquier magnitud. Al contrario el unviersal, a fin de reducir los errores debo medir en modo frecuencia para las frecuencias altas y en modo período para las bajas.
+		De ambas tablas se desprende que el contador recíproco es mucho más preciso que el universal, por lo que su uso es útil en modo período o frecuencia cuando se mide frecuencias de cualquier magnitud. Por el contrario, en el unviersal, a fin de reducir los errores, se debe medir en modo frecuencia a frecuencias altas y en modo período a frecuencias bajas.
 
 
 
 %% DESARROLLO - Segunda medición
 \subsection{Segunda medición}
+\medskip
+
 
 	Banco de Medición:
 	
@@ -408,11 +440,7 @@ Análisis de la primer medición:
 	\end{figure}
 	\bigskip\bigskip
 	
-	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, 1 KHz de frecuencia y se fue variando el ciclo de trabajo desde el generador y probando todas las combinaciones posibles entre el slope A y B ( + y -). Para calcular el valor del duty cycle se utilizará la siguiente formula:
-			
-		\begin{equation*}
-			DC = {t(+) \over T} = {[Scope A+][Scope B-] \over T }* 100 \%
-		\end{equation*}	 
+	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, 1 KHz de frecuencia y se fue variando el ciclo de trabajo desde el generador y probando todas las combinaciones posibles entre el slope A y B ( + y -). 
 \bigskip
 
 
@@ -426,22 +454,21 @@ Análisis de la primer medición:
 			& \multicolumn{2}{c|}{\textbf{Slope B +}} & \multicolumn{2}{c|}{\textbf{Slope B -}} & \multicolumn{2}{c|}{\textbf{Slope B +}} & \multicolumn{2}{c|}{\textbf{Slope B -}} & \multicolumn{2}{c|}{(calculado)} \\\cline{2-11}
 			& \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Valor} & \textbf{Error} \\\hline
 			
-			\textbf{20\%} & 996,34 & 0,01  & 263,78 & 0,04 & 730,77 & 0,01 & 994,57 & 0,01 & 26,47 & 5 \\\hline
-			\textbf{50\%} & 998,35 & 0,01 & 509,70 & 0,02 & 502,35 & 0,02 & 13,84 & 0,07 & 51,05 & 3 \\\hline
-			\textbf{80\%} & 1001,70 & 0,01 & 785,50 & 0,01 & 216,06 & 0,05 & 1002,65 & 0,01 & 78,42 & 2 \\\hline
+			\textbf{20\%} & 996,34 &  & 263,78 &  & 730,77 &  & 994,57 &  &  &  \\\hline
+			\textbf{50\%} & 998,35 &  & 509,70 &  & 502,35 &  & 13,84 &  &  &  \\\hline
+			\textbf{80\%} & 1001,70 &  & 785,50 &  & 216,06 &  & 1002,65 &  &  &  \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la segunda medición.}
 	\end{center}
 \end{table}
 \medskip
-Análisis de la segunda medición:	
-
-		Pudimos observar que la suma de los periodos del pico máximo y del mínimo dan un valor aproximado al del período total. Además los valores calculados de duty cycle concuerdan con los esperados.
+	
 
 
 %% DESARROLLO - Tercera medición
 \subsection{Tercera medición}
+\medskip
 
 
 % Tabla 5
@@ -449,10 +476,10 @@ Análisis de la segunda medición:
 	\begin{center}
 		\begin{tabular}{|c|c|c|} \hline
 			\textbf{Frecuencia del generador} & \textbf{Lectura del display} & \textbf{Error} \\\hline
-			100 Hz & 0,1 & 1 \\\hline
-			1 kHz & 11 & 10 \\\hline
-			10 kHz & 10,4 & 1 \\\hline
-			100 kHz & 102,4 & 0,1 \\\hline
+			100 Hz & 0,1 &  \\\hline
+			1 kHz & 11 &  \\\hline
+			10 kHz & 10,4 &  \\\hline
+			100 kHz & 102,4 &  \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la tercera medición.}
@@ -467,7 +494,7 @@ Análisis de la segunda medición:
 		\begin{tabular}{|c|c|} \hline
 			\multicolumn{2}{|c|}{\textbf{Frecuencia de la señal de calibración}} \\\cline{1-2}
 			\textbf{Lectura del display} & \textbf{Error} \\\hline
-			999,807 & 0,01\% \\\hline
+			999,807 & \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la tercera medición.}
@@ -475,20 +502,26 @@ Análisis de la segunda medición:
 \end{table}
 \medskip
 
-Análisis de la tercera medición:
-
-		Los valores medidos coincidieron con los esperados por la relacion entre las dos frecuencias.
 
 
 %% DESARROLLO - Cuarta medición
 \subsection{Cuarta medición}
-	En este caso se armó un circuito más complejo que los anteriores, incorporando una resistencia y un capacitor en una configuración de filtro pasa – bajos. Para que el efecto de carga aportado por los instrumentos involucrados en las mediciones sea despreciable, se utilizó un capacitor de 100 nF que es varios ordenes mayor a la capacidad equivalente del conjunto osciloscopio – punta. Con el mismo objetivo, se utilizó una resistencia de 1 KΩ.
+\medskip
+
+	En este caso se armó un circuito más complejo que los anteriores, incorporando una resistencia y un capacitor en una configuración de filtro pasa–bajos. Para que el efecto de carga aportado por los instrumentos involucrados en las mediciones sea despreciable, se utilizó un capacitor de 100 nF que es varios ordenes mayor a la capacidad equivalente del conjunto osciloscopio – punta. Con el mismo objetivo, se utilizó una resistencia de 1 KΩ.
+	\par
 	Se configuró el generador en una onda sinusoidal de 10 Vpp. Se utilizó al contador para medir  intervalos de tiempo y frecuencias, con el tiempo de compuerta fijo en 1 segundo.
+	\par
 	Al osciloscopio se lo utilizó en modo dual, para ver ambas señales simultáneamente, configurando el disparo en modo choppeado de manera tal de poder observar correctamente el desfasaje. Para calcular el desfasaje se utilizó la fórmula:
-	
-	\begin{equation}
-		\phi = {Tdif * 360° \over T} = {Tdif * f * 360°}
-	\end{equation}
+\medskip
+
+\begin{equation}
+	\phi = {Tdif * 360° \over T} = {Tdif * f * 360°}
+\end{equation}
+\bigskip
+
+	En la \textit{Tabla 7} se muestran los valores obtenidos en la presente medición junto con los errores correspondientes a cada una de las indicaciones visualizadas en el display.
+\bigskip
 
 
 % Tabla 7
