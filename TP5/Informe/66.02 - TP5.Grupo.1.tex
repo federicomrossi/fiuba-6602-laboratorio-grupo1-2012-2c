@@ -154,7 +154,7 @@
 \bigskip\bigskip
 
 	
-	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1 ó 10 segundos según sea seleccionado por el control \textit{GATE TIME}.A la señal de entrada , para eliminar ruidos que pueden causar una lectura errónea, se la transforma en una señal cuadrada. Para esto se la pasa por un disparador de Schmitt. Este disparador cuenta con un límite máximo de tensión y otro límite mínimo, y cuando la señal sobrepasa el máximo, o pasa por debajo del mínimo, la señal de salida (del disparador de Schmitt) varía. Un detalle importante es que los límites de tensión se pueden variar, por la razón de que puede darse el caso en el que la señal de entrada no supere los límites establecidos, de manera tal que no se llegue a formar una señal. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
+	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1  10 segundos según sea seleccionado por el control \textit{GATE TIME}.A la señal de entrada , para eliminar ruidos que pueden causar una lectura errónea, se la transforma en una señal cuadrada. Para esto se la pasa por un disparador de Schmitt. Este disparador cuenta con un límite máximo de tensión y otro límite mínimo, y cuando la señal sobrepasa el máximo, o pasa por debajo del mínimo, la señal de salida (del disparador de Schmitt) varía. Un detalle importante es que los límites de tensión se pueden variar, por la razón de que puede darse el caso en el que la señal de entrada no supere los límites establecidos, de manera tal que no se llegue a formar una señal. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
 \bigskip
 
 
@@ -634,24 +634,9 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 \section{Conclusiones}
 
 	
-	Al analizar los datos obtenidos y los cálculos realizados, se puede concluir que el contador es un elemento muy versátil a la hora de realizar mediciones de períodos y frecuencias. También arroja valores correctos y con incertezas muy controladas en sus modos de intervalo de tiempo y relación de frecuencia. Es decir, tiene una incerteza considerablemente menor que la del osciloscopio para este tipo de mediciones ya que al leer la medición directamente en un display estamos eliminando los errores de apreciación que se producen cuando uno mide en un osciloscopio. Estas diferencias entre ambos instrumentos se pueden apreciar en la \textit{Tabla 9}.
-\bigskip\medskip
-
-
-% Tabla 9
-\begin{table}[!hbt]
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|} \hline
-			\textbf{Equipo de medición} & \textbf{Frecuencia / Período} & \textbf{Desfasaje} & \textbf{Ancho de pulso} \\\hline
-			Osciloscopio &  &  &  \\\hline
-			Contador &  &  &  \\\hline
-		\end{tabular}
-
-	\caption{Cuadro comparativo de los ordenes de magnitud\\ de los errores de los equipos.}
-	\end{center}
-\end{table}
-
-
+	Al analizar los datos obtenidos y los cálculos realizados, se puede concluir que el contador es un elemento muy versátil a la hora de realizar mediciones de períodos y frecuencias. También arroja valores correctos y con incertezas muy controladas en sus modos de intervalo de tiempo y relación de frecuencia. Es decir, tiene una incerteza considerablemente menor que la del osciloscopio para este tipo de mediciones ya que al leer la medición directamente en un display estamos eliminando los errores de apreciación que se producen cuando uno mide en un osciloscopio.
+	\par
+	Dichos errores no son menores ya que en el osciloscopio, la incerteza en el eje del tiempo, tiene alrededor de un 6\% mínimo para cada medición, valor que puede incrementarse si se quieren comparar unos valores medidos, ó en el caso de ultilizar el magnificador. En comparación, la incerteza del contador es de varios ordenes de magnitud menor que la del osciloscopio, detalle que afirma la elección entre ambos instrumentos a la hora de medir tiempos ó frecuencias.
 
 	Un dato importante que se obtuvo, y que fue mencionado en apartados anteriores, fue el hecho de que en modo frecuencia trabaja satisfactoriamente con frecuencia altas. A su vez, ocurre algo similar en el modo período, ya que es conveniente que los tiempos a medir sean grandes. En caso de tener que realizar una medición de una baja frecuencia, conviene utilizar su recíproco, esto es, medir el período.
 	\par
