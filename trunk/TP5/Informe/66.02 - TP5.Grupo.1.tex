@@ -408,7 +408,11 @@ Análisis de la primer medición:
 	\end{figure}
 	\bigskip\bigskip
 	
-	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, 1 KHz de frecuencia y se fue variando el ciclo de trabajo desde el generador y probando todas las combinaciones posibles entre el slope A y B ( + y -). 
+	Para el desarrollo de esta medición se generó una onda cuadrada de amplitud 5V pico a pico, 1 KHz de frecuencia y se fue variando el ciclo de trabajo desde el generador y probando todas las combinaciones posibles entre el slope A y B ( + y -). Para calcular el valor del duty cycle se utilizará la siguiente formula:
+			
+		\begin{equation*}
+			DC = {t(+) \over T} = {[Scope A+][Scope B-] \over T }* 100 \%
+		\end{equation*}	 
 \bigskip
 
 
@@ -422,16 +426,18 @@ Análisis de la primer medición:
 			& \multicolumn{2}{c|}{\textbf{Slope B +}} & \multicolumn{2}{c|}{\textbf{Slope B -}} & \multicolumn{2}{c|}{\textbf{Slope B +}} & \multicolumn{2}{c|}{\textbf{Slope B -}} & \multicolumn{2}{c|}{(calculado)} \\\cline{2-11}
 			& \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Valor} & \textbf{Error} \\\hline
 			
-			\textbf{20\%} & 996,34 &  & 263,78 &  & 730,77 &  & 994,57 &  &  &  \\\hline
-			\textbf{50\%} & 998,35 &  & 509,70 &  & 502,35 &  & 13,84 &  &  &  \\\hline
-			\textbf{80\%} & 1001,70 &  & 785,50 &  & 216,06 &  & 1002,65 &  &  &  \\\hline
+			\textbf{20\%} & 996,34 & 0,01  & 263,78 & 0,04 & 730,77 & 0,01 & 994,57 & 0,01 & 26,47 & 5 \\\hline
+			\textbf{50\%} & 998,35 & 0,01 & 509,70 & 0,02 & 502,35 & 0,02 & 13,84 & 0,07 & 51,05 & 3 \\\hline
+			\textbf{80\%} & 1001,70 & 0,01 & 785,50 & 0,01 & 216,06 & 0,05 & 1002,65 & 0,01 & 78,42 & 2 \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la segunda medición.}
 	\end{center}
 \end{table}
 \medskip
-	
+Análisis de la segunda medición:	
+
+		Pudimos observar que la suma de los periodos del pico máximo y del mínimo dan un valor aproximado al del período total. Además los valores calculados de duty cycle concuerdan con los esperados.
 
 
 %% DESARROLLO - Tercera medición
@@ -443,10 +449,10 @@ Análisis de la primer medición:
 	\begin{center}
 		\begin{tabular}{|c|c|c|} \hline
 			\textbf{Frecuencia del generador} & \textbf{Lectura del display} & \textbf{Error} \\\hline
-			100 Hz & 0,1 &  \\\hline
-			1 kHz & 11 &  \\\hline
-			10 kHz & 10,4 &  \\\hline
-			100 kHz & 102,4 &  \\\hline
+			100 Hz & 0,1 & 1 \\\hline
+			1 kHz & 11 & 10 \\\hline
+			10 kHz & 10,4 & 1 \\\hline
+			100 kHz & 102,4 & 0,1 \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la tercera medición.}
@@ -461,7 +467,7 @@ Análisis de la primer medición:
 		\begin{tabular}{|c|c|} \hline
 			\multicolumn{2}{|c|}{\textbf{Frecuencia de la señal de calibración}} \\\cline{1-2}
 			\textbf{Lectura del display} & \textbf{Error} \\\hline
-			999,807 & \\\hline
+			999,807 & 0,01\% \\\hline
 		\end{tabular}
 
 	\caption{Valores obtenidos en la tercera medición.}
@@ -469,6 +475,9 @@ Análisis de la primer medición:
 \end{table}
 \medskip
 
+Análisis de la tercera medición:
+
+		Los valores medidos coincidieron con los esperados por la relacion entre las dos frecuencias.
 
 
 %% DESARROLLO - Cuarta medición
