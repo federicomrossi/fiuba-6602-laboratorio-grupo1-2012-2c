@@ -154,7 +154,7 @@
 \bigskip\bigskip
 
 	
-	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1 ó 10 segundos según sea seleccionado por el control \textit{GATE TIME}. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
+	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1 ó 10 segundos según sea seleccionado por el control \textit{GATE TIME}.A la señal de entrada , para eliminar ruidos que pueden causar una lectura errónea, se la transforma en una señal cuadrada. Para esto se la pasa por un disparador de Schmitt. Este disparador cuenta con un límite máximo de tensión y otro límite mínimo, y cuando la señal sobrepasa el máximo, o pasa por debajo del mínimo, la señal de salida (del disparador de Schmitt) varía. Un detalle importante es que los límites de tensión se pueden variar, por la razón de que puede darse el caso en el que la señal de entrada no supere los límites establecidos, de manera tal que no se llegue a formar una señal. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
 
 
 \newpage
@@ -461,7 +461,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 			& \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Display} & \textbf{Error} & \textbf{Valor} & \textbf{Error} \\\hline
 			
 			\textbf{20\%} & 996,34 &  & 263,78 &  & 730,77 &  & 994,57 &  &  &  \\\hline
-			\textbf{50\%} & 998,35 &  & 509,70 &  & 502,35 &  & 13,84 &  &  &  \\\hline
+			\textbf{50\%} & 998,35 &  & 509,70 &  & 502,35 &  & 996,43 &  &  &  \\\hline
 			\textbf{80\%} & 1001,70 &  & 785,50 &  & 216,06 &  & 1002,65 &  &  &  \\\hline
 		\end{tabular}
 
@@ -470,12 +470,14 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 \end{table}
 \medskip
 	
+El contador toma el intervalo de tiempo entre la señal del \textit{CH A} y la del \textit{CH B}. Como en este caso es la misma señal la que entra a ambos canales, el contador no tiene el tiempo suficiente de notar la diferencia de fase si ambas pendientes son positivas o negativas, es por eso que se mide el período. En los demás casos, se puede apreciar que la suma de los valores cuando A y B son + y -, respectivamente, y cuando son - y +, da un valor cercano al período de la señal.
 
 
 %% DESARROLLO - Tercera medición
 \subsection{Tercera medición}
 \medskip
 
+Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia de aproximadamente $1 khz$ (su valor se encuentra en \textit{tabla 6}), ésta se conectó al \textit{CH B} y del generador con una frecuencia variable (conectado al \textit{CH A}), en este ítem del trabajo práctico se buscó evaluar el funcionamiento del modo relación de frecuencias del contador.
 
 % Tabla 5
 \begin{table}[!hbt]
@@ -493,6 +495,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 \end{table}
 \medskip
 
+Ya que el contador utiliza la señal del \textit{CH B} como señal de \textit{Gate}, y de este modo cuenta los flancos de la señal del \textit{CH A} durante el período  de la señal de \textit{Gate}, es de entender que el error sea grosero cuando se presenta una señal en el \textit{CH A} con una frecuencia inferior a la del \textit{CH B}, como se puede apreciar en la \textit{Tabla 5}. Para los demás valores, el error se encuentra en un valor aceptable, donde se pueden considerar válidas las mediciones.
 
 % Tabla 6
 \begin{table}[!hbt]
@@ -525,6 +528,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 	\phi = {Tdif * 360° \over T} = {Tdif * f * 360°}
 \end{equation}
 \bigskip
+
 
 	En la \textit{Tabla 7} se muestran los valores obtenidos en la presente medición junto con los errores correspondientes a cada una de las indicaciones visualizadas en el display.
 \bigskip
