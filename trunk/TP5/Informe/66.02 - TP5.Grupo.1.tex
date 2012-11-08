@@ -139,50 +139,99 @@
 %% INTRODUCCIÓN - Medición de Frecuencia	
 \subsection{Medición de Frecuencia}
 
-	El contador cuenta durante el tiempo elegido en la \textit{Base de Tiempo}, la cantidad de ciclos de la señal de entrada. Ese valor es el que aparece en el display indicando la frecuencia.
+	En este modo, el contador cuenta durante el tiempo elegido en la \textit{Base de Tiempo}, la cantidad de ciclos de la señal de entrada. Ese valor es el que aparece en el display indicando la frecuencia.
 \bigskip\bigskip
 
 
+% Figura 1
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.70\textwidth]{images/ondasFrecuenciaContador.jpg}
+	\includegraphics[width=0.70\textwidth]{images/01-ondasFrecuenciaContador.jpg}
 	\medskip
+	\caption{Esquema de conteo en la medición de frecuencia.}
 \end{figure}
 \bigskip\bigskip
 
 	
-	\medskip
-	Diagrama de bloques para medir frecuencia:
-	
+	En la \textit{Figura 2} se muestra el diagrama en bloques basico del contador en este modo. El oscilador de la base de tiempos (BT) genera una señal de 10MHz, con una elevada estabilidad. Esta señal se aplica a un circuito divisor, de tal forma que a la salida se obtiene un pulso rectangular cuya duración es de 0.01, 0.1, 1 ó 10 segundos según sea seleccionado por el control \textit{GATE TIME}. Este pulso se aplica a la entrada IN-1 de la compuerta principal. El funcionamiento de la compuerta es tal que la señal de IN-2 se trasladará a la salida toda vez que IN-1 esté en estado alto. De este modo la entrada del contador de pulsos interno irá incrementando el número de cuentas acumuladas mientras la señal de gate este en estado alto. 
+
+
+\newpage
+% Figura 2
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.47\textwidth]{images/diagramaBloquesFrecuenciaContador.jpg}
+	\includegraphics[width=0.80\textwidth]{images/02-diagrama-en-bloques-modo-medicion-frecuencia.jpg}
 	\medskip
+	\caption{Esquema de bloques de un contador convencional\\ en modo medición de frecuencias.}
 \end{figure}
 \bigskip\bigskip
-	
+
+
+	De esta manera, la frecuencia a medir será
+\medskip
+
+\begin{equation}
+	f_x = {N_c \over T_G}
+\end{equation}
+\medskip
+
+\noindent donde, \\
+$N_c$ = Número de cuentas acumuladas (ó ciclos de la señal de entrada);\\
+$T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
+\bigskip\bigskip
+
+
+
+%% INTRODUCCIÓN - Medición de Periodo	
 \subsection {Medicion de Período}
 		
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.47\textwidth]{images/ondasPeriodoContador.jpg}
-		\medskip
-	\end{figure}
-	\bigskip\bigskip
-	
-	El contador cuenta la cantidad de pulsos de la base de tiempo durante un ciclo de la señal de entrada. A partir de ese valor obtiene el período.
+	En este modo, el contador cuenta la cantidad de pulsos de la base de tiempo durante un ciclo de la señal de entrada. A partir de ese valor obtiene el período. 
+\bigskip\bigskip
+
+
+% Figura 3
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.65\textwidth]{images/03-ondasPeriodoContador.jpg}
 	\medskip
-	El diagrama en bloques del instrumento para poder realizar esta medición es:
-		
-		
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.47\textwidth]{images/diagramaBloquesPeriodoContador.jpg}
-		\medskip
-	\end{figure}
-	\bigskip\bigskip
-	
-	
+	\caption{Esquema de conteo en la medición de período.}
+\end{figure}
+\bigskip\bigskip
+
+
+	Más específicamente, en este modo de funcionamiento la señal contada es la de la base de datos (oscilador interno) mientras que el tiempo de apertura de la compuerta para conteo es fijado por la señal de entrada encuadrada y el acumulador de períodos como puede verse en el diagrama en bloques de la \textit{Figura 4}.
+\bigskip\bigskip
+
+
+% Figura 4
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.80\textwidth]{images/04-diagrama-en-bloques-modo-medicion-periodo.jpg}
+	\medskip
+	\caption{Diagrama en bloques correspondiente al modo de\\ Medición de Período.}
+\end{figure}
+\bigskip\bigskip
+
+
+	El contador de Períodos o acumulador cuenta la cantidad de eventos de la señal de entrada (N), y cierra la compuerta una vez alcanzada la cuenta prefijada por el control de Gate Time (1, 10, 100 ó 1000 períodos). Para un solo periodo medido (Gate Time = 0.01 segundo $\rightarrow$ N=1) resulta:
+\medskip
+
+\begin{equation}
+	f_x = {N_c \over T_G}
+\end{equation}
+\medskip
+
+\noindent donde $f_x = f_B = 1/t_B$, la frecuencia de la base de tiempos interna ($t_B$ el período de la misma) y $T_G = t_x$ el período de la señal de entrada que queremos medir, por lo que la ecuación (2) puede reescribirse para la medición en modo Período como:
+\medskip
+
+\begin{equation}
+	t_x = {N_c \over f_B} = N_c \times t_B
+\end{equation}
+\bigskip\bigskip
+
+
+
+%% INTRODUCCIÓN - Medición del Intervalo de tiempo	
 \subsection{Medición del Intervalo de tiempo}
 	
 	A diferencia de las mediciones anteriores, en este caso el objetivo de esta medición es medir el tiempo que transcurre entre dos eventos que pueden provenir de señales diferentes o de la misma señal.
