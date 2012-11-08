@@ -385,9 +385,9 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 			
 			\multirow{4}{*}{\textbf{10 Hz}}
 			& 9,991893 Hz & 1e-5  & 0,010 KHz & 10 & Frecuencia & 1 Seg. \\\cline{2-7}
-			& 100131,1 $\mu$S & 1e-5 & ¿OVER? &  & Período & 1 Seg. \\\cline{2-7}
-			& - &  & ¿GATE? &  & Frecuencia & 0.01 Seg. \\\cline{2-7}
-			& - &  & 100201,7 $\mu$S & 1e-5  & Período & 0.01 Seg. \\\hline
+			& 100131,1 $\mu$S & 1e-5 & - & - & Período & 1 Seg. \\\cline{2-7}
+			& - & - & - & - & Frecuencia & 0.01 Seg. \\\cline{2-7}
+			& - & - & 100201,7 $\mu$S & 1e-5  & Período & 0.01 Seg. \\\hline
 
 			\multirow{4}{*}{\textbf{1 kHz}}
 			& 1,00423 kHz & 1e-4  & 1,005 kHz & 0,1  & Frecuencia & 1 Seg. \\\cline{2-7}
@@ -491,7 +491,7 @@ $T_G$ = tiempo de apertura del Gate, comandado por la base de tiempos.
 \subsection{Tercera medición}
 \medskip
 
-Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia de aproximadamente $1 khz$ (su valor se encuentra en \textit{tabla 6}), ésta se conectó al \textit{CH B} y del generador con una frecuencia variable (conectado al \textit{CH A}), en este ítem del trabajo práctico se buscó evaluar el funcionamiento del modo relación de frecuencias del contador.
+	Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia de aproximadamente $1 kHz$ (su valor se encuentra en \textit{Tabla 6}), ésta se conectó al \textit{CH B} y del generador con una frecuencia variable (conectado al \textit{CH A}), en este ítem del trabajo práctico se buscó evaluar el funcionamiento del modo relación de frecuencias del contador.
 \bigskip
 
 
@@ -536,17 +536,28 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 \subsection{Cuarta medición}
 \medskip
 
-	En este caso se armó un circuito más complejo que los anteriores, incorporando una resistencia y un capacitor en una configuración de filtro pasa–bajos. Para que el efecto de carga aportado por los instrumentos involucrados en las mediciones sea despreciable, se utilizó un capacitor de 100 nF que es varios ordenes mayor a la capacidad equivalente del conjunto osciloscopio – punta. Con el mismo objetivo, se utilizó una resistencia de 1 KΩ.
-	\par
+	En este caso se armó un circuito más complejo que los anteriores (\textit{Figura 9}), incorporando una resistencia y un capacitor en una configuración de filtro pasa–bajos. Para que el efecto de carga aportado por los instrumentos involucrados en las mediciones sea despreciable, se utilizó un capacitor de 100 nF que es varios ordenes mayor a la capacidad equivalente del conjunto osciloscopio – punta. Con el mismo objetivo, se utilizó una resistencia de 1 KΩ.
+\bigskip
+
+
+% Figura 9
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.60\textwidth]{images/09-bancoMedicionMed4.jpg}
+	\medskip
+	\caption{Banco de medición para la cuarta medición.}
+\end{figure}
+\bigskip\bigskip
+
+
 	Se configuró el generador en una onda sinusoidal de 10 Vpp. Se utilizó al contador para medir  intervalos de tiempo y frecuencias, con el tiempo de compuerta fijo en 1 segundo.
 	\par
 	Al osciloscopio se lo utilizó en modo dual, para ver ambas señales simultáneamente, configurando el disparo en modo choppeado de manera tal de poder observar correctamente el desfasaje. Para calcular el desfasaje se utilizó la fórmula:
-\medskip
 
 \begin{equation}
 	\phi = {Tdif * 360° \over T} = {Tdif * f * 360°}
 \end{equation}
-\bigskip
+\medskip
 
 
 	En la \textit{Tabla 7} se muestran los valores obtenidos en la presente medición junto con los errores correspondientes a cada una de las indicaciones visualizadas en el display.
@@ -570,14 +581,32 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 	\caption{Valores obtenidos en la cuarta medición.}
 	\end{center}
 \end{table}
-\medskip
+\bigskip
 
 
 
 %% DESARROLLO - Quinta medición
 \subsection{Quinta medición}
+\medskip
+
+	En esta última experiencia, se buscó evaluar la sensibilidad de entrada del contador. Para ello se dispuso del generador de funciones, suministrando una señal senoidal de 1 KHz. Al contador se lo utilizó en modo frecuencia y con un Gate Time de 0,01 segundos. Adicionalmente se contó con un multimetro digital para estimar la tensión de salida del generador. El banco de medición utilizado se muestra en la \textit{Figura 10}.
+\bigskip
 
 
+% Figura 10
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.63\textwidth]{images/10-bancoMedicionMed5.jpg}
+	\medskip
+	\caption{Banco de medición para la quinta medición.}
+\end{figure}
+\bigskip\bigskip
+
+
+	En la \textit{Tabla 8} se encuentran volcados los valores obtenidos junto con sus respectivos errores para el caso del multímetro. Para esto se fue variando en forma decreciente la amplitud de la señal de entrada hasta que el contador ya no sea capaz de mostrar una indicación sobre el display.
+\bigskip
+
+	
 % Tabla 8
 \begin{table}[!hbt]
 	\begin{center}
@@ -587,11 +616,11 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 			\textbf{sugerida} & \textbf{Lectura} & \textbf{Error} & \textbf{contador} & \textbf{Sí} & \textbf{No} \\\hline
 			
 			\textbf{5V} & 3,548 & 1,96\% & 1,0 & \tick &  \\\hline
-			\textbf{1V} & 0,677 & 2,20\% & 1,1 &  &  \\\hline
-			\textbf{0,5V} & 0,347 & 2,48\% & 1,1 &  &  \\\hline
-			\textbf{0,25V} & 0,173 & 3,06\% & 1,2 &  &  \\\hline
-			\textbf{0,05V} & 0,027 & 9,31\% & 1,0 &  &  \\\hline
-			\textbf{0,04V} & 0,019 & 12,43\% & 0 &  &  \\\hline
+			\textbf{1V} & 0,677 & 2,20\% & 1,1 & \tick &  \\\hline
+			\textbf{0,5V} & 0,347 & 2,48\% & 1,1 & \tick &  \\\hline
+			\textbf{0,25V} & 0,173 & 3,06\% & 1,2 & \tick &  \\\hline
+			\textbf{0,05V} & 0,027 & 9,31\% & 1,0 & \tick &  \\\hline
+			\textbf{0,04V} & 0,019 & 12,43\% & 0 &  & \tick \\\hline
 
 		\end{tabular}
 
@@ -601,14 +630,12 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 \medskip
 
 
-
-
 % CONCLUSIONES
 \section{Conclusiones}
 
 	
 	Al analizar los datos obtenidos y los cálculos realizados, se puede concluir que el contador es un elemento muy versátil a la hora de realizar mediciones de períodos y frecuencias. También arroja valores correctos y con incertezas muy controladas en sus modos de intervalo de tiempo y relación de frecuencia. Es decir, tiene una incerteza considerablemente menor que la del osciloscopio para este tipo de mediciones ya que al leer la medición directamente en un display estamos eliminando los errores de apreciación que se producen cuando uno mide en un osciloscopio. Estas diferencias entre ambos instrumentos se pueden apreciar en la \textit{Tabla 9}.
-\bigskip\bigskip
+\bigskip\medskip
 
 
 % Tabla 9
@@ -623,7 +650,7 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 	\caption{Cuadro comparativo de los ordenes de magnitud\\ de los errores de los equipos.}
 	\end{center}
 \end{table}
-\bigskip
+
 
 
 	Un dato importante que se obtuvo, y que fue mencionado en apartados anteriores, fue el hecho de que en modo frecuencia trabaja satisfactoriamente con frecuencia altas. A su vez, ocurre algo similar en el modo período, ya que es conveniente que los tiempos a medir sean grandes. En caso de tener que realizar una medición de una baja frecuencia, conviene utilizar su recíproco, esto es, medir el período.
@@ -653,12 +680,15 @@ Haciendo uso de la señal de calibración del osciloscopio, con una frecuencia d
 
 \section{Incertezas}
 
-\subsection{\textbf{Contador universal}} Utilizando el contador universal, las incertezas se deben a:\\
+\subsection{\textbf{Contador universal}} Utilizando el contador universal, las incertezas se deben a:
+\smallskip
 
 \begin{itemize}
-\item{Error de cuantización ($\pm 1$ cuenta).}
-\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, se tomó como aproximado 50 ppm).}
-\item{Error del trigger(0,3\%/N)).}
+	\itemsep=3pt \topsep=0pt \partopsep=0pt \parskip=0pt \parsep=0pt
+
+	\item{Error de cuantización ($\pm 1$ cuenta).}
+	\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, se tomó como aproximado 50 ppm).}
+	\item{Error del trigger(0,3\%/N)).}
 \end{itemize}
 
 \medskip
@@ -686,17 +716,33 @@ Se cometen: error de cuantización, y error de la base de tiempos.
 
 \subsection{\textbf{Contador recíproco}}
 
-La incertidumbre cometida en el modo frecuencia y en modo período de tiempo es debido a:\\
+La incertidumbre cometida en el modo frecuencia y en modo período de tiempo es debido a:\smallskip
 
 \begin{itemize}
-\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, tambien se tomó como aproximado 50 ppm).}
-\item{Resolución del contador(\textit{ver hoja de datos}).}
+	\itemsep=3pt \topsep=0pt \partopsep=0pt \parskip=0pt \parsep=0pt
+	
+	\item{Exactitud de la base de tiempos (debido a la temperatura, a la edad del aparato, tambien se tomó como aproximado 50 ppm).}
+	\item{Resolución del contador(\textit{ver hoja de datos}).}
 \end{itemize}
 
 \bigskip
 
 
 \newpage
+
+
+
+% APÉNDICE B
+\newpage
+\vspace*{4cm}
+\begin{center}
+	\textbf{\Huge{Apéndice B}} \\
+	\bigskip\bigskip
+	\Large{\textit{``Hojas de datos''}}
+\end{center}
+
+
+\newpage \textit{}
 
 
 \end{document}
