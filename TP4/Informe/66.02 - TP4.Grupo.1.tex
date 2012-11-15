@@ -256,7 +256,7 @@ De estos dos valores obtenidos resulta que:
 
 	En la práctica el efecto de carga es imposible de evitar, por lo que se midió el tiempo de crecimiento y la frecuencia de corte con los dos tipos de puntas disponibles, la \textit{X1}, y la \textit{X10}. El procedimiento para ambas fue el mismo y se pasan a enunciar.
 	\par
-	Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor), y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad.
+	Para el tiempo de crecimiento, se utilizó el \textit{CH 2} del osciloscopio (que es el que mide la caída de tensión en el capacitor), y se midió el tiempo que le toma a la señal pasar del 10\% al 90\%. La exactitud en la sección horizontal proporcionada por el fabricante es del 3\% de la medida, más otro 3\% por linealidad. Además a esto hay que sumarle la incerteza por el error de lectura del usuario (mitad de la mínima división).
 \bigskip
 
 
@@ -276,10 +276,10 @@ $T_c = 2,2 \times 1k\Omega \times 268pF = 590 ns$\\
 
 	Para el tiempo de crecimiento, se contaron 2,8 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
 
-$T_c = 560 ns \pm 34 ns$\\
+$T_c = 560 ns \pm 54 ns$\\
 \smallskip
 
-
+Aquí se puede apreciar que el valor teórico del tiempo de crecimiento cae dentro del rango de exactitud del valor medido, y que la diferencia entre ambos valores no es muy alta en relación a la magnitud de los valores.
 
 %%% DESARROLLO - Medicion del tiempo de crecimiento - Medición con la punta X10
 \subsubsection{Medición con la punta \textit{X10}} 
@@ -297,7 +297,11 @@ $T_c = 2,2 \times 1k\Omega \times 88pF =  194 ns$\\
 
 	Para el tiempo de crecimiento, se contaron 1,2 divisiones, en una escala de $0.2 \mu S$, por lo que el valor medido, con su respectiva incerteza es: \\
 
-$T_c = 240 ns \pm 15 ns$\\
+$T_c = 240 ns \pm 35 ns$\\
+\smallskip
+
+En este caso, el valor teórico no entra dentro del intervalo de incertidumbre, aunque su distancia no es muy grande. 
+
 
 \bigskip
 
@@ -332,8 +336,11 @@ $f_c = {1 \over 2 \pi RC} = 796 KHz$
 
 
 $f_c = 580 kHz$
-\medskip
+\smallskip
 
+La diferencia entre los valores está dada casi completamente por el método utilizado para medir la frecuencia de corte, donde influye el usuario en mayor medida que la incertidumbre de los instrumentos.
+
+\medskip
 
 %%% DESARROLLO - Medición de la respuesta en frecuencia - Medición con la punta X10
 \subsubsection{Medición con la punta \textit{X10}}
@@ -351,6 +358,10 @@ $f_c = {1 \over 2 \pi RC} = 1,8 MHz$
 	La frecuencia de corte fue medida con el contador una vez dadas las condiciones comentadas en el comienzo de la sección, su valor es:\\
 
 $f_c = 1,62 MHz$
+\smallskip
+
+Para este caso, la diferencia entre los valores tiene la misma explicación que la medición con la punta \textit{x1}
+
 \bigskip
 
 
